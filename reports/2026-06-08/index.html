@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi & VC Brief · June 8, 2026</title>
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111520;
+    --surface-2: #161b29;
+    --border: #1f2638;
+    --gold: #f0b429;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+    --purple: #a855f7;
+    --orange: #f97316;
+    --teal: #14b8a6;
+    --pink: #ec4899;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1A0826 0%, #0a0c10 60%);
+    border-bottom: 1px solid var(--border);
+  }
+  .brand-left { display: flex; align-items: center; gap: 18px; }
+  .brand-logo {
+    height: 60px; width: auto; display: block;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.55));
+  }
+  .brand-left h1 {
+    margin: 0; font-size: 22px; letter-spacing: 5px;
+    color: var(--text); font-weight: 700;
+  }
+  .brand-left .sub {
+    color: var(--muted); font-size: 13px; letter-spacing: 1.5px;
+    margin-top: 4px; text-transform: uppercase;
+  }
+  .brand-right { text-align: right; }
+  .brand-right .stamp { color: var(--gold); font-weight: 600; font-size: 14px; }
+  .brand-right .tag { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .breaking {
+    background: linear-gradient(90deg, rgba(239,68,68,0.15), rgba(240,180,41,0.08));
+    border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .breaking-title {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--red); font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .breaking-title::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red); box-shadow: 0 0 8px var(--red);
+    animation: pulse 1.4s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .breaking ul { margin: 0; padding-left: 20px; }
+  .breaking li { margin-bottom: 6px; color: var(--text); font-size: 14px; }
+  .breaking li strong { color: var(--gold); }
+
+  .market-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 20px 0 28px;
+  }
+  .ticker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .ticker .name { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .ticker .price { color: var(--text); font-size: 18px; font-weight: 700; margin-top: 4px; }
+  .ticker .chg.up { color: var(--green); font-size: 12px; }
+  .ticker .chg.down { color: var(--red); font-size: 12px; }
+  .ticker .chg.neutral { color: var(--gold); font-size: 12px; }
+
+  .tabs {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+  }
+  .tab {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-weight: 500;
+  }
+  .tab:hover { transform: translateY(-1px); }
+  .tab.active { color: #fff; border-color: transparent; }
+  .tab[data-topic="defi"].active { background: var(--blue); }
+  .tab[data-topic="security"].active { background: var(--purple); }
+  .tab[data-topic="mining"].active { background: var(--orange); }
+  .tab[data-topic="airdrops"].active { background: var(--teal); }
+  .tab[data-topic="rwa"].active { background: var(--green); }
+  .tab[data-topic="markets"].active { background: var(--blue); }
+  .tab[data-topic="vc"].active { background: var(--pink); }
+
+  .panel { display: none; position: relative; }
+  .panel.active { display: block; }
+  .panel-title { font-size: 22px; margin: 0 0 6px; color: var(--gold); }
+  .panel-sub { color: var(--muted); margin: 0 0 18px; font-size: 13px; }
+
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    position: relative;
+  }
+  .stat .tile-mark {
+    position: absolute; top: 8px; right: 8px;
+    width: 22px; height: 22px;
+    opacity: 0.45;
+  }
+  .stat .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+  .stat .value { color: var(--text); font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .stat .delta { font-size: 12px; margin-top: 2px; }
+  .stat .delta.up { color: var(--green); }
+  .stat .delta.down { color: var(--red); }
+  .stat .delta.neutral { color: var(--gold); }
+
+  .story-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+  }
+  .card .tile-mark {
+    position: absolute; top: 12px; right: 12px;
+    width: 32px; height: 32px;
+    opacity: 0.55;
+  }
+  .card .card-title {
+    color: var(--gold); font-size: 13px; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 600;
+    margin-bottom: 14px; padding-right: 40px;
+  }
+  .story { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+  .story:last-child { border-bottom: none; }
+  .story .headline { font-weight: 600; color: var(--text); margin-bottom: 4px; font-size: 14px; }
+  .story .meta { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+  .story .summary { color: var(--text); font-size: 13px; margin-bottom: 6px; }
+  .story .why { color: var(--muted); font-size: 12px; font-style: italic; }
+  .story .why::before { content: '▸ '; color: var(--gold); font-style: normal; }
+
+  .trend-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.06));
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 16px;
+    position: relative;
+  }
+  .trend-card .tile-mark {
+    position: absolute; top: 12px; right: 12px;
+    width: 32px; height: 32px;
+    opacity: 0.55;
+  }
+  .trend-card h3 { margin: 0 0 12px; color: var(--blue); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .trend-card ul { margin: 0; padding-left: 20px; }
+  .trend-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+  .trend-card strong { color: var(--gold); }
+
+  .watch-card {
+    background: linear-gradient(135deg, rgba(240,180,41,0.06), rgba(249,115,22,0.04));
+    border: 1px solid rgba(240,180,41,0.3);
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 16px;
+    position: relative;
+  }
+  .watch-card .tile-mark {
+    position: absolute; top: 12px; right: 12px;
+    width: 32px; height: 32px;
+    opacity: 0.55;
+  }
+  .watch-card h3 { margin: 0 0 12px; color: var(--gold); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .watch-card ul { margin: 0; padding-left: 20px; }
+  .watch-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+
+  footer {
+    margin-top: 40px; padding: 18px 0;
+    border-top: 1px solid var(--border);
+    text-align: center; color: var(--muted); font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<!-- KWIZERANA_ARCHIVE_NAV_START -->
+<div style="position:sticky;top:0;z-index:9999;background:#060810;border-bottom:1px solid rgba(122,150,187,.28);font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:1120px;margin:0 auto;padding:10px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;color:#9EB8D4;font-size:13px;">
+    <a href="../../" style="color:#E8F0FF;text-decoration:none;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Kwizerana Intelligence</a>
+    <span style="display:flex;gap:12px;align-items:center;">
+      <a href="../../" style="color:#00D4AA;text-decoration:none;font-weight:700;">Latest</a>
+      <a href="../../archive/" style="color:#9EB8D4;text-decoration:none;">Archive</a>
+    </span>
+  </div>
+</div>
+<!-- KWIZERANA_ARCHIVE_NAV_END -->
+
+<header class="brand">
+  <div class="brand-left">
+    <img class="brand-logo" src="../../brand/KWIZERANA_LOGO_TRANSPARENT.png" alt="KWIZERANA FINANCE" />
+    <div>
+      <h1>KWIZERANA INTELLIGENCE</h1>
+      <div class="sub">Daily Crypto · DeFi · VC Brief</div>
+    </div>
+  </div>
+  <div class="brand-right">
+    <div class="stamp">MON · JUNE 8, 2026 · 8:00 AM</div>
+    <div class="tag">preservation · privacy · community · media · compounding</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- BREAKING -->
+  <div class="breaking">
+    <div class="breaking-title">Breaking · last 24h</div>
+    <ul>
+      <li><strong>Fear &amp; Greed collapses to 12 · "Extreme Fear"</strong> — Sentiment fell from 52 to 12 in a week as BTC broke below $70K then bottomed near $61K; ~$110B in total crypto cap erased in a single 24h window.</li>
+      <li><strong>BTC ETF outflow streak hits 13 days · $4.4B drained</strong> — Longest run since launch (Jan 2024); BlackRock IBIT alone shed ~$3.3B, Fidelity FBTC -$456M. 2026 net flows now negative.</li>
+      <li><strong>US–Iran strikes trigger risk-off</strong> — Iran and Israel traded airstrikes Sunday evening; oil spiked and institutional money rotated out of risk assets fast, deepening the crypto selloff.</li>
+      <li><strong>Strategy (MSTR) discloses BTC sale</strong> — Saylor's first reported sale feeds the "anatomy of the June crash" narrative — Fed, Iran, Saylor, and ETF outflows named as the four triggers.</li>
+      <li><strong>Zcash patches critical Orchard counterfeiting bug</strong> — Emergency upgrade June 7 closed a soundness flaw (live since May 2022) that could mint counterfeit ZEC; ZEC crashed ~40% intraday. EU confirms ZEC not banned.</li>
+    </ul>
+  </div>
+
+  <!-- MARKET BAR -->
+  <div class="market-bar">
+    <div class="ticker">
+      <div class="name">BTC</div>
+      <div class="price">$63,050</div>
+      <div class="chg down">▼ -14% · 7d · low $61.5K Jun 4</div>
+    </div>
+    <div class="ticker">
+      <div class="name">ETH</div>
+      <div class="price">$1,610</div>
+      <div class="chg down">▼ collapsed toward $1.5K</div>
+    </div>
+    <div class="ticker">
+      <div class="name">AVAX</div>
+      <div class="price">$6.80</div>
+      <div class="chg down">▼ risk-off across L1s</div>
+    </div>
+    <div class="ticker">
+      <div class="name">Fear &amp; Greed</div>
+      <div class="price">12</div>
+      <div class="chg down">Extreme Fear · ▼ from 52 last wk</div>
+    </div>
+    <div class="ticker">
+      <div class="name">DeFi TVL</div>
+      <div class="price">~$69B</div>
+      <div class="chg down">▼ -55% from $150B high</div>
+    </div>
+    <div class="ticker">
+      <div class="name">Stablecoin Mcap</div>
+      <div class="price">$175B+</div>
+      <div class="chg neutral">▬ Ethereum mainnet aggregate</div>
+    </div>
+    <div class="ticker">
+      <div class="name">RWA Onchain</div>
+      <div class="price">$26.4B</div>
+      <div class="chg up">▲ ~5x in 3 years</div>
+    </div>
+    <div class="ticker">
+      <div class="name">BTC Hashrate</div>
+      <div class="price">&lt;1 ZH/s</div>
+      <div class="chg neutral">▬ Diff adj ≈ -9% Jun 13</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" data-topic="defi">1 · DeFi</button>
+    <button class="tab" data-topic="security">2 · Privacy &amp; Security</button>
+    <button class="tab" data-topic="mining">3 · Mining</button>
+    <button class="tab" data-topic="airdrops">4 · Airdrops</button>
+    <button class="tab" data-topic="rwa">5 · Stablecoins &amp; RWA</button>
+    <button class="tab" data-topic="markets">6 · Crypto &amp; US Stocks</button>
+    <button class="tab" data-topic="vc">7 · VC &amp; Capital Deals</button>
+  </div>
+
+  <!-- ============ 1 · DeFi ============ -->
+  <section class="panel active" data-topic="defi">
+    <h2 class="panel-title">1 · DeFi / Decentralized Finance</h2>
+    <p class="panel-sub">Protocol launches, DEX/AMM activity, lending rates, bridges, hacks, DAO governance, TVL moves.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Total DeFi TVL</div><div class="value">~$69B</div><div class="delta down">▼ -55% from $150B 2025 high</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">12-mo Hack Losses</div><div class="value">$16.5B+</div><div class="delta down">▼ Bridge exploits dominate</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hyperliquid Perps</div><div class="value">$180B/mo</div><div class="delta up">▲ Bright spot vs broad decline</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Aave Net Assets</div><div class="value">~$11B</div><div class="delta down">▼ from $43B Sep 2025 high</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h</div>
+        <div class="story">
+          <div class="headline">KelpDAO aftermath: $13B in TVL fled DeFi in 48h after $290M rsETH exploit — $8.4B left Aave</div>
+          <div class="meta">Jun/2026 · <a href="https://sherwood.news/crypto/kelpdao-290million-largest-defi-hack-2026/" target="_blank">Sherwood News</a></div>
+          <div class="summary">The $290M KelpDAO exploit remains DeFi's largest hack of 2026. More than $13B in TVL exited in the 48 hours after the drain, with $8.4B of that pulled from Aave alone as users de-risked across lending markets.</div>
+          <div class="why">Why it matters: A single exploit triggered system-wide contagion. The speed of the TVL exodus shows how reflexive DeFi liquidity has become in a fear regime — counterparty trust is the scarce resource right now.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Is this the end of DeFi? TVL down 57%, 12-mo hacks hit $16.5B</div>
+          <div class="meta">Jun/2026 · <a href="https://www.benzinga.com/crypto/26/06/53048094/is-this-the-end-of-defi-tvl-drops-57-and-crypto-hacks-hit-16-5-billion" target="_blank">Benzinga</a></div>
+          <div class="summary">DeFi TVL has retreated to roughly $69B from last year's $150B high — a ~55–57% drawdown — while cumulative hack losses over the trailing 12 months topped $16.5B. The drumbeat of exploits is the dominant driver of capital flight.</div>
+          <div class="why">Why it matters: The headline "is DeFi over" framing is now mainstream. For a privacy-first DAO, this is a buy-the-infrastructure-not-the-hype moment — survivors with real revenue will define the next cycle.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Hyperliquid handling $180B/mo in perps — but June 6 vesting unlock drives -12% weekly HYPE</div>
+          <div class="meta">Jun/2026 · <a href="https://coinmarketcap.com/cmc-ai/hyperliquid/latest-updates/" target="_blank">CoinMarketCap</a></div>
+          <div class="summary">Hyperliquid's perpetual futures venue now processes over $180B in monthly volume, cementing it as one of the most important platforms in onchain finance. A scheduled vesting release on June 6 lifted circulating supply and contributed to a 12% weekly HYPE drawdown.</div>
+          <div class="why">Why it matters: Hyperliquid is the cleanest counter-example to the "DeFi is dying" thesis — usage keeps compounding. The volume-vs-unlock tension remains the key scoreboard for whether the model self-sustains.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">40+ DeFi protocols shut down in 2026 amid a $770M hack crisis reshaping the sector</div>
+          <div class="meta">May–Jun/2026 · <a href="https://www.cryptotimes.io/2026/05/09/40-defi-protocols-shut-down-in-2026-inside-the-770m-hack-crisis-reshaping-crypto/" target="_blank">CryptoTimes</a></div>
+          <div class="summary">More than 40 DeFi protocols have shut down or begun wind-downs in 2026, with exploit losses reaching ~$770M through April. Kelp DAO ($293M) and Drift Protocol ($285M) alone accounted for nearly 88% of April's losses.</div>
+          <div class="why">Why it matters: Consolidation is brutal but clarifying — capital and users are concentrating into a handful of battle-tested protocols. The long tail of incentive-farmed TVL is being purged.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Aave becomes first DeFi protocol to cross $1T in cumulative lifetime loans</div>
+          <div class="meta">Jun/2026 · <a href="https://www.spotedcrypto.com/aave-1-trillion-defi-tvl-airdrop-staking-2026/" target="_blank">Spoted Crypto</a></div>
+          <div class="summary">Despite net assets falling to ~$11B from a $43B high, Aave crossed $1 trillion in cumulative loans originated — a milestone underlining that lending demand persists even as deposits shrink in the risk-off tape.</div>
+          <div class="why">Why it matters: Cumulative throughput, not snapshot TVL, is the durable measure of a credit protocol. Aave's milestone says onchain credit rails have real, recurring usage beneath the headline drawdown.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Falling liquidity threatens smaller protocols first as DeFi TVL stress spreads</div>
+          <div class="meta">Jun/2026 · <a href="https://cryptodaily.co.uk/2026/06/defi-tvl-stress-liquidity-small-protocols" target="_blank">CryptoDaily</a></div>
+          <div class="summary">Analysts warn that as aggregate liquidity drains, thinly capitalized protocols face the sharpest risk — wider slippage, weaker incentives, and reflexive deposit flight. Larger venues with sticky volume (Aave, Hyperliquid) absorb the marginal survivor flows.</div>
+          <div class="why">Why it matters: Liquidity concentration is becoming a moat. For integration decisions, depth and survivability now outrank headline APYs — the "highest yield" protocol is often the most fragile.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key DeFi trends · this week</h3>
+      <ul>
+        <li><strong>Hack-driven contagion is the dominant force</strong> — $16.5B in 12-mo losses · KelpDAO's $290M drain alone triggered a $13B TVL exodus and 40+ protocol shutdowns.</li>
+        <li><strong>Liquidity concentrating into survivors</strong> — Aave ($1T cumulative loans) and Hyperliquid ($180B/mo perps) absorbing flows while the long tail deflates.</li>
+        <li><strong>TVL is no longer the scoreboard</strong> — Cumulative throughput + monthly volume now separate real protocols from incentive-farmed shells in a -55% TVL tape.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>Hyperliquid HyperEVM + Season 2</strong> — Permissionless market creation and the near-untouched HyperEVM layer are the catalysts for whether HYPE re-rates through the unlock schedule.</li>
+        <li><strong>Aave deposit stabilization</strong> — Whether net assets find a floor above $11B is the cleanest gauge of when DeFi lending confidence returns post-KelpDAO.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 2 · Privacy & Security ============ -->
+  <section class="panel" data-topic="security">
+    <h2 class="panel-title">2 · Privacy &amp; Security</h2>
+    <p class="panel-sub">Wallet/protocol hacks, ZK tech, regulatory crackdowns, audits, onchain forensics.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ZEC · 24h</div><div class="value">▼ ~40%</div><div class="delta down">Orchard counterfeiting bug · patched Jun 7</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Privacy Sector Mcap</div><div class="value">$24B+</div><div class="delta down">▼ Sector-wide doubt post-ZEC</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">12-mo Hack Losses</div><div class="value">$16.5B+</div><div class="delta down">▼ Bridge + sig exploits lead</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Quantum-Recoverable Wallets</div><div class="value">Rollout</div><div class="delta neutral">▬ Initial deployment Jun 2026</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h</div>
+        <div class="story">
+          <div class="headline">Zcash patches critical Orchard counterfeiting vulnerability — live since May 2022</div>
+          <div class="meta">Jun 7/2026 · <a href="https://finance.yahoo.com/markets/crypto/articles/zec-crashes-38-zcash-discloses-104159962.html" target="_blank">Yahoo Finance</a></div>
+          <div class="summary">Zcash disclosed and patched a critical bug in its Orchard shielded pool that could have allowed creation of counterfeit ZEC. The flaw was present from Orchard's activation in May 2022 until the emergency network upgrade; due to privacy properties, there is no definitive way to confirm whether it was ever exploited. ZEC fell ~40% on the news.</div>
+          <div class="why">Why it matters: The bug hits the most sensitive surface in privacy-coin design — proof soundness in the shielded pool. The undetectability of any exploitation is itself the headline risk; institutional/ETF narratives stall pending re-audit.</div>
+        </div>
+        <div class="story">
+          <div class="headline">EU confirms Zcash is not banned — but exchanges face compliance rules</div>
+          <div class="meta">Jun 6/2026 · <a href="https://coinmarketcap.com/cmc-ai/zcash/latest-updates/" target="_blank">CoinMarketCap</a></div>
+          <div class="summary">Amid the technical crisis, EU officials clarified on June 6 that Zcash is not banned in the bloc, though exchanges listing it face compliance obligations. The clarification offered some relief against fears of a privacy-coin delisting cascade.</div>
+          <div class="why">Why it matters: Regulatory tone toward privacy assets in the EU is "regulate, don't prohibit" — a meaningfully better outcome than outright bans for the long-term privacy thesis KWIZERANA is built on.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Monero and Dash fall in sympathy as doubt spreads across the privacy sector</div>
+          <div class="meta">Jun/2026 · <a href="https://www.tradingkey.com/analysis/cryptocurrencies/more/261949174-crypto-privacy-zcash-zec-xmr-dash-crash-tradingkey" target="_blank">TradingKey</a></div>
+          <div class="summary">The ZEC vulnerability dragged the broader privacy cohort lower, with Monero (XMR) and Dash (DASH) selling off as markets began questioning the entire privacy-coin sector's audit assurances.</div>
+          <div class="why">Why it matters: Correlation risk inside the privacy basket is high — a flaw in one major shielded design re-prices confidence across all of them. Diversification within privacy is not the hedge it appears to be.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">Quantum-recoverable wallets begin initial rollout with future-threat recovery pathways</div>
+          <div class="meta">Jun/2026 · <a href="https://airdropalert.com/blogs/privacy-coins-2026-and-quantum-resistant-crypto/" target="_blank">Airdrop Alert</a></div>
+          <div class="summary">Quantum-recoverable wallet designs began an initial rollout in June 2026, introducing recovery pathways intended to protect holdings against future quantum-computing threats to current signature schemes.</div>
+          <div class="why">Why it matters: Quantum resistance is moving from research talking point to shipped product. Early standards will shape which wallet stacks are considered "future-proof" by institutions over the next cycle.</div>
+        </div>
+        <div class="story">
+          <div class="headline">ZK technology matures into production-ready privacy infrastructure</div>
+          <div class="meta">Jun/2026 · <a href="https://www.vaasblock.com/news/crypto-privacy-zcash-aleo-aztec-zk-renaissance-2026/" target="_blank">VaaSBlock</a></div>
+          <div class="summary">Zero-knowledge proof systems have matured into production-grade infrastructure supporting a new generation of privacy products — Zcash, Aleo, and Aztec among them — that are markedly more usable than predecessors. Privacy-asset sector cap surpassed $24B earlier in 2026.</div>
+          <div class="why">Why it matters: The "privacy renaissance" thesis is intact at the infrastructure layer even as ZEC's bug bruises sentiment. Usable ZK is the precondition for compliant, private onchain finance.</div>
+        </div>
+        <div class="story">
+          <div class="headline">AI-driven attacks expand the wallet threat surface in 2026</div>
+          <div class="meta">Jun/2026 · <a href="https://www.kucoin.com/blog/protect-crypto-from-ai-hackers-2026-guide" target="_blank">KuCoin</a></div>
+          <div class="summary">As LLM-driven assistants and routing layers embed into wallet UX, AI-powered attackers are probing the new gateway dependencies — phishing, prompt injection, and automated exploit discovery — beyond pure smart-contract risk.</div>
+          <div class="why">Why it matters: The security perimeter now includes AI-gateway components. Audit scope for any KWIZERANA tooling that touches LLM routing must expand to cover that surface.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key Privacy &amp; Security trends · this week</h3>
+      <ul>
+        <li><strong>Proof-soundness risk goes mainstream</strong> — ZEC's Orchard bug (live since 2022, undetectable if exploited) re-prices confidence across every shielded-pool design.</li>
+        <li><strong>"Regulate, don't ban" in the EU</strong> — Zcash confirmed not banned but compliance-bound · a constructive regulatory tone for the privacy thesis.</li>
+        <li><strong>Quantum + AI threats move from theory to product</strong> — Quantum-recoverable wallets shipping · AI-gateway dependencies now part of the audit perimeter.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>Zcash independent re-audit</strong> — A clean third-party re-audit of the patched Orchard circuit is the gate for ZEC recovery and any institutional/ETF narrative restart.</li>
+        <li><strong>Aleo &amp; Aztec production usage</strong> — Real app deployment on usable ZK rails is the leading signal of whether the "privacy renaissance" survives the ZEC shock.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 3 · Mining ============ -->
+  <section class="panel" data-topic="mining">
+    <h2 class="panel-title">3 · Mining</h2>
+    <p class="panel-sub">BTC hashrate &amp; difficulty, hardware, mining pools, post-halving profitability, AI pivots.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Network Hashrate</div><div class="value">&lt;1 ZH/s</div><div class="delta down">▼ -8–9% from 2026 highs</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Next Difficulty Adj</div><div class="value">≈ -9%</div><div class="delta neutral">▬ Est. ~Jun 13 · 139T → ~126T</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Miner BTC Sold (Q1)</div><div class="value">32,000+</div><div class="delta down">▼ Funding AI data-center buildouts</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Margin Backdrop</div><div class="value">Tight</div><div class="delta down">▼ BTC slide compresses economics</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h</div>
+        <div class="story">
+          <div class="headline">Bitcoin difficulty set to drop ~9% around June 13 as miners pivot to AI</div>
+          <div class="meta">Jun/2026 · <a href="https://www.dextools.io/news/bitcoin-mining-difficulty-drop-hashrate-miners-ai-june-2026" target="_blank">DEXTools News</a></div>
+          <div class="summary">Mining difficulty is projected to fall roughly 9% around June 13, from ~138.96T to ~125.94T — extending the softer 2026 trend after record 2025 highs. The driver is capacity being redirected toward AI and HPC workloads as mining margins compress.</div>
+          <div class="why">Why it matters: A 9% downward adjustment eases costs for miners that stay 100% on BTC — a relief valve in a falling-price tape. It also confirms hashrate is leaving the network for higher-margin compute.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Public miners sold 32,000+ BTC in Q1 to fund AI data-center buildouts</div>
+          <div class="meta">Q1–Jun/2026 · <a href="https://millionminer.com/news/bitcoin-mining-difficulty-drop-ai-pivot" target="_blank">MillionMiner</a></div>
+          <div class="summary">Marathon, Riot, CleanSpark, Bitdeer, and Core Scientific collectively sold more than 32,000 BTC in Q1 2026 to finance AI/HPC data-center construction. Miners control two things AI needs badly — large blocks of power and sites built for heavy compute.</div>
+          <div class="why">Why it matters: The AI pivot is now the defining structural story for listed miners. Treasury BTC sales add persistent supply pressure exactly as ETF flows turn negative — a double hit to spot.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Bitcoin records second-largest difficulty drop of 2026 as hashrate stays below 1 ZH/s</div>
+          <div class="meta">Jun/2026 · <a href="https://cryptopotato.com/bitcoin-records-second-largest-difficulty-drop-of-2026-as-hash-rate-remains-below-1-zh-s/" target="_blank">CryptoPotato</a></div>
+          <div class="summary">An earlier 2.3% difficulty reduction marked the second-largest drop of 2026, with network hashrate holding below the 1 ZH/s threshold. Hash rate and difficulty are now down 8–9% from 2026 highs.</div>
+          <div class="why">Why it matters: Two downward adjustments in quick succession is a regime change after a year of relentless difficulty growth — the clearest data signal that miner economics have flipped from expansion to triage.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">Margin compression accelerates the AI/HPC diversification thesis</div>
+          <div class="meta">Jun/2026 · <a href="https://askfuzz.ai/discover/news/cryptocurrencies/bitcoin-hash-rate-drops-4-as-miners-pivot-to-ai-infrastructure" target="_blank">AskFuzz</a></div>
+          <div class="summary">With BTC sliding and margins tightening, a growing list of listed miners is shifting part of their energy and compute capacity to AI and HPC. Diverting capacity smooths the revenue swings tied to BTC price and difficulty.</div>
+          <div class="why">Why it matters: Miner equities are decoupling from pure BTC-beta toward an "AI infrastructure" multiple. The investable read on the sector now hinges on power-and-site optionality, not just hashprice.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Hashrate and difficulty down 8–9% from 2026 highs</div>
+          <div class="meta">Jun/2026 · <a href="https://www.facebook.com/CoinMarketCap/posts/latest-%EF%B8%8F-bitcoins-hash-rate-and-mining-difficulty-are-down-89-from-2026-highs-wi/1410569901100399/" target="_blank">CoinMarketCap</a></div>
+          <div class="summary">Bitcoin's hash rate and mining difficulty are both down 8–9% from their 2026 peaks, reflecting capacity exiting the network as operators reallocate to AI and ride out the price drawdown.</div>
+          <div class="why">Why it matters: A sustained hashrate decline is rare and signals genuine economic stress, not seasonal noise — historically a feature of capitulation phases that have preceded miner-supply exhaustion.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Operator playbook: who benefits from the difficulty drop</div>
+          <div class="meta">May–Jun/2026 · <a href="https://cryptorank.io/news/feed/3ef5a-bitcoin-mining-difficulty-drops-230" target="_blank">CryptoRank</a></div>
+          <div class="summary">Coverage frames the 2.3% difficulty drop as a "surprising shift" that favors efficient, low-cost operators who remain BTC-focused, while higher-cost rigs are the first to power down or be repurposed to compute.</div>
+          <div class="why">Why it matters: Difficulty drops are a stealth subsidy to the most efficient miners. Cost-per-TH discipline is the single variable separating survivors from forced sellers this quarter.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key Mining trends · this week</h3>
+      <ul>
+        <li><strong>Two difficulty drops in quick succession</strong> — A regime change after a year of relentless growth · ~-9% adjustment estimated for June 13.</li>
+        <li><strong>The AI pivot is structural, not opportunistic</strong> — 32,000+ BTC sold in Q1 to fund data centers · miner equities re-rating to an "AI infrastructure" multiple.</li>
+        <li><strong>Miner selling compounds spot weakness</strong> — Treasury BTC liquidation collides with negative ETF flows to deepen the supply overhang.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>June 13 difficulty adjustment</strong> — A confirmed ~9% drop would be among the largest of 2026 and mark the deepest hashrate retreat of the cycle.</li>
+        <li><strong>Miner AI/HPC contract disclosures</strong> — New data-center deals from Core Scientific, Bitdeer, and peers are the catalyst for the sector's decoupling from BTC beta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 4 · Airdrops ============ -->
+  <section class="panel" data-topic="airdrops">
+    <h2 class="panel-title">4 · Liquidity &amp; Airdrops</h2>
+    <p class="panel-sub">Airdrop campaigns, farming/point systems, protocol incentives, TGEs, IDOs.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hyperliquid S2 Pool</div><div class="value">38.888%</div><div class="delta up">▲ Larger pool · HyperEVM untouched</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Backpack Community</div><div class="value">25%</div><div class="delta up">▲ 24% to points holders · TGE plan live</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">MetaMask MAU</div><div class="value">30M+</div><div class="delta up">▲ MASK token "sooner than expected"</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">XDAO Catalyst</div><div class="value">Jun 10</div><div class="delta neutral">▬ Listing/TGE date in focus</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h</div>
+        <div class="story">
+          <div class="headline">Hyperliquid Season 2 live — 38.888% supply pool and untouched HyperEVM layer</div>
+          <div class="meta">Jun/2026 · <a href="https://passiveyieldlab.com/blog/hyperliquid-season-2-airdrop-guide-2026/" target="_blank">Passive Yield Lab</a></div>
+          <div class="summary">Hyperliquid's Season 2 is live with a larger 38.888% supply pool and the near-untouched HyperEVM layer in scope. The team has not confirmed a snapshot date or final parameters — the ambiguity window before the deadline is where the biggest rewards historically accrue. Points convert 1:1 into HYPE.</div>
+          <div class="why">Why it matters: The largest active points campaign in DeFi, on the one protocol still growing usage in a fear tape. Consistent perps activity + early HyperEVM usage is the highest-EV farm right now.</div>
+        </div>
+        <div class="story">
+          <div class="headline">MetaMask MASK token confirmed coming "sooner than you would expect"</div>
+          <div class="meta">Jun/2026 · <a href="https://www.coingecko.com/learn/new-crypto-airdrop-rewards" target="_blank">CoinGecko</a></div>
+          <div class="summary">ConsenSys CEO Joseph Lubin reiterated the MASK token is arriving sooner than the market expects. With 30M+ monthly active users, a MetaMask airdrop could become one of the largest distributions in crypto history.</div>
+          <div class="why">Why it matters: MASK is the highest-reach airdrop on the board. Wallet-level activity (swaps, bridges, staking via MetaMask) is the likely eligibility surface — worth routing routine onchain actions through it now.</div>
+        </div>
+        <div class="story">
+          <div class="headline">XDAO listing/TGE watch — June 10 in focus</div>
+          <div class="meta">Jun/2026 · <a href="https://www.coingabbar.com/en/crypto-currency-news/xdao-listing-date-tge-airdrop-update-roadmap-june-2026-news" target="_blank">CoinGabbar</a></div>
+          <div class="summary">June 10 is flagged as a key date for XDAO's listing and TGE, with Q4 2026 remaining the likely broader listing window. Community buzz is building into the date.</div>
+          <div class="why">Why it matters: A near-term, datable catalyst in an otherwise snapshot-ambiguous airdrop calendar — useful for timing claim/sell decisions rather than open-ended farming.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">Backpack TGE plan: 25% to community, 24% to points holders, 1% to Mad Lads</div>
+          <div class="meta">Jun/2026 · <a href="https://www.coingecko.com/learn/new-crypto-airdrop-rewards" target="_blank">CoinGecko</a></div>
+          <div class="summary">Backpack's airdrop is considered highly likely after the team published its TGE plan, allocating 25% of supply to the community — 24% to points holders and 1% to Mad Lads holders. Points are tallied weekly on Fridays based on spot and perpetual trading volume.</div>
+          <div class="why">Why it matters: A transparent, volume-based points formula rewards consistency over one-off size. The weekly Friday cadence makes Backpack a steady, plannable farm rather than a snapshot gamble.</div>
+        </div>
+        <div class="story">
+          <div class="headline">2026 airdrop meta rewards consistency, not the fastest clickers</div>
+          <div class="meta">Jun/2026 · <a href="https://www.dlnews.com/articles/defi/how-crypto-airdrops-will-change-in-2026/" target="_blank">DL News</a></div>
+          <div class="summary">The dominant strategy guidance for 2026: farm 2–3 protocols consistently, track snapshot dates, and let genuine on-chain activity compound. Sybil defenses and behavioral scoring increasingly penalize spray-and-pray farming.</div>
+          <div class="why">Why it matters: The farming game has shifted from breadth to depth. A focused KWIZERANA approach — a few high-conviction protocols, real usage — beats scattering wallets across dozens of low-quality campaigns.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Airdrop Alpha: Re Protocol announces TGE, Apyx launches Season 2</div>
+          <div class="meta">Jun/2026 · <a href="https://news.todayindefi.com/p/airdrop-alpha-re-protocol-announced" target="_blank">Today in DeFi</a></div>
+          <div class="summary">The week's pipeline added Re Protocol's TGE announcement and Apyx's Season 2 plus TGE, alongside continued buzz around TonXDAO. The new-issuance calendar remains active despite the risk-off market.</div>
+          <div class="why">Why it matters: TGEs are still shipping into a fear tape — a sign teams are choosing to launch into low sentiment to set conservative valuations. Entry pricing on these can be attractive for patient holders.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key Airdrop trends · this week</h3>
+      <ul>
+        <li><strong>Hyperliquid S2 is the marquee farm</strong> — 38.888% pool · HyperEVM untouched · undefined snapshot = peak reward window for early, consistent activity.</li>
+        <li><strong>Mega-wallet airdrops loom</strong> — MetaMask MASK (30M+ MAU) and Backpack (25% community) could be among the largest distributions in crypto history.</li>
+        <li><strong>Consistency &gt; clicks</strong> — Sybil defenses reward depth · 2–3 protocols farmed genuinely beats dozens of throwaway wallets.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>Hyperliquid S2 snapshot announcement</strong> — The date reveal is the single biggest farming catalyst on the calendar; activity before it is the highest-EV window.</li>
+        <li><strong>MetaMask MASK timing</strong> — Any concrete date from ConsenSys would trigger a wallet-activity rush given the 30M+ MAU eligibility base.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 5 · Stablecoins & RWA ============ -->
+  <section class="panel" data-topic="rwa">
+    <h2 class="panel-title">5 · Stablecoins &amp; RWA</h2>
+    <p class="panel-sub">Stablecoin flows/depegs, RWA tokenization, regulatory status, yield-bearing stables, institutional adoption.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">RWA Onchain Value</div><div class="value">$26.4B</div><div class="delta up">▲ ~5x in 3 years</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Tokenized Treasuries</div><div class="value">$12.88B</div><div class="delta up">▲ from ~$5B late 2024</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Stablecoin Mcap (ETH)</div><div class="value">$175B+</div><div class="delta up">▲ Primary RWA settlement rail</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">RWA Categories &gt;$1B</div><div class="value">6</div><div class="delta up">▲ Credit, commodities, treasuries…</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h / recent</div>
+        <div class="story">
+          <div class="headline">BlackRock files two new tokenization vehicles — RWA boom goes fully institutional</div>
+          <div class="meta">May–Jun/2026 · <a href="https://www.cryptotimes.io/2026/05/23/blackrock-tokenized-treasury-filings-2026-the-rwa-boom-goes-institutional/" target="_blank">CryptoTimes</a></div>
+          <div class="summary">BlackRock filed for a Daily Reinvestment Stablecoin Reserve Vehicle (a tokenized fund holding cash and short-term Treasuries) and an on-chain share class for its Select Treasury Based Liquidity Fund (BSTBL), a money-market-style fund managing nearly $7B.</div>
+          <div class="why">Why it matters: The largest asset manager in the world is hard-wiring tokenized Treasuries and stablecoin-reserve mechanics into its core MMF stack. This is the institutional on-ramp the RWA thesis needed.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Tokenized U.S. Treasuries hit ~$12.88B, up from ~$5B in late 2024</div>
+          <div class="meta">Apr–Jun/2026 · <a href="https://app.rwa.xyz/treasuries" target="_blank">RWA.xyz</a></div>
+          <div class="summary">On-chain tokenized Treasuries reached roughly $12.88B, more than doubling from ~$5B in late 2024. They remain the anchor category of the RWA market, providing a regulated, yield-bearing base asset for onchain portfolios.</div>
+          <div class="why">Why it matters: In a risk-off crypto tape, tokenized T-bills are the de-facto onchain safe-haven yield. RWA's growth is counter-cyclical to DeFi's TVL collapse — capital is rotating to quality, not leaving the chain.</div>
+        </div>
+        <div class="story">
+          <div class="headline">RWA market moves decisively beyond Treasuries — six categories now exceed $1B each</div>
+          <div class="meta">Jun/2026 · <a href="https://metamask.io/news/types-of-tokenized-real-world-assets-rwa-categories" target="_blank">MetaMask</a></div>
+          <div class="summary">Private credit, commodities, U.S. Treasuries, corporate bonds, non-U.S. government debt, and institutional alternative funds have each surpassed $1B in tokenized value. Private credit, real estate, commodities, and infrastructure are the fastest-growing segments.</div>
+          <div class="why">Why it matters: RWA is diversifying past the Treasury trade into genuine capital-markets breadth. Private credit on-chain dovetails directly with the DeFi credit narrative (Maple, Morpho) — the two themes are converging.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">GENIUS Act in force, Clarity Act anticipated — the U.S. stablecoin/RWA framework firms up</div>
+          <div class="meta">Jun/2026 · <a href="https://a16zcrypto.com/posts/article/trends-stablecoins-rwa-tokenization-payments-finance/" target="_blank">a16z crypto</a></div>
+          <div class="summary">The GENIUS Act (2025) established the first U.S. federal framework for stablecoins; the anticipated Clarity Act in 2026 is expected to remove further barriers by defining SEC/CFTC jurisdiction. Regulatory clarity is the tailwind underpinning institutional RWA entry.</div>
+          <div class="why">Why it matters: Clear rules are why BlackRock and peers can file now. A favorable Clarity Act outcome would unlock the next leg of institutional tokenization — the single biggest structural catalyst for the sector.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Ethereum leads RWA market-cap growth across all sectors over three years</div>
+          <div class="meta">Jun/2026 · <a href="https://www.bitget.com/news/detail/12560605445165" target="_blank">Bitget News</a></div>
+          <div class="summary">Ethereum has led RWA market-cap growth across every sector over the past three years, with the tokenized RWA market growing nearly fivefold to ~$26.4B in on-chain value. Stablecoins (>$175B on Ethereum mainnet) remain the primary settlement layer.</div>
+          <div class="why">Why it matters: RWA value is consolidating on Ethereum as the institutional settlement venue. For multi-chain strategy, ETH remains the default rail where regulated tokenized assets actually live.</div>
+        </div>
+        <div class="story">
+          <div class="headline">No major depeg events — narrative stays focused on adoption, not stress</div>
+          <div class="meta">Jun/2026 · <a href="https://app.rwa.xyz/" target="_blank">RWA.xyz</a></div>
+          <div class="summary">Despite the broad crypto selloff, there were no major stablecoin depeg events this week. Stablecoins held their pegs and continued to serve as the primary on-ramp and settlement mechanism for RWA transactions — a notable stability contrast to volatile spot markets.</div>
+          <div class="why">Why it matters: Stablecoin resilience through a fear-regime selloff is exactly the durability test the GENIUS Act framework was meant to ensure. Pegs holding under stress strengthens the institutional adoption case.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key Stablecoin &amp; RWA trends · this week</h3>
+      <ul>
+        <li><strong>RWA is counter-cyclical to DeFi's collapse</strong> — Tokenized Treasuries at $12.88B and total RWA at $26.4B grow while DeFi TVL drops 55% · capital rotates to onchain quality.</li>
+        <li><strong>BlackRock hard-wires tokenization into core MMFs</strong> — Two new filings bring stablecoin-reserve + on-chain Treasury share classes to a ~$7B fund.</li>
+        <li><strong>Regulatory clarity is the catalyst</strong> — GENIUS Act in force · Clarity Act anticipated to define SEC/CFTC lines and unlock the next institutional leg.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>Clarity Act progression</strong> — Senate movement defining SEC/CFTC jurisdiction is the single biggest structural unlock for tokenized assets in 2026.</li>
+        <li><strong>BlackRock BSTBL on-chain launch</strong> — Live trading of an on-chain share class on a $7B MMF would be the clearest proof that institutional RWA has moved from filing to product.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 6 · Crypto & US Stocks ============ -->
+  <section class="panel" data-topic="markets">
+    <h2 class="panel-title">6 · Crypto &amp; US Stocks</h2>
+    <p class="panel-sub">BTC/ETH price action, macro triggers, US regulation (SEC/CFTC), ETF flows, treasury moves, Fed policy.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC ETF Outflows</div><div class="value">$4.4B</div><div class="delta down">▼ 13-day record streak</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">IBIT Outflow</div><div class="value">-$3.3B</div><div class="delta down">▼ FBTC -$456M</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC Since May 14</div><div class="value">-22%</div><div class="delta down">▼ Low ~$61,559 Jun 4</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Next FOMC</div><div class="value">Jun 16–17</div><div class="delta neutral">▬ Dot plot · easing-defer risk</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h</div>
+        <div class="story">
+          <div class="headline">Record $3.4B weekly ETF outflow — biggest since spot products launched in Jan 2024</div>
+          <div class="meta">Jun/2026 · <a href="https://www.techtimes.com/articles/317833/20260605/bitcoin-etf-outflows-hit-44b-across-record-streak-fidelity-fbtc-among-funds-tested-nfp-looms.htm" target="_blank">TechTimes</a></div>
+          <div class="summary">U.S. spot Bitcoin ETFs bled a historic $3.4B in a single week in early June — the largest weekly exodus on record — capping a 13-day, $4.4B outflow streak. IBIT shed ~$3.3B, FBTC -$456M. The run ended a six-week stretch of positive inflows.</div>
+          <div class="why">Why it matters: ETF flows have been the marginal price-setter this cycle. A record outflow week flips the structural bid to a structural offer — the single most important driver of the June drawdown.</div>
+        </div>
+        <div class="story">
+          <div class="headline">US–Iran strikes trigger broad risk-off; oil spikes</div>
+          <div class="meta">Jun/2026 · <a href="https://www.bitget.com/news/detail/12560605448772" target="_blank">Bitget News</a></div>
+          <div class="summary">Iran and Israel traded airstrikes Sunday evening; oil prices spiked and institutional money moved out of risk assets quickly. The "anatomy of the June crash" is framed as four triggers: a hawkish Fed, US–Iran strikes, Saylor's BTC sale, and record ETF outflows.</div>
+          <div class="why">Why it matters: Geopolitics added an exogenous shock on top of an already fragile flow picture. Crypto traded as a high-beta risk asset — not a safe haven — exactly when a hedge was needed.</div>
+        </div>
+        <div class="story">
+          <div class="headline">BTC recovers to ~$63K but remains frail amid outflows and Iran tensions</div>
+          <div class="meta">Jun/2026 · <a href="https://www.investing.com/news/cryptocurrency-news/bitcoin-recovers-to-63k-but-remains-frail-amid-etf-outflows-iran-tensions-4729814" target="_blank">Investing.com</a></div>
+          <div class="summary">After touching ~$61,559 on June 4, Bitcoin clawed back to roughly $63K (+1.5% on the day) but sentiment stays fragile. ETH collapsed toward $1,500–$1,600 in the move; ~$250B was wiped from total crypto cap at the lows with $1B+ in leveraged liquidations.</div>
+          <div class="why">Why it matters: The bounce is a relief, not a reversal. With Fear &amp; Greed at 12 and ETF flows negative, rallies are sells-into-strength until the flow picture turns.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">FOMC June 16–17 looms — easing-deferral signal would be a further headwind</div>
+          <div class="meta">Jun/2026 · <a href="https://www.ig.com/en-ch/news-and-trade-ideas/bitcoin-sell-off-deepens-260603" target="_blank">IG</a></div>
+          <div class="summary">The Fed meets June 16–17 with updated projections and a fresh dot plot. Rising Treasury yields and shifting rate expectations gave investors a reason to lock in profits; any signal the easing cycle is being deferred would constitute an additional headwind for risk assets.</div>
+          <div class="why">Why it matters: The macro calendar now dominates crypto's tape. The dot plot is the next binary catalyst — a hawkish surprise extends the drawdown, a dovish tilt is the most likely bounce trigger.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Crypto decouples from equities — S&amp;P 500 posts nine straight weekly gains</div>
+          <div class="meta">Jun/2026 · <a href="https://www.ig.com/en/news-and-trade-ideas/bitcoin-outlook-2026--etf-outflows--institutional-demand-and-geo-260527" target="_blank">IG International</a></div>
+          <div class="summary">While crypto sold off hard, major US equity indices held up — the S&amp;P 500 logged nine consecutive weeks of gains. The selloff was concentrated in digital assets rather than broad risk, pointing to crypto-specific flow dynamics over a macro-wide deleveraging.</div>
+          <div class="why">Why it matters: The decoupling is diagnostic — this is a crypto-flows story (ETF + miner selling), not a global risk-off. It implies a flow reversal, not an equity recovery, is what crypto needs to bottom.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Clarity Act advances — SEC/CFTC jurisdictional boundary in the Senate</div>
+          <div class="meta">Jun/2026 · <a href="https://blog.amberdata.io/institutional-crypto-flows-2026-market-analysis" target="_blank">Amberdata</a></div>
+          <div class="summary">The Digital Asset Market Clarity Act — defining the jurisdictional split between the SEC and CFTC over digital assets — continues its Senate passage. A positive outcome would remove a longstanding regulatory overhang.</div>
+          <div class="why">Why it matters: Regulatory clarity is the one durable bull catalyst independent of macro. Passage would re-rate the entire US-listed crypto complex and unlock sidelined institutional allocation.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key Market trends · this week</h3>
+      <ul>
+        <li><strong>ETF flows flipped from bid to offer</strong> — Record $3.4B weekly outflow inside a 13-day, $4.4B streak is the primary driver of the June drawdown.</li>
+        <li><strong>Crypto-specific selloff, not macro-wide</strong> — S&amp;P 500's nine-week win streak vs crypto's -22% confirms a flows story, not global risk-off.</li>
+        <li><strong>Macro &amp; regulatory binaries ahead</strong> — June 16–17 FOMC dot plot and the Clarity Act's Senate path are the next two catalysts that matter.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>June 16–17 FOMC &amp; dot plot</strong> — The single biggest near-term catalyst; a dovish tilt is the most plausible bounce trigger, a hawkish one extends the drawdown.</li>
+        <li><strong>ETF flow inflection</strong> — The first multi-day return to net inflows is the cleanest signal the structural offer has cleared and a durable low is forming.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 7 · VC & Capital Deals ============ -->
+  <section class="panel" data-topic="vc">
+    <h2 class="panel-title">7 · VC &amp; Capital Deals</h2>
+    <p class="panel-sub">Funding rounds, lead investors, valuations, acquisitions, accelerator cohorts, exits.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">May Crypto Deals</div><div class="value">~50</div><div class="delta down">▼ Lowest count since pre-2021</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avg Ticket Size</div><div class="value">▲ Rising</div><div class="delta up">▲ Capital high, deal count low</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">SignalPlus Series B1</div><div class="value">$50M</div><div class="delta up">▲ $500M val · led HashKey</div></div>
+      <div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Funded Verticals</div><div class="value">Infra</div><div class="delta neutral">▬ Derivatives · stablecoin-fintech</div></div>
+    </div>
+
+    <div class="story-grid">
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 24h / recent</div>
+        <div class="story">
+          <div class="headline">SignalPlus raises $50M Series B1 at $500M valuation — led by HashKey Capital</div>
+          <div class="meta">Jun/2026 · <a href="https://cointelegraph.com/news/crypto-vc-roundup-institutional-funding-onchain-credit-2026" target="_blank">Cointelegraph</a></div>
+          <div class="summary">Hong Kong-based SignalPlus raised $50M in a Series B1 at a $500M post-money valuation, led by HashKey Capital with BlockBooster and AppWorks participating. The options/derivatives infrastructure firm handled a record $160B in Q4 2025 volumes, including ~$70B in block-RFQ on Deribit.</div>
+          <div class="why">Why it matters: Derivatives infrastructure is one of the few categories still attracting large checks. The deal confirms capital is concentrating in plumbing that scales with institutional trading volume, not consumer apps.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Supabase raises $500M Series F at $10.5B — adjacent infra megaround led by GIC</div>
+          <div class="meta">Jun 4/2026 · <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/" target="_blank">Crunchbase News</a></div>
+          <div class="summary">Developer-infrastructure firm Supabase closed a $500M Series F at a $10.5B post-money valuation, led by GIC. It headlined a week of enterprise-software and infrastructure megarounds, underscoring where late-stage capital is flowing.</div>
+          <div class="why">Why it matters: The backend/dev-infra layer crypto builds on is being lavishly funded even as crypto-native consumer deals dry up. Tooling and rails are the durable late-cycle bet across both worlds.</div>
+        </div>
+        <div class="story">
+          <div class="headline">AlphaSense closes $350M at $7.5B; Coralogix raises $200M at $1.6B</div>
+          <div class="meta">Jun 3/2026 · <a href="https://techstartups.com/2026/06/02/venture-capital-startup-funding-roundup-june-2-2026/" target="_blank">Tech Startups</a></div>
+          <div class="summary">AlphaSense (AI market-intelligence) raised $350M at a $7.5B valuation, led by Vitruvian, Accenture Ventures, and J.P. Morgan Asset Management. Observability firm Coralogix raised $200M at $1.6B, co-led by Advent, CPP Investments, and Greenfield.</div>
+          <div class="why">Why it matters: AI-adjacent data and observability plays are magnets for capital. The overlap with crypto's own AI/infra pivot (miners → AI, AI-gateway security) shows where cross-sector investor conviction sits.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+        <div class="card-title">Last 7 days</div>
+        <div class="story">
+          <div class="headline">Crypto venture deal count falls to a five-year low — but capital stays high</div>
+          <div class="meta">Jun/2026 · <a href="https://yellow.com/research/crypto-startup-funding-five-year-low" target="_blank">Yellow.com</a></div>
+          <div class="summary">Monthly crypto venture deal count fell to roughly 50 in May — a level unseen since before 2021 — even as total capital raised stayed high. The implication: average ticket sizes have ballooned as investors concentrate into fewer, larger bets.</div>
+          <div class="why">Why it matters: The barbell market is real — fewer deals, bigger checks. For an emerging DAO, the fundraising bar is higher: extraordinary metrics or a category-leadership story are now table stakes.</div>
+        </div>
+        <div class="story">
+          <div class="headline">Infrastructure, AI-adjacent, and stablecoin-fintech capture the lion's share of 2026 capital</div>
+          <div class="meta">Jun/2026 · <a href="https://www.vaasblock.com/news/crypto-venture-capital-funding-cycle-infrastructure-2026/" target="_blank">VaaSBlock</a></div>
+          <div class="summary">2026 allocation is concentrated in infrastructure, AI-adjacent protocols, and stablecoin-adjacent fintech, while consumer and gaming verticals have been "nearly shut out." Funding has repriced crypto from speculative apps toward foundational rails.</div>
+          <div class="why">Why it matters: The investable-narrative set is structurally defined for 2H 2026. Anything outside infra/derivatives/stablecoin-fintech needs exceptional traction to clear the bar — a clear signal for product and partnership positioning.</div>
+        </div>
+        <div class="story">
+          <div class="headline">VC roundup: funding rebounds as institutions test onchain credit and finance</div>
+          <div class="meta">Jun/2026 · <a href="https://www.tradingview.com/news/cointelegraph:507c2fa35094b:0-vc-roundup-crypto-funding-rebounds-as-institutions-test-onchain-finance/" target="_blank">TradingView / Cointelegraph</a></div>
+          <div class="summary">Despite the low deal count, the week's VC roundup highlighted institutional money testing onchain credit and finance via IPO activity, venture rounds, and on-chain credit deals — the same credit/RWA convergence visible in the DeFi data.</div>
+          <div class="why">Why it matters: Institutional capital is entering through the credit/RWA door, not speculation. It corroborates the cross-panel theme: onchain credit is where smart money is allocating across DeFi, RWA, and VC simultaneously.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Key VC trends · this week</h3>
+      <ul>
+        <li><strong>Barbell market: fewer deals, bigger checks</strong> — ~50 crypto deals in May (5-yr low) but high total capital · average ticket sizes ballooning into category leaders.</li>
+        <li><strong>Three verticals dominate</strong> — Infrastructure, derivatives, and stablecoin/AI-adjacent fintech win · consumer and gaming nearly shut out.</li>
+        <li><strong>Institutions enter via onchain credit</strong> — VC, DeFi, and RWA data all point to credit as the convergent allocation theme of 2026.</li>
+      </ul>
+    </div>
+
+    <div class="watch-card">
+      <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+      <h3>Ones to watch</h3>
+      <ul>
+        <li><strong>SignalPlus / derivatives-infra follow-ons</strong> — More large checks into options/perps plumbing would confirm derivatives infrastructure as the cycle's funding leader.</li>
+        <li><strong>Onchain-credit rounds</strong> — New institutional credit/RWA raises are the cleanest read on where smart money allocates as the speculative app market stays frozen.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    KWIZERANA INTELLIGENCE · Daily Crypto, DeFi &amp; VC Brief · Mon, June 8, 2026 · auto-built 8:00 AM<br/>
+    preservation of wealth · true privacy · organic community · media · compounding DAO
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const topic = tab.getAttribute('data-topic');
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector('.panel[data-topic="' + topic + '"]').classList.add('active');
+      window.scrollTo({ top: document.querySelector('.tabs').offsetTop - 20, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>

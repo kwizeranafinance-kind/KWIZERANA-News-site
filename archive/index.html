@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwizerana Intelligence Archive</title>
+<style>
+:root {
+  --bg: #060810;
+  --panel: #0c1120;
+  --line: #1a2340;
+  --text: #e8f0ff;
+  --muted: #7a96bb;
+  --cyan: #00d4aa;
+  --blue: #0066ff;
+  --gold: #f5c542;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(0, 212, 170, .13), transparent 28rem),
+    radial-gradient(circle at 90% 5%, rgba(0, 102, 255, .14), transparent 30rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav {
+  border-bottom: 1px solid rgba(122, 150, 187, .28);
+  background: rgba(6, 8, 16, .92);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-inner, main { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+.nav-inner { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
+.nav-links { display: flex; gap: 14px; align-items: center; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; }
+.nav-links a:first-child { color: var(--cyan); font-weight: 700; }
+.hero { padding: 72px 0 36px; }
+.eyebrow { color: var(--cyan); letter-spacing: .22em; text-transform: uppercase; font-size: 12px; font-weight: 800; }
+h1 { margin: 14px 0 12px; font-size: clamp(36px, 7vw, 74px); line-height: .95; letter-spacing: 0; max-width: 900px; }
+.dek { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 760px; }
+.archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; padding: 20px 0 72px; }
+.archive-item {
+  min-height: 180px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(12, 17, 32, .82);
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.archive-item:hover { border-color: rgba(0, 212, 170, .75); transform: translateY(-1px); }
+.date { color: var(--gold); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.archive-item strong { margin-top: 14px; font-size: 19px; line-height: 1.35; }
+.cta { margin-top: 18px; color: var(--cyan); font-size: 13px; font-weight: 800; }
+@media (max-width: 640px) {
+  .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+  .hero { padding-top: 44px; }
+}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../">Kwizerana Intelligence</a>
+      <div class="nav-links">
+        <a href="../">Latest</a>
+        <a href="./">Archive</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Daily News Archive</div>
+      <h1>Past Kwizerana newsletters, preserved.</h1>
+      <p class="dek">Every daily report is saved as a dated edition while the newest report stays live on the homepage.</p>
+    </section>
+    <section class="archive-grid">
+      <a class="archive-item" href="../reports/2026-07-20/">
+        <span class="date">Monday, July 20, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · July 20, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-07-09/">
+        <span class="date">Thursday, July 9, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · July 9, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-26/">
+        <span class="date">Friday, June 26, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 26, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-23/">
+        <span class="date">Tuesday, June 23, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 23, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-18/">
+        <span class="date">Thursday, June 18, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 18, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-17/">
+        <span class="date">Wednesday, June 17, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 17, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-16/">
+        <span class="date">Tuesday, June 16, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 16, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-15/">
+        <span class="date">Monday, June 15, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 15, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-09/">
+        <span class="date">Tuesday, June 9, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 9, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-08/">
+        <span class="date">Monday, June 8, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 8, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-05/">
+        <span class="date">Friday, June 5, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 5, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-04/">
+        <span class="date">Thursday, June 4, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 4, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-02/">
+        <span class="date">Tuesday, June 2, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 2, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-06-01/">
+        <span class="date">Monday, June 1, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · June 1, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-29/">
+        <span class="date">Friday, May 29, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief · May 29, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-25/">
+        <span class="date">Monday, May 25, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-21/">
+        <span class="date">Thursday, May 21, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-20/">
+        <span class="date">Wednesday, May 20, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-17/">
+        <span class="date">Sunday, May 17, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-15/">
+        <span class="date">Friday, May 15, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-13/">
+        <span class="date">Wednesday, May 13, 2026</span>
+        <strong>KWIZERANA INTELLIGENCE — Daily Crypto, DeFi &amp; VC Brief</strong>
+        <span class="cta">Read report</span>
+      </a>
+      <a class="archive-item" href="../reports/2026-05-10/">
+        <span class="date">Sunday, May 10, 2026</span>
+        <strong>KWIZERANA Intelligence · May 10, 2026</strong>
+        <span class="cta">Read report</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
