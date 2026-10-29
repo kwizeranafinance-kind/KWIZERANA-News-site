@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KWIZERANA INTELLIGENCE &mdash; Daily Crypto, DeFi &amp; VC Brief &middot; October 29, 2026</title>
+<meta name="description" content="KWIZERANA INTELLIGENCE daily brief, October 29, 2026. Today&#x27;s 3 Signals: Avalanche C-Chain TVL closed Oct 28 at $562.74M with stablecoins at $1.4348B and DEX volume up 61% in a day; the Fed held at 3.75%-4.00% on a 10-2 vote with both dissents for a hike while Bitcoin sits at $80,013; Coinbase converts 14 non-MiCA stablecoins into USDC for EEA users on Oct 30. Every story source-graded, with a Bittensor / TAO panel." />
+<meta name="author" content="KWIZERANA Finance" />
+<meta name="keywords" content="crypto intelligence, DeFi, Avalanche, stablecoins, RWA, bitcoin mining, crypto VC, airdrops, Bittensor, TAO" />
+<link rel="alternate" type="application/rss+xml" title="KWIZERANA INTELLIGENCE" href="reports/feed.xml" />
+<!-- Open Graph / share card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="KWIZERANA INTELLIGENCE" />
+<meta property="og:title" content="KWIZERANA INTELLIGENCE &mdash; October 29, 2026" />
+<meta property="og:description" content="Avalanche C-Chain TVL closed Oct 28 at $562.74M with stablecoins at $1.4348B and DEX volume up 61% in a day; the Fed held at 3.75%-4.00% on a 10-2 vote with both dissents for a hike while Bitcoin sits at $80,013; Coinbase converts 14 non-MiCA stablecoins into USDC for EEA users on Oct 30. Every story source-graded, with a Bittensor / TAO panel." />
+<meta property="og:image" content="reports/KWIZERANA_INTEL_2026-10-29_social.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="article:published_time" content="2026-10-29T12:34:33Z" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="KWIZERANA INTELLIGENCE &mdash; October 29, 2026" />
+<meta name="twitter:description" content="Avalanche TVL $562.7M, DEX volume +61%; Fed holds 10-2 with two hawkish dissents, BTC $80K; Coinbase converts 14 stablecoins to USDC in the EEA Oct 30." />
+<meta name="twitter:image" content="reports/KWIZERANA_INTEL_2026-10-29_social.png" />
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111520;
+    --surface-2: #161b29;
+    --border: #1f2638;
+    --gold: #f0b429;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+    --purple: #a855f7;
+    --orange: #f97316;
+    --teal: #14b8a6;
+    --pink: #ec4899;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1A0826 0%, #0a0c10 60%);
+    border-bottom: 1px solid var(--border);
+  }
+  .brand-left { display: flex; align-items: center; gap: 18px; }
+  .brand-logo {
+    height: 60px; width: auto; display: block;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.55));
+  }
+  .brand-left h1 {
+    margin: 0; font-size: 22px; letter-spacing: 5px;
+    color: var(--text); font-weight: 700;
+  }
+  .brand-left .sub {
+    color: var(--muted); font-size: 13px; letter-spacing: 1.5px;
+    margin-top: 4px; text-transform: uppercase;
+  }
+  .brand-right { text-align: right; }
+  .brand-right .stamp { color: var(--gold); font-weight: 600; font-size: 14px; }
+  .brand-right .tag { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .breaking {
+    background: linear-gradient(90deg, rgba(239,68,68,0.15), rgba(240,180,41,0.08));
+    border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .breaking-title {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--red); font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .breaking-title::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red); box-shadow: 0 0 8px var(--red);
+    animation: pulse 1.4s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .breaking ul { margin: 0; padding-left: 20px; }
+  .breaking li { margin-bottom: 6px; color: var(--text); font-size: 14px; }
+  .breaking li strong { color: var(--gold); }
+
+  .market-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 20px 0 28px;
+  }
+  .ticker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .ticker .name { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .ticker .price { color: var(--text); font-size: 18px; font-weight: 700; margin-top: 4px; }
+  .ticker .chg.up { color: var(--green); font-size: 12px; }
+  .ticker .chg.down { color: var(--red); font-size: 12px; }
+  .ticker .chg.neutral { color: var(--gold); font-size: 12px; }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tab {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-weight: 500;
+  }
+  .tab:hover { transform: translateY(-1px); }
+  .tab.active { color: #fff; border-color: transparent; }
+  .tab[data-topic="defi"].active { background: var(--blue); }
+  .tab[data-topic="security"].active { background: var(--purple); }
+  .tab[data-topic="mining"].active { background: var(--orange); }
+  .tab[data-topic="airdrops"].active { background: var(--teal); }
+  .tab[data-topic="rwa"].active { background: var(--green); }
+  .tab[data-topic="markets"].active { background: var(--blue); }
+  .tab[data-topic="vc"].active { background: var(--pink); }
+  .tab[data-topic="tao"].active { background: #6366f1; }
+
+  .panel { display: none; position: relative; }
+  .panel.active { display: block; }
+  .panel-title { font-size: 22px; margin: 0 0 6px; color: var(--gold); }
+  .panel-sub { color: var(--muted); margin: 0 0 18px; font-size: 13px; }
+
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    position: relative;
+  }
+  .stat .tile-mark { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; opacity: 0.45; }
+  .stat .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding-right: 26px; }
+  .stat .value { color: var(--text); font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .stat .delta { font-size: 12px; margin-top: 2px; }
+  .stat .delta.up { color: var(--green); }
+  .stat .delta.down { color: var(--red); }
+  .stat .delta.neutral { color: var(--gold); }
+
+  .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+  }
+  .card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .card .card-title {
+    color: var(--gold); font-size: 13px; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 600;
+    margin-bottom: 14px; padding-right: 40px;
+  }
+  .story { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+  .story:last-child { border-bottom: none; }
+  .story .headline { font-weight: 600; color: var(--text); margin-bottom: 4px; font-size: 14px; }
+  .story .meta { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+  .story .summary { color: var(--text); font-size: 13px; margin-bottom: 6px; }
+  .story .why { color: var(--muted); font-size: 12px; font-style: italic; }
+  .story .why::before { content: '\25B8 '; color: var(--gold); font-style: normal; }
+
+  .trend-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.06));
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 12px; padding: 18px; margin-top: 16px; position: relative;
+  }
+  .trend-card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .trend-card h3 { margin: 0 0 12px; color: var(--blue); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .trend-card ul { margin: 0; padding-left: 20px; }
+  .trend-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+  .trend-card strong { color: var(--gold); }
+
+  .watch-card {
+    background: linear-gradient(135deg, rgba(240,180,41,0.06), rgba(249,115,22,0.04));
+    border: 1px solid rgba(240,180,41,0.3);
+    border-radius: 12px; padding: 18px; margin-top: 16px; position: relative;
+  }
+  .watch-card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .watch-card h3 { margin: 0 0 12px; color: var(--gold); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .watch-card ul { margin: 0; padding-left: 20px; }
+  .watch-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+  .watch-card strong { color: var(--gold); }
+
+  /* ---------- Source-confidence system (see INTEL_STANDARDS.md) ---------- */
+  .conf {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    vertical-align: middle; white-space: nowrap;
+  }
+  .conf-verified { background: rgba(34,197,94,0.14); color: #4ade80; border: 1px solid rgba(34,197,94,0.40); }
+  .conf-single   { background: rgba(240,180,41,0.13); color: var(--gold); border: 1px solid rgba(240,180,41,0.40); }
+  .conf-rumor    { background: rgba(239,68,68,0.13); color: #f87171; border: 1px solid rgba(239,68,68,0.42); }
+  .conf-method   { background: rgba(148,163,184,0.13); color: var(--muted); border: 1px solid rgba(148,163,184,0.35); }
+  .story .meta .conf { margin-right: 7px; }
+  .method-note {
+    margin-top: 8px; font-size: 12px; color: var(--muted);
+    border-left: 2px solid rgba(148,163,184,0.4); padding: 4px 0 4px 10px;
+  }
+
+  /* ---------- Today's 3 Signals ---------- */
+  .signals { margin: 24px 0 8px; }
+  .signals-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 14px;
+  }
+  .signals-head h2 {
+    margin: 0; font-size: 20px; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold);
+  }
+  .signals-head .note { color: var(--muted); font-size: 12px; }
+  .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .signal {
+    background: linear-gradient(160deg, rgba(240,180,41,0.07), rgba(17,21,32,0.92));
+    border: 1px solid rgba(240,180,41,0.32);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px; padding: 18px 18px 16px; position: relative;
+  }
+  .signal .tile-mark { position: absolute; top: 12px; right: 12px; width: 26px; height: 26px; opacity: 0.40; }
+  .signal .num { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+  .signal h3 { margin: 4px 0 12px; font-size: 15px; color: var(--text); padding-right: 34px; line-height: 1.35; }
+  .signal dl { margin: 0; }
+  .signal dt {
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    font-weight: 700; color: var(--muted); margin-top: 11px;
+  }
+  .signal dl > dt:first-child { margin-top: 0; }
+  .signal dd { margin: 3px 0 0; font-size: 13px; color: var(--text); line-height: 1.5; }
+  .signal dd.sig-next { color: #fcd34d; }
+  .signal .sig-foot { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+  /* ---------- Tag chips ---------- */
+  .tag-chip {
+    font-size: 10px; letter-spacing: 0.6px; text-transform: uppercase;
+    color: var(--muted); background: var(--surface-2);
+    border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px;
+  }
+
+  /* ---------- Utility bar ---------- */
+  .util-bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; justify-content: flex-end; }
+  .util-btn {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: all .15s ease; font-family: inherit;
+  }
+  .util-btn:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+  .util-btn.on { background: var(--gold); color: #1A0826; border-color: var(--gold); font-weight: 700; }
+
+  /* ---------- Reader mode ---------- */
+  body.reader { background: #12100c; font-size: 17px; line-height: 1.72; }
+  body.reader .container { max-width: 820px; }
+  body.reader .market-bar,
+  body.reader .stat-grid,
+  body.reader .tabs { display: none; }
+  body.reader .panel { display: block !important; margin-bottom: 46px; }
+  body.reader .story-grid,
+  body.reader .signal-grid { grid-template-columns: 1fr; }
+  body.reader .card,
+  body.reader .signal,
+  body.reader .trend-card,
+  body.reader .watch-card { background: #161310; border-color: #2a2520; }
+  body.reader .card .tile-mark,
+  body.reader .signal .tile-mark,
+  body.reader .trend-card .tile-mark,
+  body.reader .watch-card .tile-mark { display: none; }
+  body.reader .story .headline { font-size: 17px; margin-bottom: 6px; }
+  body.reader .story .summary { font-size: 15.5px; }
+  body.reader .story .why { font-size: 14.5px; }
+  body.reader .panel-title { font-size: 26px; border-bottom: 1px solid #2a2520; padding-bottom: 8px; }
+
+  @media print {
+    .tabs, .util-bar, .market-bar { display: none; }
+    .panel { display: block !important; page-break-inside: avoid; }
+    html, body { background: #fff; color: #111; }
+  }
+
+  footer {
+    margin-top: 40px; padding: 18px 0;
+    border-top: 1px solid var(--border);
+    text-align: center; color: var(--muted); font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<!-- KWIZERANA_ARCHIVE_NAV_START -->
+<div style="position:sticky;top:0;z-index:9999;background:#060810;border-bottom:1px solid rgba(122,150,187,.28);font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:1120px;margin:0 auto;padding:10px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;color:#9EB8D4;font-size:13px;">
+    <a href="../../" style="color:#E8F0FF;text-decoration:none;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Kwizerana Intelligence</a>
+    <span style="display:flex;gap:12px;align-items:center;">
+      <a href="../../" style="color:#00D4AA;text-decoration:none;font-weight:700;">Latest</a>
+      <a href="../../archive/" style="color:#9EB8D4;text-decoration:none;">Archive</a>
+    </span>
+  </div>
+</div>
+<!-- KWIZERANA_ARCHIVE_NAV_END -->
+
+<header class="brand">
+  <div class="brand-left">
+    <img class="brand-logo" src="../../brand/KWIZERANA_LOGO_TRANSPARENT.png" alt="KWIZERANA Finance" />
+    <div>
+      <h1>KWIZERANA INTELLIGENCE</h1>
+      <div class="sub">Daily Crypto, DeFi &amp; VC Brief</div>
+    </div>
+  </div>
+  <div class="brand-right">
+    <div class="stamp">Thursday, October 29, 2026</div>
+    <div class="tag">Compiled 12:34 UTC &middot; live data pull 2026-10-29T12:27Z <strong style="color:var(--gold);">CoinGecko, Alternative.me, DefiLlama and mempool.space answered directly; Oct 29 DefiLlama points are partial days, so Oct 28 closes are used for comparisons</strong></div>
+    <div class="util-bar">
+      <button class="util-btn" id="readerToggle" type="button">Reader mode</button>
+      <a class="util-btn" href="reports/index.html">Archive</a>
+      <a class="util-btn" href="reports/feed.xml">RSS</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="signals">
+    <div class="signals-head">
+      <h2>Today's 3 Signals</h2>
+      <div class="note">What moved &middot; why it matters &middot; what to watch next &mdash; source-graded per <a href="INTEL_STANDARDS.md">INTEL_STANDARDS</a></div>
+    </div>
+    <div class="signal-grid">
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 01</div>
+  <h3>Avalanche C-Chain: TVL closed Oct 28 at $562.74M (+0.74%), chain stablecoins closed at $1.4348B (+1.69%) and 24h DEX volume jumped to $96.70M (+61.47% in a day)</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>DefiLlama (our pull, 12:27Z Oct 29): Avalanche TVL closed Oct 28 at $562.74M against $558.63M on Oct 27 (+0.74%); the partial Oct 29 point is $553.12M. Avalanche stablecoin supply closed Oct 28 at $1.4348B against $1.4110B (+1.69%, a seventh straight close above $1.40B). 24h DEX volume is $96.70M (+61.47% 1d; the 7-day total is $483.30M) and 24h fees are $294.3K. AVAX is $8.74 (−2.17% 24h, CoinGecko).</dd>
+    <dt>Matters</dt>
+    <dd>Capital and activity rose together on the day: stablecoins grew $24M in a day and turnover jumped, but price fell 2.17%, so the volume is trading flow rather than a bid for AVAX. <em>DefiLlama’s own 7-day change field still reads −32.74%, so one strong day does not yet reverse the week; the Oct 29 TVL point is a partial day and is not read as a trend.</em></dd>
+    <dt>Next</dt>
+    <dd class="sig-next">DefiLlama’s Oct 29 daily close (readable Oct 30): TVL at or above $562.74M and stablecoins at or above $1.40B would make an eighth straight close above the floor; 24h DEX volume holding above $60M (it was $59.89M in yesterday’s pull) would confirm the jump is not a one-day spike.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">defi</span><span class="tag-chip">avalanche</span><span class="tag-chip">stablecoins</span>
+  </div>
+</div>
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 02</div>
+  <h3>The Fed held at 3.75%–4.00% on a 10–2 vote with both dissents for a hike; Bitcoin spiked above $81,000, then faded to $80,013 (−1.08% 24h)</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>The FOMC left the target range at 3.75%–4.00% on Oct 28, upgraded its read of activity from “solid” to “strong”, and split 10–2 with Cook and Hammack voting for a quarter-point hike (Yahoo Finance live blog, Brave New Coin and Finwire agree). CoinGecko (12:27Z Oct 29): BTC $80,013 (−1.08%), ETH $2,321.72 (−1.00%). Finwire reports BTC above $81,000 right after the statement.</dd>
+    <dt>Matters</dt>
+    <dd>Both dissents leaned hawkish, so the debate has moved from when rates fall to whether the next move is up, and Chair Warsh gave no explicit signal on Dec 8–9. <em>CryptoTicker, citing Glassnode, puts the average cost of US spot BTC ETF holdings near $81,500 (single source), about 1.8% above spot, so the funds as a group are under water.</em> </dd>
+    <dt>Next</dt>
+    <dd class="sig-next">The Dec 8–9 FOMC is the next decision. Before it, the Nov 3 US midterms and a daily BTC close back above $81,500 (the cited ETF cost basis) would show the post-FOMC fade has reversed; a close below $78,000 would show the hawkish split is being priced.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">markets</span><span class="tag-chip">macro</span>
+  </div>
+</div>
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 03</div>
+  <h3>Coinbase will convert 14 non-MiCA stablecoins held by EEA retail users, USDT and PYUSD among them, into USDC on Oct 30</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>Coinbase blocked buying, selling and converting 14 non-MiCA stablecoins (USDT, PYUSD, USD1 and 11 others) for EEA retail users and will auto-convert remaining balances into USDC on Oct 30 (Cryptoast and TechYorker agree on the list; one lists BUSD where the other lists BUST). DefiLlama (12:27Z Oct 29): USDT is $180.82B and USDC $71.36B of a $302.00B stablecoin supply.</dd>
+    <dt>Matters</dt>
+    <dd>Coinbase is acting about ten weeks before the Jan 8, 2027 outer date in an ESMA opinion dated Oct 8, so the first large EU venue is removing USDT from retail rails and USDC is the direct beneficiary. <em>Neither the ESMA opinion nor Coinbase’s own notice was opened, so the Jan 8 date and the token list rest on the two secondary outlets.</em></dd>
+    <dt>Next</dt>
+    <dd class="sig-next">After the Oct 30 conversion, DefiLlama’s USDC supply holding above $71.36B and USDT staying near $180.8B would show EEA retail balances are too small to move global supply; another EU exchange announcing a similar delisting before Nov 15 would show the policy is spreading.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">rwa</span><span class="tag-chip">stablecoins</span><span class="tag-chip">regulation</span>
+  </div>
+</div>
+
+    </div>
+    <div class="method-note" style="margin-top:14px;"><span class="conf conf-method">&#128208; Methodology</span> <strong style="color:var(--text);">How these signals are graded.</strong> Signal 01 is VERIFIED on live DefiLlama and CoinGecko pulls (primary); the Oct 29 point is a partial day and the 7-day change field is DefiLlama’s own. Signal 02 is VERIFIED on three independent outlets for the Fed decision and vote; the federalreserve.gov statement itself could not be opened, and the ETF cost-basis figure inside it is SINGLE-SOURCE (CryptoTicker citing Glassnode). Finwire quoted BTC near $81,192 at press time against our $80,013 pull; the difference is timing, shown unreconciled. Signal 03 is VERIFIED on two independent outlets; the ESMA opinion and Coinbase notice were not opened. No signal rests on a RUMOR / WATCH item.</div>
+  </section>
+
+  <div class="breaking">
+  <div class="breaking-title">Breaking &mdash; October 29, 2026</div>
+  <ul>
+    <li><strong>Fed held at 3.75%–4.00% on a 10–2 vote</strong>, both dissents (Cook, Hammack) for a hike; BTC faded from above $81,000 to $80,013 (see Signal 02).</li>
+    <li><strong>Avalanche C-Chain TVL closed Oct 28 at $562.74M (+0.74%)</strong>, stablecoins at $1.4348B and 24h DEX volume at $96.70M (+61.47%) (see Signal 01).</li>
+    <li><strong>Coinbase converts 14 non-MiCA stablecoins into USDC for EEA users on Oct 30</strong> (see Signal 03).</li>
+    <li><strong>zkLink Nova reportedly drained of about $786K</strong> through a forged batch root, per a Blockaid relay (single source, unconfirmed); Ledger/CryptoBilis theft stands at $95.35M by Arkham (see Privacy &amp; Security).</li>
+    <li><strong>Bitcoin difficulty is on track for about +5.80%</strong> at block 973,728 with 37 blocks left, an estimate near 18:20Z today (see Mining).</li>
+    <li><strong>Predicate raises $8M Series A led by Blockchain Capital</strong>; Finney remains on runtime 486 with quantum-resistant wallet code merged into release 487 but not live (see VC and Bittensor / TAO).</li>
+  </ul>
+</div>
+
+  <div class="market-bar">
+    <div class="ticker"><div class="name">Bitcoin</div><div class="price">$80,013</div><div class="chg down">−1.08% 24h · CoinGecko 12:27Z</div></div>
+    <div class="ticker"><div class="name">Ethereum</div><div class="price">$2,321.72</div><div class="chg down">−1.00% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">&#9650; Avalanche</div><div class="price">$8.74</div><div class="chg down">−2.17% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Solana</div><div class="price">$100.28</div><div class="chg down">−1.63% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Zcash</div><div class="price">$1,262.14</div><div class="chg down">−2.57% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Monero</div><div class="price">$599.64</div><div class="chg down">−0.32% 24h · CoinGecko · ZEC 2.10x XMR</div></div>
+    <div class="ticker"><div class="name">Bittensor (TAO)</div><div class="price">$250.70</div><div class="chg down">−1.20% 24h · CoinGecko (bittensor)</div></div>
+    <div class="ticker"><div class="name">Total Market Cap</div><div class="price">$2.702T</div><div class="chg down">−3.98% 24h per /global · CoinGecko · &#128208; see note</div></div>
+    <div class="ticker"><div class="name">BTC Dominance</div><div class="price">59.39%</div><div class="chg neutral">CoinGecko /global</div></div>
+    <div class="ticker"><div class="name">Fear &amp; Greed</div><div class="price">51</div><div class="chg neutral">“Neutral” · Alternative.me · 51 yesterday</div></div>
+    <div class="ticker"><div class="name">DeFi TVL (all chains)</div><div class="price">$88.45B</div><div class="chg up">+0.50% vs $88.01B Oct 27 · DefiLlama Oct 28 close · Oct 29 partial $87.82B · &#128208; see note</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX C-Chain TVL</div><div class="price">$562.74M</div><div class="chg up">+0.74% vs $558.63M Oct 27 · Oct 28 close · Oct 29 partial $553.12M</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX stablecoins</div><div class="price">$1.4348B</div><div class="chg up">+1.69% vs $1.4110B Oct 27 · stablecoincharts series · Oct 29 partial $1.4242B</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX DEX volume (24h)</div><div class="price">$96.70M</div><div class="chg up">+61.47% 1d · 7d total $483.30M · DefiLlama overview · fees $294.3K</div></div>
+    <div class="ticker"><div class="name">Stablecoin Supply</div><div class="price">$302.00B</div><div class="chg down">−0.14% vs $302.41B yesterday · USDT $180.82B · USDC $71.36B · DefiLlama sum · &#128208; see note</div></div>
+    <div class="ticker"><div class="name">BTC Hashrate</div><div class="price">1,091 EH/s</div><div class="chg neutral">mempool.space 3-day (±10%) · &#128208; see note</div></div>
+    <div class="ticker"><div class="name">BTC Difficulty</div><div class="price">140.58T</div><div class="chg neutral">Unchanged since the +5.92% retarget on Oct 16 · mempool.space</div></div>
+    <div class="ticker"><div class="name">Next Retarget (est)</div><div class="price">+5.80%</div><div class="chg up">mempool.space · block 973,728, 37 blocks left, about Oct 29 18:20Z · &#128208; estimate</div></div>
+    <div class="ticker"><div class="name">FOMC (Oct 28)</div><div class="price">Hold 3.75–4.00%</div><div class="chg neutral">10–2 vote, two dissents for a hike · Yahoo Finance, Brave New Coin, Finwire</div></div>
+  </div>
+
+  <div class="method-note" style="border-left-color:rgba(148,163,184,0.5); margin:0 0 18px; padding:10px 0 10px 12px;">
+    <span class="conf conf-method">&#128208; Methodology</span> <strong style="color:var(--text);">Items to carry before reading on.</strong> CoinGecko’s /global field reads total cap −3.98% in 24h while BTC is −1.08% and ETH −1.00%; the aggregate and the majors differ by a wide margin and we show both without reconciling. Stablecoin supply: $302.00B is our sum of DefiLlama’s USD-pegged circulating supply at 12:27Z Oct 29, against $302.41B in yesterday’s brief; RWA.xyz (Stablecoins &amp; RWA panel) uses a different universe and basis. DeFi TVL and Avalanche TVL: daily closes through Oct 28 are used for comparison and Oct 29 points are partial days. DefiLlama also revised Oct 27 all-chain TVL to $88.01B from the $88.14B we published yesterday. Hashrate is derived from block timing and is always ±10%: mempool.space 1,091 EH/s (3-day; daily points 1,124, 1,105 and a partial 1,011 EH/s). <strong>The retarget:</strong> two of our direct mempool.space pulls (12:27Z and later) read +5.83% and +5.80% with 37 blocks left; the mining researcher’s read at about 12:30Z showed +5.98% with 76 blocks left. We publish our own pulls and name the gap; the estimate moves with block times. Fed outcome and ETF cost basis are as reported by the cited outlets in the Markets panel, not our own pulls.
+  </div>
+
+  <div class="method-note" style="border-left-color:rgba(240,180,41,0.5); margin:0 0 18px; padding:10px 0 10px 12px;">
+    <strong style="color:var(--text);">How to read the badges.</strong>
+    <span class="conf conf-verified">&#10003; Verified</span> two or more independent outlets, or a primary source (filing, wire release, official API).
+    <span class="conf conf-single">&#9670; Single-source</span> one credible outlet, not independently corroborated &mdash; directionally useful, not load-bearing.
+    <span class="conf conf-rumor">&#9888; Rumor / Watch</span> unconfirmed, aggregator-only, or self-reported with no third-party check; never used as a Signal.
+    <span class="conf conf-method">&#128208; Methodology</span> attached wherever trackers disagree or bases differ.
+    A mirror or syndication of the same copy does <em>not</em> count as a second source, and a page seen only as a search snippet is downgraded one tier. Research coverage was thin in several topics on Oct 21&ndash;22 (the stablecoin and DeFi cards carry fewer than six stories); empty slots are noted rather than backfilled, and cards dated before Oct 15 are labelled as background. Full rules in <a href="INTEL_STANDARDS.md">INTEL_STANDARDS.md</a>.
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-topic="defi">DeFi</div>
+    <div class="tab" data-topic="security">Privacy &amp; Security</div>
+    <div class="tab" data-topic="mining">Mining</div>
+    <div class="tab" data-topic="airdrops">Liquidity &amp; Airdrops</div>
+    <div class="tab" data-topic="rwa">Stablecoins &amp; RWA</div>
+    <div class="tab" data-topic="markets">Crypto &amp; US Stocks</div>
+    <div class="tab" data-topic="vc">VC &amp; Capital</div>
+    <div class="tab" data-topic="tao">Bittensor / TAO</div>
+  </div>
+
+<section class="panel active" data-topic="defi">
+<h2 class="panel-title">DeFi</h2>
+<p class="panel-sub">DeFi TVL $88.45B (Oct 28 close); Avalanche TVL $562.7M (+0.74%), Avalanche DEX volume $96.7M (+61% 1d); Morpho RWA deposits at record $2.14B.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">DeFi TVL (DefiLlama, Oct 28 close)</div><div class="value">$88.449B</div><div class="delta neutral">Oct 29 partial $87.82B (partial, not a trend)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche TVL (Oct 28 close)</div><div class="value">$562.74M</div><div class="delta up">+0.74% vs $558.63M Oct 27</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche DEX volume 24h (12:27 UTC Oct 29)</div><div class="value">$96.70M</div><div class="delta up">+61.47% 1d; -32.74% 7d-over-7d</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Stablecoin supply (sum, 12:27 UTC Oct 29)</div><div class="value">$302.0B</div><div class="delta neutral">USDT $180.82B, USDC $71.36B</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Hifi Finance, a DeFi protocol, has suffered a DAO governance takeover in which about $1 million in user collateral was moved out</div>
+  <div class="meta"><span class="conf conf-rumor">&#9888; Rumor / Watch</span> ChainCatcher (citing on-chain researcher Spreek) &middot; Oct 29, 2026 &middot; <a href="https://chaincatcher.com/en/article/2299815">source</a></div>
+  <div class="body">An attacker reportedly won control with four last-minute votes funded via Tornado Cash, minted 25 million governance tokens and moved roughly $1M of staked assets, mostly RWA tokens. <em>Why it matters:</em> Last-minute-vote capture of a low-turnout DAO is the same pattern flagged in the Term Labs and Compound episodes this year, and it hits RWA collateral specifically. <em>Single researcher account relayed by one outlet; no protocol statement or second outlet found; dollar figure unverified. Search for corroboration returned nothing for Hifi.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Morpho crypto rebounds 12% amid $2B RWA milestone – Is $2.26 next?</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> AMBCrypto &middot; Oct 29, 2026 &middot; <a href="https://ambcrypto.com/morpho-crypto-rebounds-12-amid-2b-rwa-milestone-is-2-26-next">source</a></div>
+  <div class="body">Morpho RWA deposits hit a record of about $2.14B with $894M borrowed (42% utilization) against 14% average utilization across a $4.36B DeFi RWA market, and MORPHO rose 12% over three days. <em>Why it matters:</em> Morpho ranks first by RWA borrowed ahead of Kamino ($433M), Grove ($395M) and Aave V3 ($391M), while its fee switch stays off. <em>Single outlet; underlying data source for the TVL and utilization figures is not named in the article and was not independently checked; the article's price targets are commentary.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Avail launches ShieldTX privacy tool targeting copy-trading bots on Hyperliquid</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Oct 28, 2026 &middot; <a href="https://www.theblock.co/news/defi/2026-10-28-avail-launches-shieldtx-privacy-tool-targeting-copy-trading-bots-on-hyperliquid-431977">source</a></div>
+  <div class="body">ShieldTX gives each Hyperliquid perp position its own shielded wallet, and its own study of 332,317 wallets puts median copy-trading cost at 63 bps per trade (project-reported). <em>Why it matters:</em> It is a direct test of whether position privacy can be added on top of Hyperliquid's public order flow without the core team's involvement. <em>Project-reported metrics (63 bps study, 75-trader/$50M beta); invite-only; Hyperliquid not involved; no independent verification.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Introducing Chainlink CustodySync: Connecting Institutional Capital to DeFi Lending Markets</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Chainlink official blog; Aave Labs proposal covered by Bitcoinist &middot; Oct 26, 2026 &middot; <a href="https://chain.link/blog/introducing-chainlink-custodysync">source</a></div>
+  <div class="body">CustodySync, launched with Anchorage Digital Bank as first qualified custodian, posts transfer-restricted receipt tokens for custodied assets into lending markets, against more than $80B of DeFi lending deposits and over $30B of active loans (Chainlink-cited). <em>Why it matters:</em> If adopted, custodied BTC could borrow stablecoins from Aave V4 without being wrapped or bridged, opening a new collateral source for lending markets. <em>Primary-source product launch; Aave V4 integration is only a governance-stage proposal (Bitcoinist, page dated ~Sep 19 and unclear), not a live market; Chainlink market-share and deposit figures are self-cited.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Uniswap's aggregator hooks go live on Ethereum, Base and Robinhood Chain</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; Bankless &middot; Oct 22, 2026 &middot; <a href="https://theblock.co/news/defi/2026-10-22-uniswaps-aggregator-hooks-go-live-ethereum-base-robinhood-chain-421932">source</a></div>
+  <div class="body">Uniswap v4 aggregator hooks wrap Fluid, Curve and PancakeSwap liquidity as v4 pools on three chains, charging a fee of a couple of basis points on external routes that funds UNI burns. <em>Why it matters:</em> It converts competitors' liquidity into UNI-burning fee flow, so Uniswap's token value now depends on routing share rather than only its own pools. <em>Fee size (a couple of bps) comes from Bankless quoting Hayden Adams; The Block gives no fee amount. Uniswap's own blog post not opened. $4.5T lifetime volume is Uniswap Labs-reported.</em></div>
+</div>
+<div class="story">
+  <div class="headline">ZeroBeta Integrates to the Lynq Platform Enabling Mutual Clients to use Tokenized Collateral</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Lynq/ZeroBeta press release (via The Block); Cryptowisser &middot; Oct 27, 2026 &middot; <a href="https://www.theblock.co/press-releases/zerobeta-integrates-to-the-lynq-platform-enabling-mutual-clients-to-use-tokenized-collateral-431929">source</a></div>
+  <div class="body">Lynq, whose settlement network runs on an Avalanche L1, added a collateral lock feature so institutions can pledge tokenized Treasuries for secured borrowing and margin while the asset keeps accruing interest. <em>Why it matters:</em> It is an Avalanche L1 institutional use case where tokenized Treasuries serve as margin, which does not show up in C-Chain TVL. <em>Primary-source press release (The Block disclaims endorsement); Cryptowisser (Oct 28, crypto.news copy could not be opened) repeats the Avalanche Foundation X announcement, so not independent; no volumes or client counts disclosed. Announcement date Oct 27 falls outside the 24h window.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Custodied and tokenized collateral is the lending theme of the week</strong> &mdash; CustodySync, the Aave V4 custodied-BTC proposal, Lynq's Treasury collateral lock on Avalanche and Morpho's $2.14B RWA deposits all point at off-chain assets being posted into on-chain credit.</li>
+  <li><strong>Governance attacks keep targeting thin voter turnout</strong> &mdash; Hifi's reported takeover follows Compound's $24M vote where about 82% of support landed in the last 34 minutes (Spendnode, Sep 5) and the Term Labs governance exploit ($8.5M, Aug 24).</li>
+  <li><strong>Avalanche DEX volume rebounded while TVL is flat</strong> &mdash; Avalanche DEX volume of $96.70M is up 61% on the day but down 33% week-over-week, and TVL moved only +0.74% to $562.74M, so the daily jump looks like a bounce, not a trend.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Hifi Finance confirmation</strong> &mdash; Watch for a Hifi team statement or a second outlet or on-chain explorer confirmation of the 25M token mint and ~$1M outflow by Oct 31; absent that, treat the report as unverified.</li>
+  <li><strong>Aave V4 custodied-collateral vote</strong> &mdash; A formal Aave governance vote or Snapshot date on the Anchorage custodied-BTC hub would show whether CustodySync reaches a live market; none had been scheduled in the pages opened as of Oct 29.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The startupfortune.com article (Oct 24) says October 2026 is DeFi's costliest month at $718M across 11 hacks citing Chainalysis; the $718M October figure matches Chainalysis' October 2022 record, so it was opened but not used and no October 2026 total is stated here.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hifi item rests on one researcher account relayed by ChainCatcher; no protocol statement was found, so it is tiered rumor and the ~$1M figure is unverified.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Cryptobriefing pages (Aave Anchorage, Hyperliquid/Kraken) failed to open; Aave proposal details were taken from Bitcoinist, whose page date is ambiguous (metadata Sep 19 vs 'a month ago'). crypto.news Lynq article could not be opened (Cryptowisser copy used).</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The Cryptowisser article quotes AVAX at $8.96 (+2.3%) on Oct 28; the 12:27 UTC Oct 29 live pull is $8.74 (-2.17%), consistent with a day-over-day decline rather than a contradiction.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> DeFi TVL Oct 29 is a partial-day print ($87.82B vs $88.449B Oct 28 close) and is not read as a trend; Avalanche TVL Oct 29 partial $553.12M likewise.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Morpho TVL/utilization figures in AMBCrypto and ShieldTX study metrics are project- or article-reported with no named independent dataset; capped at single.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Lynq runs on its own Avalanche L1, so it is not part of the Avalanche C-Chain TVL or DEX volume figures quoted in stats.</div>
+</section>
+<section class="panel" data-topic="security">
+<h2 class="panel-title">Privacy &amp; Security</h2>
+<p class="panel-sub">Hardware-wallet supply chain, Korean exchange breaches and a bridge forgery; Tornado Cash retrial now April 2027</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">zkLink Nova drain (Blockaid)</div><div class="value">$786K</div><div class="delta down">ongoing</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Ledger/CryptoBilis theft (Arkham)</div><div class="value">$95.35M</div><div class="delta down">Bitquery: $102M</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ZEC</div><div class="value">$1,262</div><div class="delta down">-2.57% 24h</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ZEC/XMR ratio</div><div class="value">2.10x</div><div class="delta neutral">ZEC $1,262 / XMR $600</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Hacking Spreads to Securities, Asset Management Firms and Crypto Exchanges, Police Open Probe</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Seoul Economic Daily &middot; Oct 28, 2026 &middot; <a href="https://en.sedaily.com/society/2026/10/28/hacking-spreads-to-brokerages-and-crypto-exchanges-police">source</a></div>
+  <div class="body">Korean police opened a probe on Oct 28 after Daishin Securities exposed data on 38,490 clients, Mirae Asset Global Investments lost internal-system data and Bithumb confirmed employee information was exposed. <em>Why it matters:</em> It extends a breach wave that already hit 16 financial firms and about 100,000 records, and police have not ruled out a single attacker. <em>One outlet; no link between cases confirmed. Bithumb is still checking whether customer data was taken.</em></div>
+</div>
+<div class="story">
+  <div class="headline">CryptoBilis Ledger hack: $95 million stolen, $10 million frozen</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Finwire (citing Arkham, Bitquery); Forklog &middot; Oct 29, 2026 &middot; <a href="https://finwire.io/news/crypto-news/cryptobilis-ledger-hack-95-million-stolen-10-million-frozen">source</a></div>
+  <div class="body">Arkham tallies $95.35M taken from 1,486 addresses, with 9,529 ETH ($23.27M) sent to Tornado Cash and about $10M USDT frozen by Tether. <em>Why it matters:</em> A pre-loaded LTE implant that reads the 24-word phrase at setup defeats the secure element entirely, so the risk sits in the reseller channel, not the firmware. <em>Loss figures disagree: Arkham $95.35M, Bitquery $102M (Finwire) or $93.2M (Forklog, earlier), YFarmX $103.4M. Ledger has not confirmed totals. The Oct 28 Singapore police detail (about SGD 3.5M) appears only in Finwire and was not independently found. Forklog's implant/LTE detail (Oct 13) was opened and agrees with Finwire; Bleeping Computer would not load.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Alleged Wagyu Leak Contains 4,580 Completed Crypto Swaps Linking Monero Wallets to IP Addresses</div>
+  <div class="meta"><span class="conf conf-rumor">&#9888; Rumor / Watch</span> GBHackers &middot; Oct 29, 2026 &middot; <a href="https://gbhackers.com/alleged-wagyu-data-breach/">source</a></div>
+  <div class="body">A dataset attributed to Hudson Rock researchers lists 38,628 orders from Wagyu.xyz, including 4,580 completed swaps that tie Monero receiving addresses to client IPs. <em>Why it matters:</em> If genuine, it would show that Monero-bound swap flows can be deanonymised through service logs rather than chain analysis. <em>Unverified: the article says provenance is unauthenticated and the records do not establish an intrusion; VPNs and shared IPs blur attribution. Only one outlet.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Users Drained of $260K on Predict Fun, YZi-Backed Market</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Inside Bitcoins; crypto.news &middot; Oct 27, 2026 &middot; <a href="https://insidebitcoins.com/news/predict-fun-drained-tornadocash">source</a></div>
+  <div class="body">About $260K (roughly 105 ETH) left at least 19 Predict Fun user wallets on BNB Chain on Oct 27 and was bridged to Ethereum and sent to Tornado Cash. <em>Why it matters:</em> Wallet drains with no confirmed contract bug and a mixer exit point to approval or phishing abuse, which audits do not cover. <em>Both outlets rely on the same on-chain analyst posts on X (Naeven), so this is treated as one source. Cause unconfirmed. Other outlets headline $300K+ and $400K; those pages were not opened or would not load.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Public wallet logs expose founder histories, and Zcash group demands fix</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CryptoSlate &middot; Oct 27, 2026 &middot; <a href="https://cryptoslate.com/atkinss-zcash-crypto-privacy-vision-faces-a-test-what-must-founders-reveal/">source</a></div>
+  <div class="body">Pretty Good Policy for Zcash filed an Oct 20 comment letter asking the SEC to let issuers prove fund use without exposing unrelated wallet activity under Regulation Crypto Assets, proposed Aug 18. <em>Why it matters:</em> Form 1-CRYPTO Item 15 already allows redaction where wallet disclosure is an unwarranted privacy invasion, so the final text decides whether on-chain privacy survives disclosure rules. <em>The SEC docket was not opened; the rule is described as still proposed as of Oct 26. Request is advocacy, not adopted policy.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Monero (XMR) and Zcash (ZEC) Beat Bitcoin This Week. Can the Privacy Coins Keep It Up?</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> 24/7 Wall St. &middot; Oct 25, 2026 &middot; <a href="https://247wallst.com/investing/cryptocurrency/2026/10/25/monero-xmr-and-zcash-zec-beat-bitcoin-this-week-can-the-privacy-coins-keep-it-up/">source</a></div>
+  <div class="body">For the week ending Oct 25, ZEC rose 7.5% and XMR 3.8% while BTC fell 2%, after FinCEN rescinded its proposed mixing rule on Oct 5. <em>Why it matters:</em> Privacy coins are trading as a regulatory-relief bet with ZEC still 24.1% below its 30-day level, so a rule reversal moves them more than hacks do. <em>Prices in the article (ZEC $1,208) predate the Oct 29 live pull (ZEC $1,262.14, -2.57% 24h). FinCEN rescission is as stated by the outlet; the FinCEN notice was not opened.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Supply-chain over code</strong> &mdash; Ledger's implant and Korea's multi-firm breaches both bypass cryptography and attack vendors, resellers or staff, so audit scope misses them.</li>
+  <li><strong>Mixers remain the exit</strong> &mdash; Predict Fun ($260K) and Ledger (9,529 ETH, $23.27M) funds both reached Tornado Cash within days, while the Storm retrial slipped from Oct 26, 2026 to Apr 26, 2027.</li>
+  <li><strong>Privacy as a service-log problem</strong> &mdash; The alleged Wagyu leak ties Monero addresses to IPs, which would make operator logs, not protocols, the weak point.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>zkLink Nova final loss</strong> &mdash; If Blockaid's $786K rises above $1M or zkLink publishes a root-cause post-mortem by Nov 5, 2026, treat the forged-root path as a systemic relayer flaw.</li>
+  <li><strong>Zcash NU7 activation</strong> &mdash; The 24/7 Wall St. piece puts NU7 near Nov 5, 2026; a slip past that date or a ZEC close below $1,048 (the Oct 18 low) would break the current privacy-coin bid.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Live prices (2026-10-29T12:27Z): BTC $80,013, ETH $2,321.72, AVAX $8.74, ZEC $1,262.14, XMR $599.64; ZEC/XMR = 2.10x, computed from those values.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Loss figures are shown side by side where trackers differ: Ledger/CryptoBilis is Arkham $95.35M vs Bitquery $102M (Finwire) or $93.2M (Forklog) vs YFarmX $103.4M.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> zkLink Nova: the primary Cryptotimes and Cryptoadventure pages would not load; the figure comes from Coin Gabbar relaying Blockaid and is single-tier. Blockaid's own post was not opened.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The 24h window is thin: the zkLink, Korea, Ledger and Wagyu items are the only dated Oct 28-29 items found. Bitget ($387.5M, disclosed Sep 24) and Coldcard fall outside both windows.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Mirrors and syndications were not counted as second sources.</div>
+</section>
+<section class="panel" data-topic="mining">
+<h2 class="panel-title">Mining</h2>
+<p class="panel-sub">Hashrate is back near 1.09 ZH/s while hashprice sits about 23% below a year ago, and listed miners keep trading hashrate for AI contracts.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Difficulty</div><div class="value">140.58T</div><div class="delta neutral">Prev. retarget +5.92% (Oct 16)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Next retarget (est.)</div><div class="value">+5.80%</div><div class="delta up">37 blocks left, ~149T, est. Oct 29 ~18:20 UTC</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hashrate (3-day, ±10%)</div><div class="value">1,091 EH/s</div><div class="delta up">7d avg 1,074 EH/s, 6.8% below Oct 2025 record</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hashprice (7d avg)</div><div class="value">$36.12/PH/day</div><div class="delta down">-23% y/y; ~$34 after retarget</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Bitcoin's Hashrate Climbs Back Within 7% of Its Record, but Miners Earn 23% Less Than a Year Ago</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Tokenist &middot; Oct 28, 2026 &middot; <a href="https://tokenist.com/bitcoin-hashrate-near-record-hashprice">source</a></div>
+  <div class="body">The 7-day average hashrate was 1,074 EH/s versus the 1,153 EH/s record, while 7-day hashprice was $36.12 per PH/s per day, down from about $47 a year ago. <em>Why it matters:</em> Rising difficulty on falling hashprice squeezes the marginal miner, and the projected drop to about $34 after the retarget is what decides which idled machines stay on. <em>Single outlet; hashprice is Tokenist's calculation and trackers differ (OneMiners, a hardware/hosting seller, gives ~$34-36 on its own method). Hashrate is an estimate from block timing, ±10%. Retarget estimate (+6.3% in the article) has since moved to +5.98% on mempool.space.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin (BTC) Hash Ribbon Recovery Holds as AI Shift Complicates Signal</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> TokenPost &middot; Oct 28, 2026 &middot; <a href="https://tokenpost.com/news/investing/42799">source</a></div>
+  <div class="body">The Hash Ribbon recovery signal that began Aug 26 is still active, with the 30-day average hashrate near 1.1 ZH/s, about 13% above July. <em>Why it matters:</em> Past recoveries were followed by higher prices in six of seven cases, but with miners diverting capacity to AI a hashrate rebound may carry less information about mining profits than it used to. <em>Single outlet; the 6-of-7 historical record is small-sample and is the article's figure, not independently checked. Hashrate figures carry ±10% uncertainty.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Tether pimps Mining Development Kit to connect mining, AI, whatever</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinGeek &middot; Oct 28, 2026 &middot; <a href="https://coingeek.com/tether-pimps-mining-development-kit-to-connect-mining-ai-whatever/">source</a></div>
+  <div class="body">Tether's open-source Mining Development Kit has non-binding backing from 15 firms including Bitdeer, Bitmain, Canaan and Foundry, with a stable 1.0 targeted by year-end; the piece also lists Bitdeer at 82.3 EH/s and MARA at 70.3 EH/s. <em>Why it matters:</em> A common control layer across ASIC, pool and facility software would lower the cost of re-purposing sites between bitcoin and AI loads. <em>Single outlet (CoinGeek's tone is opinionated). Phemex carried the MDK news on Oct 24 but as a republish of PANews, so not counted as independent. CoinGeek's claim that all-in cost per BTC exceeds market price is unsourced and not verified. Commitments are non-binding.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">HIVE's BUZZ HPC Secures Approximately $129 Million at 9.0% Fixed-Rate Financing at 80% Loan-to-Cost</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> HIVE Digital press release (SEC 8-K Ex. 99.1); spaziocrypto analysis &middot; Oct 27, 2026 &middot; <a href="https://www.sec.gov/Archives/edgar/data/0001720424/000106299326005585/exhibit99-1.htm">source</a></div>
+  <div class="body">HIVE's BUZZ HPC arranged a 3-year, 9.0% loan of about $129M to fund 80% of a roughly $165M cluster of 2,303 Nvidia GB200 GPUs serving a $225M, 3-year Cohere contract, with delivery expected near end of Q4 2026. <em>Why it matters:</em> A 9% asset-backed rate on a contract worth about 1.4x the GPU cost shows what lenders charge to turn a miner's balance sheet into AI infrastructure. <em>Terms are from the company's own filing (primary source); the coverage ratio (~1.5x) and per-GPU-hour price (~$3.70) are spaziocrypto's estimates, not HIVE's. Lender is unnamed.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin miners' move into AI is creating a new market for trading computing power</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinDesk &middot; Oct 27, 2026 &middot; <a href="https://www.coindesk.com/business/2026/10/27/bitcoin-miners-move-into-ai-is-creating-a-new-market-for-trading-computing-power">source</a></div>
+  <div class="body">Luxor raised $16M led by CMT Digital with Canaan and MicroBT participating, to build AI hardware brokerage and compute-price contracts; CoinShares counts over $70B of miner AI/HPC contracts signed by end of March. <em>Why it matters:</em> ASIC makers investing in a compute broker is a hedge by the hardware supply chain against miners shifting capex away from bitcoin rigs. <em>Single credible outlet; other sites (e.g. crypto.news) carried the raise but were not opened and are not counted. The $16M mixes new money and secondary sales in an undisclosed split. The $70B figure is CoinShares' tally of announced contracts, not revenue.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin Mining Output Falls 47% as Hashrate Reclaims 1 ZH/s</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Market Periodical (citing CryptoQuant) &middot; Oct 23, 2026 &middot; <a href="https://themarketperiodical.com/2026/10/23/bitcoin-mining-output-falls-47/">source</a></div>
+  <div class="body">Five listed miners (IREN, Core Scientific, Bitfarms, TeraWulf, Cipher) mined 7,075 BTC from Jan 1 to Oct 19 versus 13,263 BTC a year earlier, while network hashrate recovered to about 1,004 EH/s. <em>Why it matters:</em> Listed miners' share of the network is shrinking even as total hashrate rises, so the gap is being filled by private, sovereign and non-US operators. <em>Single outlet relaying one CryptoQuant report; the 47% applies only to the five named companies, not the network. Cointelegraph (Oct 22, BlocksBridge) separately reports public miners' realized hashrate -23% and AI revenue +52% q/q, a different metric, so it is not treated as confirmation. Hashrate ±10%.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Hashrate recovers while public miners shrink</strong> &mdash; The network is near 1.09 ZH/s, 6.8% under the October 2025 record, even as five listed miners produced 47% fewer BTC year to date.</li>
+  <li><strong>Two ~6% difficulty rises in two weeks</strong> &mdash; The +5.92% retarget on Oct 16 and an estimated +5.80% next put difficulty near 149T, about 4% below the 156T record.</li>
+  <li><strong>AI financing is getting priced</strong> &mdash; HIVE's 9% loan at 80% loan-to-cost and Luxor's compute-price contracts show lenders and brokers treating miner-built GPU capacity as a financeable asset class.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Retarget at block 973,728</strong> &mdash; If the adjustment lands above +5% by Oct 30 UTC, it is a third consecutive hashrate-driven rise in difficulty; a result under +4% would mean the 1.09 ZH/s readings were overstated.</li>
+  <li><strong>Hashprice vs $34</strong> &mdash; If 7-day hashprice closes below $34 per PH/s per day by Nov 5 with BTC near $80,000, expect more hosted and older-generation rigs to switch off, which would show in November's first retarget.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hashrate is derived from block timing and is always ±10%; daily points (about 1,124, 1,105 and 1,011 EH/s) swing more than the 3-day average, and trackers (mempool.space, Tokenist, CoinGeek, TokenPost) quote 1,074 to 1,100 EH/s depending on window.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> mempool.space difficulty-adjustment, our direct pulls at 12:27Z and later: +5.83% then +5.80% with 37 blocks left (retarget at block 973,728, est. Oct 29 ~18:20 UTC; difficulty 140.58T). The mining researcher's read at about 12:30Z showed +5.98% with 76 blocks left; the two disagree and we publish our own pulls. The API's estimated-date and remaining-time fields also disagree by hours. Trackers differ on the estimate (4.8% to 6.4%).</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hashprice differs by method: Tokenist 7-day $36.12, OneMiners about $34 post-retarget (subsidy-only, and OneMiners sells miners and hosting, so capped as a commercial source). BTC $80,013 at time of writing.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> HIVE items rely on the company's own 8-K exhibit; spaziocrypto estimates are labelled as the author's. The HIVE release is dated Oct 27, so about 40 hours old and placed in the 7-day card. GitHub and reseller 'deep dive' posts surfaced in search were not used.</div>
+</section>
+<section class="panel" data-topic="airdrops">
+<h2 class="panel-title">Liquidity &amp; Airdrops</h2>
+<p class="panel-sub">35% vs 100% is the choice on Predict.fun's 70M-token airdrop, and $145M-$210M of tokens unlock this week, led by Falcon Finance (FF) today.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC</div><div class="value">$80,013</div><div class="delta down">-1.08%</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ETH</div><div class="value">$2,321.72</div><div class="delta neutral">live 12:27Z</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">AVAX</div><div class="value">$8.74</div><div class="delta neutral">live 12:27Z</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Unlocks Oct 26-Nov 1</div><div class="value">$145M-$210M</div><div class="delta neutral">TokenPost $210.5M / Bitcoinsistemi $145M</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Binance Wallet Opens PREDICT Airdrop Form With 35% Immediate Claim Option</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> TokenPost; AMBCrypto &middot; Oct 28, 2026 &middot; <a href="https://tokenpost.com/news/business/42461">source</a></div>
+  <div class="body">Predict Points holders can take 35% of their PREDICT allocation at launch and forfeit 65%, or stake for one year to get 100%; the Season One pool is 70M tokens (7% of a 1B supply), and later weekly batches run Nov 6, 13, 20 and 27. <em>Why it matters:</em> Only about 2.5% of supply is liquid from the airdrop at launch, and the PP-to-PREDICT ratio is still undisclosed, so the real per-point value is unknown. <em>Terms confirmed by TokenPost and AMBCrypto (separate outlets); the launch-day form deadline of 09:00 UTC Oct 29 has now passed. AMBCrypto gives about 2.5% in the body and 2.4% in its summary.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Wire Network Moves $WIRE TGE From Oct 27 to Second Half of November</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinGabbar (citing project X post) &middot; Oct 28, 2026 &middot; <a href="https://www.coingabbar.com/en/wire-network-tge-delay-token-launch-late-november">source</a></div>
+  <div class="body">Wire Network pushed its token generation event from Oct 27 to late November with no date set, saying the delay is 'not a technical delay' and that exchange listings, market makers and liquidity are still being finalized. <em>Why it matters:</em> A TGE that slips after a public date means listing and liquidity commitments were not locked, which is a common precursor to a thinner launch. <em>Single aggregator relaying the project's X post; I did not open the original post, so this stays at single.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Predict.fun Hit by Roughly $400K Exploit Days Before PREDICT Airdrop Launch</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> AMBCrypto &middot; Oct 28, 2026 &middot; <a href="https://ambcrypto.com/predict-fun-predict-airdrop-criticized-after-400k-exploit-nothing-but-scam-projects/">source</a></div>
+  <div class="body">The Binance-backed BNB Chain prediction market said nearly $400K was drained from user accounts, blamed a possibly compromised third-party API docs site, and pledged to repay affected users. <em>Why it matters:</em> A security incident landing in the same week as a 35%-or-lock airdrop choice adds a trust discount to a launch already criticized as too small. <em>The $409.5K, three-wave breakdown (Oct 14-15, 22, 27) is from an unverified researcher report, not the project; repayment is a promise, not a completed action.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Weekly Token Unlocks Oct 26-Nov 1: Falcon Finance (FF) Leads at About $20M</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> TokenPost; CryptoNews/Bitcoinsistemi; KuCoin &middot; Oct 26, 2026 &middot; <a href="https://www.tokenpost.com/news/investing/40967">source</a></div>
+  <div class="body">TokenPost totals about $210.52M for the week, with the largest day Nov 1 (about $67M: MAV, EIGEN, TRUTH, FF, BEAT); the FF unlock of about 208M tokens (6.62% of circulating supply) lands Oct 29 per KuCoin. <em>Why it matters:</em> FF alone is about 10% of the weekly total on the tracker figures, so today's unlock is the single largest identifiable supply event in the window outside GateToken. <em>Trackers disagree on the total (see notes). FF value ranges $19.65M-$20.7M across the three sources, and the Nov 1 date for FF in TokenPost differs from the Oct 29 date in the other two.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Aster Stage 6 'Convergence' Claim Window Opens Oct 28 With 200M ASTER</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> KuCoin News &middot; Oct 26, 2026 &middot; <a href="https://www.kucoin.com/news/flash/crypto-airdrops-in-week-44-aster-and-standx-claim-windows-open">source</a></div>
+  <div class="body">Aster's Stage 6 claim runs Oct 28 12:00 UTC to Nov 28 12:00 UTC for users who chose full vesting over the 50% immediate payout, and StandX's DUSD claim runs Nov 1 to Dec 31. <em>Why it matters:</em> 200M ASTER becomes claimable for holders who already declined a 50% payout, so a claim-and-sell wave is a test of whether the vesting choosers hold. <em>Project-reported figures relayed by one outlet; some round-ups give Nov 4 as the start, and I did not open Aster's own page. StandX gives no total amount.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Hyperliquid Labs Unlocks 180,000 HYPE for Team Allocation Ahead of Nov 6 Distribution</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Bloomingbit (citing BlockBeats); PANews &middot; Oct 28, 2026 &middot; <a href="https://en.bloomingbit.io/feed/news/123124">source</a></div>
+  <div class="body">A Hyperliquid Labs official said on Discord that 180,000 HYPE for the team unlocked Oct 28, with distribution on Nov 6; PANews adds a 179,706 HYPE (about $14.49M) redemption expected Nov 4, sold OTC via Flowdesk. <em>Why it matters:</em> A monthly team unlock sold OTC rather than on-book is a fixed, dated supply item that traders can size against about $14.5M. <em>Both reports trace to the same Discord statement via BlockBeats, so I count them as one source. The OTC/Flowdesk detail comes from PANews only.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Airdrops are shrinking the liquid portion</strong> &mdash; PREDICT releases 35% at launch or 100% after 12 months, and ChainCatcher cites Bitquery data that 35 of 46 tokens from 51 large airdrops since 2026 fell below first-week prices, median drop 48%.</li>
+  <li><strong>Unlock supply is concentrated in a few names</strong> &mdash; GateToken ($65.4M), Grass ($21.5M) and FF (about $20M) make up most of the Bitcoinsistemi $145M tally, so the headline total overstates breadth.</li>
+  <li><strong>TGE dates are slipping on liquidity</strong> &mdash; Wire Network moved from Oct 27 to late November to finalize listings and market makers, a timing risk for any unconfirmed TGE date this month.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>PREDICT weekly batches</strong> &mdash; Check on Nov 6 whether the first weekly batch (forms due Nov 5, 09:00 UTC) shows heavier 35% immediate-claim selling; the default for no form by Nov 26 is the one-year lock.</li>
+  <li><strong>Hyperliquid and Aster supply</strong> &mdash; Verify by Nov 4-6 that the 179,706 HYPE redemption lands and by Nov 28 12:00 UTC how much of Aster's 200M Stage 6 is claimed.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Unlock totals differ by tracker for Oct 26-Nov 1: TokenPost reports about $210.52M, CryptoNews/Bitcoinsistemi sums 16 tokens to about $145.17M (my own sum of its table), and KuCoin/PANONY lists only FF ($20.7M) and CARDS ($18.4M) in text. Both are published rather than reconciled.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> FF unlock value ranges $19.65M (Bitcoinsistemi), $20.10M (TokenPost) and $20.7M (KuCoin); dates are Oct 29 (KuCoin, Bitcoinsistemi) and Nov 1 (TokenPost day grouping).</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Avalanche C-Chain: no qualifying airdrop, points or unlock item dated within the last 7 days was found. The only Retro9000 wind-down coverage located (Agent Times) is dated July 16, 2026 and is outside the window.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> ChainCatcher (Oct 29) reports PREDICT pre-market peaked at $1.99 and was about $1.35 at writing, a Binance Prime Sale of 20M tokens at $0.29, and some bloggers valuing a point at about $0.1; these are third-party estimates and were not used in a card.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Prices are live pulls at 2026-10-29T12:27Z supplied by the desk; the research notes were verified by opening each cited page.</div>
+</section>
+<section class="panel" data-topic="rwa">
+<h2 class="panel-title">Stablecoins &amp; RWA</h2>
+<p class="panel-sub">Stablecoin supply $302.0B (DefiLlama); OCC GENIUS rule final, effective Jan 18, 2027; Avalanche stablecoins $1.435B, +1.7% d/d.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Stablecoin supply</div><div class="value">$302.0B</div><div class="delta neutral">DefiLlama, Oct 29 12:27Z</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">USDT</div><div class="value">$180.82B</div><div class="delta neutral">59.9% of supply</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">USDC</div><div class="value">$71.36B</div><div class="delta neutral">23.6% of supply</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche stablecoins</div><div class="value">$1.4348B</div><div class="delta up">+1.7% vs Oct 27 ($1.4110B)</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Coinbase gives EEA customers until Oct 30 to withdraw USDT, PYUSD, USD1 and 11 other non-MiCA stablecoins before auto-conversion to USDC</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Cryptoast; TechYorker &middot; Oct 28, 2026 &middot; <a href="https://cryptoast.fr/coinbase-conversion-automatique-usdc-stablecoins-mica-30-octobre-usdt/">source</a></div>
+  <div class="body">Coinbase will convert remaining balances of 14 tokens for EEA retail users into USDC on Oct 30; buying, selling and converting are already blocked, and post-deadline deposits will not be credited. <em>Why it matters:</em> An ESMA opinion dated Oct 8 sets Jan 8, 2027 as the outer target, so Coinbase acting 10 weeks early signals that other EU venues may follow and that USDC is the main beneficiary of MiCA compliance. <em>Two independent secondary outlets agree on the 14-token list (one lists BUSD where the other lists BUST); ESMA opinion and Coinbase notice not opened directly.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Visa stablecoin settlement run rate passes $25B, about 10x year over year, with 225+ card programs</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> crypto.news &middot; Oct 29, 2026 &middot; <a href="https://crypto.news/visa-stablecoin-settlement-volume-25-billion-2026">source</a></div>
+  <div class="body">Visa said on its Oct 27 fiscal Q4 call that annualized stablecoin settlement exceeds $25B across 10 blockchains and 5 stablecoins, up from over $20B in September. <em>Why it matters:</em> Run rate rose roughly $5B in about seven weeks, showing card-network settlement is a growing source of stablecoin demand that does not depend on trading activity. <em>Company-reported run-rate, not realized volume; relies on one outlet relaying the earnings call, call transcript not opened. Prior $20B figure confirmed separately by The Block (Sep 8).</em></div>
+</div>
+<div class="story">
+  <div class="headline">Lynq and ZeroBeta link institutional borrowing and trading margin to tokenized U.S. Treasuries on Avalanche</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinSpectator (crypto.news syndication) &middot; Oct 27, 2026 &middot; <a href="https://coinspectator.com/cryptonews/2026/10/27/avalanche-tokenized-treasuries-gain-yield-bearing-collateral-use/">source</a></div>
+  <div class="body">Tokenized Treasuries on Avalanche can now be pledged as collateral while still earning interest, via an integration of Lynq's settlement network and ZeroBeta's BlueShift risk platform. <em>Why it matters:</em> Yield-bearing collateral that stays productive is what moves Avalanche's roughly $545M of tokenized Treasuries from holding instruments to working balance-sheet assets. <em>Published Oct 27 20:30 UTC, slightly over 24h old. Only a partial excerpt was readable; no token names, sizes or volumes. Project-reported; crypto.news original returned an error.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">OCC Advances U.S. Digital Asset Leadership with Final Rule to Implement GENIUS Act</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> OCC (News Release 2026-92); WilmerHale; Jones Day &middot; Oct 21, 2026 &middot; <a href="https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92.html">source</a></div>
+  <div class="body">The OCC's final rule keeps 2-business-day redemption and the yield ban, cuts the proposed daily liquidity floor from 10% to 5%, adds stress testing, and takes effect Jan 18, 2027. <em>Why it matters:</em> The final text is looser than the March proposal on reserves but still bars yield and sets no grandfathering, which fixes the compliance deadline for issuers 81 days from today. <em>Release is 8 days old, one day outside the window; included because law-firm analyses (Oct 27-28) are driving current coverage. BSA/AML rules come in a separate rulemaking. Release gave no detail; specifics come from WilmerHale and Jones Day, both opened.</em></div>
+</div>
+<div class="story">
+  <div class="headline">zerohash Brings Open USD (OUSD) Stablecoin Live Across Its Network</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> GlobeNewswire (zerohash release) &middot; Oct 27, 2026 &middot; <a href="https://globenewswire.com/news-release/2026/10/27/3389097/0/en/zerohash-brings-open-usd-ousd-stablecoin-live-across-its-network.html">source</a></div>
+  <div class="body">OUSD, the stablecoin from the Open Standard alliance, is now available to all zerohash partners, with interoperability to 15+ stablecoins across about 25 chains and named partners Marqeta and Visa Direct. <em>Why it matters:</em> OUSD circulating supply exceeded $800M by Oct 15 per Visa, so distribution through a payments infrastructure layer is how a month-old issuer tries to challenge USDC. <em>Issuer-side release, project-reported, capped at single. OUSD may need approval in some jurisdictions including New York. The $800M supply figure is from the Visa article (crypto.news), not verified independently.</em></div>
+</div>
+<div class="story">
+  <div class="headline">BlackRock joins SBI and Startale to link tokenized MMFs with Japanese yen stablecoins</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Oct 26, 2026 &middot; <a href="https://www.theblock.co/news/business/2026-10-26-blackrock-sbi-startale-mou-431642">source</a></div>
+  <div class="body">SBI Holdings, Startale and BlackRock signed an MOU to study linking tokenized money market funds with SBI's yen stablecoin JPYSC, launched in June 2026. <em>Why it matters:</em> BUIDL holds about $2.17B, so pairing it with a local-currency stablecoin tests whether tokenized MMFs can serve as reserve or settlement assets outside the dollar. <em>MOU to explore only; no launch date, size or chain named.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Rules harden before supply grows</strong> &mdash; OCC final rule, ESMA opinion and Coinbase's Oct 30 cutoff all land within 10 days, and supply is $302.0B on DefiLlama versus about $305B at end-September (Allium via KuCoin), so compliance is shaping share more than growth.</li>
+  <li><strong>Payments rails pull demand</strong> &mdash; Visa's run rate went from over $20B (Sep 8) to over $25B (Oct 27) while total supply was flat, so volume per dollar of stablecoin is rising.</li>
+  <li><strong>Tokenized Treasuries become collateral</strong> &mdash; Lynq/ZeroBeta on Avalanche and BlackRock's MMF-yen MOU both treat tokenized Treasury funds as settlement or margin assets rather than parked cash.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Coinbase EEA conversion, Oct 30</strong> &mdash; If USDT, PYUSD or USD1 trade more than 0.5% off $1 on a major venue on Oct 30 or Oct 31, the conversion is causing price stress; no deviation would show EEA retail exposure was small.</li>
+  <li><strong>OCC issuer applications before Jan 18, 2027</strong> &mdash; The OCC has said it will announce separately when it opens applications and waiver requests; no announcement by Nov 30, 2026 would leave under 7 weeks for issuers to apply.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Supply figures differ by tracker: DefiLlama live pull Oct 29 12:27Z gives $302.0B (USDT $180.82B, USDC $71.36B); the $305B end-September figure is Allium via KuCoin/MetaEra and is not the same methodology, so do not read the gap as a decline.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Avalanche stablecoin supply $1.4348B (Oct 28 close) vs $1.4110B (Oct 27) is a DefiLlama pull supplied by the editor, not re-fetched here. The $545M Avalanche tokenized Treasury figure (cryptonews.net, Oct 8, citing Avalanche's Oct 7 update) is project-reported, an AI-assisted syndication, and was left out of the cards as older than 7 days.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Pages that failed to open (cryptobriefing, crypto.news Lynq original, thecoinrepublic robots block) were not cited. The Lynq card relies on a partial excerpt. Pluang's Coinbase item had a broken source link and was replaced by Cryptoast and TechYorker.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> No depeg event was found in the window; the search surfaced no confirmed stablecoin depeg in the last 7 days.</div>
+</section>
+<section class="panel" data-topic="markets">
+<h2 class="panel-title">Crypto &amp; US Stocks</h2>
+<p class="panel-sub">BTC $80,013 and ETH $2,321.72 sit near cycle-range support after a hawkish-split Fed hold, with spot ETF flows turning choppy and CLARITY stalled until after the Nov 3 midterms.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC</div><div class="value">$80,013</div><div class="delta down">-1.08% 24h</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ETH</div><div class="value">$2,321.72</div><div class="delta down">-1.00% 24h</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Total crypto cap</div><div class="value">$2.702T</div><div class="delta down">-3.98% 24h (CoinGecko /global; majors fell about 1%)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Fear &amp; Greed</div><div class="value">51</div><div class="delta neutral">Neutral; BTC dominance 59.39%</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Fed holds rates at 3.75%-4.00% in 10-2 vote as Cook and Hammack dissent in favor of a hike</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Yahoo Finance live blog; Brave New Coin; Finwire &middot; Oct 28, 2026 &middot; <a href="https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html">source</a></div>
+  <div class="body">The FOMC left the target range at 3.75%-4.00%, upgraded activity from 'solid' to 'strong', and two members wanted a quarter-point hike; Chair Warsh gave no explicit signal on the Dec 8-9 meeting. <em>Why it matters:</em> A split with both dissents hawkish moves the debate from cuts to whether the next move is a hike, which is a headwind for BTC while the 10-year yield sits near 5%. <em>Three outlets opened and agree on rate, vote and dissenters, but the federalreserve.gov statement itself could not be opened (index page did not list it). Warsh press-conference quotes could not be verified: CNBC, CNN, FXStreet and US News pages failed to open, so the 'no explicit signal on December' framing rests on Brave New Coin. Pre-decision market figures only from Yahoo (10-year 5.02%, S&amp;P +0.2%); no post-decision equity close was confirmed. Price conflict: Finwire quotes BTC about $81,192 (+0.67% 24h) at press time vs live $80,013 (-1.08%); Brave New Coin's 03:34 UTC snapshot had BTC about $79,732. Moves above $81,000 right after the statement then fading are reported by both Finwire and Brave New Coin.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Why is Ethereum price falling today, October 29?</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> crypto.news &middot; Oct 29, 2026 &middot; <a href="https://crypto.news/ethereum-price-falls-etf-outflows-october-29-2026/">source</a></div>
+  <div class="body">US spot ETH ETFs logged three straight outflow days totaling about $170.21M (Oct 26 -$88.58M, Oct 27 -$60.22M, Oct 28 -$21.41M, SoSoValue basis) while ETH traded near $2,318 with support at $2,290-$2,300. <em>Why it matters:</em> Outflows are shrinking each day, so a flip to net inflow on Oct 29 data would be the first sign the ETH selling is exhausting; a close below $2,290 targets $2,200. <em>Single outlet; SoSoValue basis only, Farside figures not checked and may differ. ETH price $2,318 vs live $2,321.72, consistent. The article's Glamsterdam/Hoodi testnet delay claim (postponed Oct 23) was not independently confirmed.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin price $80,913: ETF buyers in the red</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CryptoTicker &middot; Oct 28, 2026 &middot; <a href="https://cryptoticker.io/en/bitcoin-price-etf-cost-basis-81500-dollar/">source</a></div>
+  <div class="body">Citing Glassnode, the average acquisition price of US spot BTC ETF holdings is about $81,500, so with BTC at $80,913 the funds are about 0.7% under water as a group. <em>Why it matters:</em> With BTC at $80,013 the gap is about 1.8%, making $81,500 the level where ETF holders go back to breakeven and likely sell into strength. <em>Single outlet relaying Glassnode via Yahoo Finance; the article itself notes inconsistent related figures (cost basis $81,500-$82,000; Oct 22-23 outflows $773M vs $635M) and calls a $149M Tuesday inflow unconfirmed. Price $80,913 was a morning-of-Oct-28 print, pre-FOMC; live is $80,013.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Bitcoin ETFs Gain $301M Despite Late-Week Sell-Off</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Cointelegraph &middot; Oct 26, 2026 &middot; <a href="https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million">source</a></div>
+  <div class="body">US spot BTC ETFs took in about $301M net for the week (Farside), ending a two-week outflow streak, as $1.08B of Mon-Wed inflows was offset by $774M of Thu-Fri withdrawals; BTC peaked at $84,777 on Wednesday. <em>Why it matters:</em> A $1.08B three-day inflow reversed in two days shows ETF demand is price-chasing, which fits BTC failing at $84,777 and returning to $80,000. <em>Basis note: this uses Farside (October month-to-date net outflow about $314M). A companion Cointelegraph piece dated Oct 27 uses SoSoValue and gives Monday Oct 26 as +$110M with October to date at about -$202M; the two vendors differ by about $112M on month-to-date. Cointelegraph is one outlet, so single tier. Spot ETH ETFs had a fourth straight weekly outflow of about $221M per the same article.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Strategy buys no bitcoin for the week to Oct 25, spends $204.9M repurchasing STRC preferred</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Coin Gabbar (summarizing Strategy 8-K) &middot; Oct 26, 2026 &middot; <a href="https://www.coingabbar.com/en/saylor-bitcoin-purchase-oct-26-2026-strategy-8k-btc-price">source</a></div>
+  <div class="body">Strategy held at 848,517 BTC (average cost $75,446) after a zero-buy week, putting about $204.9M of cash into STRC buybacks and leaving the BTC-purchase cash pool at $242.4M against a $4.83B USD reserve. <em>Why it matters:</em> With BTC at about $80,000 against a $75,446 average cost, the largest corporate buyer is now spending on its preferred stack instead of coins, removing a steady bid. <em>Single aggregator-grade outlet; the SEC 8-K itself was not opened for this week (an earlier 8-K for Oct 5-11 was opened: 250 BTC, 848,250 total, but that is outside the 7-day window). Saylor's X post cited by the article puts USD assets at $5.1B vs $4.83B reserve in the article.</em></div>
+</div>
+<div class="story">
+  <div class="headline">CLARITY Act updates: Senate cloture fails 49-50, odds of passing at 7%-9%</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> DeFi Rate &middot; Oct 28, 2026 &middot; <a href="https://defirate.com/clarity-act-fact-sheet/">source</a></div>
+  <div class="body">The Senate rejected cloture 49-50 on Sept 15 and has not revisited it; Kalshi (observed Oct 28) priced passage before Dec 1 at 1.5% and before Jan 1, 2027 at 5.7%, with the Senate out until Nov 6. <em>Why it matters:</em> No floor action is possible before Nov 6, so market-structure rules in 2026 now depend on a lame-duck session or CFTC rulemaking under Chair Selig (prerule at OIRA since Sept 17). <em>Single tracker page, not a primary Senate or Roll Call source. Headline is the page's title (its 7%-9% odds figure is a Polymarket reading from Sept 24, stale vs the October Kalshi data). The Oct 20 CFTC swap-definition item was not confirmed as related. Earlier May coverage of the committee vote (KuCoin) is outside the window and not used.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Hawkish split, not a pause</strong> &mdash; Two of twelve voters wanted a hike and the statement now says activity is 'strong'; BTC gave back its post-statement spike above $81,000 within minutes.</li>
+  <li><strong>ETF flows follow price</strong> &mdash; Farside showed +$301M for the week and SoSoValue showed about -$202M month-to-date, both flipping sign with each test of $80,000.</li>
+  <li><strong>Regulation shifts to agencies</strong> &mdash; With CLARITY cloture at 49-50 and Kalshi at 1.5% before Dec 1, the SEC/CFTC rulemaking path matters more than Congress this quarter.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>BTC at ETF cost basis $81,500</strong> &mdash; A daily close above $81,500 (Glassnode ETF average cost) by Nov 3 would put ETF holders back in profit; a close below $79,000 would reopen the $75,446 Strategy cost-basis zone.</li>
+  <li><strong>Senate returns after Nov 6 recess</strong> &mdash; If no cloture re-vote on CLARITY is scheduled by Nov 20, treat 2026 passage as below the 5.7% Kalshi price and expect CFTC rulemaking to lead.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Live pulls at 2026-10-29T12:27Z: BTC $80,013 (-1.08%), ETH $2,321.72 (-1.00%), SOL $100.28, AVAX $8.74. CoinGecko /global total cap $2.702T is -3.98% 24h, a larger drop than BTC and ETH (-1%); likely a methodology or stablecoin/altcoin weighting difference, so treat the total-cap move with caution.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> FOMC outcome: hold at 3.75%-4.00%, 10-2, Cook and Hammack dissenting for a +25bp hike (Yahoo Finance, Brave New Coin, Finwire all opened). The federalreserve.gov statement was not opened; the verified tier rests on three independent outlets.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Pages that failed to open and were NOT cited: CNBC and CNN live blogs, US News, FXStreet, Benzinga, ATFX, GuruFocus, CryptoTimes, TCB. Warsh's reported plan for fewer rate-setting meetings (CNBC headline seen in search only) is unverified and omitted. No post-decision S&amp;P/Nasdaq close was confirmed.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> ETF flow bases differ: Farside (Cointelegraph Oct 26, $301M week, October about -$314M) vs SoSoValue (Cointelegraph Oct 27, Monday +$110M, October about -$202M; crypto.news for ETH ETFs). Oct 22-23 outflows are quoted as $773M-$774M by some outlets and $635M by another.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> BTC price conflicts: Finwire $81,192 (+0.67%) at press time vs live $80,013 (-1.08%); CryptoTicker $80,913 on Oct 28 morning; Brave New Coin $79,732 at 03:34 UTC Oct 29. All are time-of-writing prints rather than errors.</div>
+</section>
+<section class="panel" data-topic="vc">
+<h2 class="panel-title">VC &amp; Capital</h2>
+<p class="panel-sub">Crypto VC at $730.1M across 37 rounds in October to Oct 25, against $680.5M in September; the 24h window is thin, so two cards are 48 hours old.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Oct crypto VC (to Oct 25)</div><div class="value">$730.1M</div><div class="delta up">+7% vs Sep $680.5M (TokenPost)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Rounds logged, Oct</div><div class="value">37</div><div class="delta down">vs 52 in Sep; month not closed</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Strive preferred raise</div><div class="value">$630M</div><div class="delta neutral">71% of week's disclosed capital</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC</div><div class="value">$80,013</div><div class="delta down">-1.08% (12:27Z)</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Blockchain Capital, Paxos Back Compliance Startup Predicate in $8M Funding Round</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinGape &middot; Oct 29, 2026 &middot; <a href="https://coingape.com/block-of-fame/pulse/blockchain-capital-paxos-back-compliance-startup-predicate-in-8m-funding-round/">source</a></div>
+  <div class="body">Predicate closed an $8M Series A led by Blockchain Capital, with Paxos, 1kx and Tribe Capital participating; the company says it has screened over $1B of volume and blocked 100,000+ transactions. <em>Why it matters:</em> Policy-enforcement infrastructure for onchain assets is where stablecoin issuers and custodians are now buying, and the round is 14% above Predicate's $7M seed. <em>Single outlet opened; CryptoRank's deal page (slug dated Oct 27) failed to load and no press release was linked, so tier held at single. Valuation not disclosed.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin mining infrastructure firm Luxor raises $16 million to expand AI business</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Oct 27, 2026 &middot; <a href="https://www.theblock.co/news/deals/2026-10-27-bitcoin-mining-ai-luxor-technology-funding-431858">source</a></div>
+  <div class="body">Luxor Technology raised $16M led by CMT Digital, with Canaan, MicroBT, Halo and Steelhead, split between primary preferred equity and secondary shares, to fund GPU hardware sales, Luxor Cloud and compute derivatives. <em>Why it matters:</em> Mining-side capital is being priced as AI-compute exposure, not hashrate, and only part of the $16M is new cash. <em>About 48 hours old, outside a strict 24h window; used because fewer than 3 genuine funding stories dated within 24h were found. Round is partly secondary and valuation undisclosed. TCB Daily also covered it but likely derives from the same announcement; a crypto.news version is sponsored content and was not counted.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Canton-based trading platform Cancore raises $7.2 million at $60 million token valuation</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Oct 27, 2026 &middot; <a href="https://www.theblock.co/news/deals/2026-10-27-canton-based-trading-platform-cancore-raises-7-2-million-60-million-token-valuation-431906">source</a></div>
+  <div class="body">Cancore raised $7.2M via SAFTs for its planned CNRX token at a $60M fully diluted valuation, with Paper Ventures and dao5 holding the largest allocations and no formal lead. <em>Why it matters:</em> Token-linked seed rounds like this count in some trackers and not others, so it moves the monthly total depending on the methodology. <em>About 48 hours old; filler for the thin 24h window. Token sale, not equity, and the valuation is a token FDV, not a company valuation.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Fireblocks denies report of $2.5 billion acquisition talks with Visa</div>
+  <div class="meta"><span class="conf conf-rumor">&#9888; Rumor / Watch</span> The Block (citing Axios) &middot; Oct 22, 2026 &middot; <a href="https://www.theblock.co/news/deals/2026-10-22-visa-in-talks-acquire-crypto-custody-firm-fireblocks-around-2-5-billion-axios-421926">source</a></div>
+  <div class="body">Axios reported Visa in late-stage talks to buy Fireblocks for about $2.5B; Fireblocks told The Block the report is 'news to us, and not true at present time' and Visa declined to comment. <em>Why it matters:</em> A $2.5B price would be 69% below Fireblocks' $8B January 2022 valuation, so the report is a read on custody-infrastructure marks. <em>Unconfirmed, sourced to Axios's anonymous sources and denied by the target; rumor regardless of outlet count. Axios page itself was not opened.</em></div>
+</div>
+<div class="story">
+  <div class="headline">[Crypto Dealbook] October funding reaches $730.1 million as Strive takes 71% of weekly capital</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> TokenPost &middot; Oct 26, 2026 &middot; <a href="https://www.tokenpost.com/news/investing/40969">source</a></div>
+  <div class="body">Strive's $630M post-IPO financing on Oct 20 made up 71% of the week's disclosed funding; October stands at $730.1M over 37 rounds vs $680.5M over 52 in September and $1.59B over 62 in August. <em>Why it matters:</em> Round count fell 29% month on month while dollars rose, so the October total depends on one treasury-style preferred raise. <em>Event dated Oct 20, about 9 days old, so slightly outside 7d. The $630M figure comes from TokenPost only; Strive's SEC Form FWP (Oct 13) shows an illustrative $500M notional 15% perpetual preferred, terms 'subject to change'. Preferred stock counts as capital raise in some trackers and not in others.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Whop raises $200M at $5.1B valuation after shipping three products in three months</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Next Web; TokenPost &middot; Oct 27, 2026 &middot; <a href="https://thenextweb.com/news/whop-200m-series-d-5-1b-valuation-sequoia">source</a></div>
+  <div class="body">Whop closed a $200M Series D at a $5.1B valuation led by Sequoia and Shopify Ventures, versus $1.6B when Tether invested $200M in February. <em>Why it matters:</em> A 3.2x mark-up in eight months on a Tether-backed company shows stablecoin-issuer capital can anchor large later-stage rounds. <em>Crypto link is indirect: only via Tether's earlier stake; TNW does not describe crypto products at Whop. TokenPost and KuCoin/CoinMarketCap trackers log the round on Oct 21, TNW published Oct 27. Opened TNW and TokenPost; two independent outlets.</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Stablecoin-adjacent compliance and payments</strong> &mdash; Predicate (Blockchain Capital, Paxos) and the Ripple trust-bank approval on Oct 26 point to capital following regulated stablecoin rails.</li>
+  <li><strong>Fewer, larger deals</strong> &mdash; October shows 37 rounds against 52 in September while dollars rose 7%, driven by one Strive preferred raise rather than broad seed activity.</li>
+  <li><strong>Token-linked seeds and AI pivots</strong> &mdash; Cancore's SAFT at $60M FDV and Luxor's AI-compute pivot show raises being sold on token or compute narratives instead of pure crypto equity.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Fireblocks / Visa</strong> &mdash; If Visa or Fireblocks files or announces a definitive agreement by Nov 12, 2026, the $2.5B Axios report moves from rumor to confirmed; silence past that date keeps the denial standing.</li>
+  <li><strong>October VC close</strong> &mdash; TokenPost's $730.1M tally should be revised when October closes on Oct 31; a final figure above $900M would mean late-month rounds outweigh the thin Oct 26-29 stretch.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Methodology: totals differ by tracker. TokenPost counts $730.1M across 37 rounds for October to Oct 25 including Strive's $630M preferred raise (about $100M excluding it). The CoinMarketCap/KuCoin weekly tally for Oct 17-23 shows $1.7626B across 8 disclosed rounds but includes non-crypto Tenstorrent ($1.5B); excluding it the week is about $262M, and the KuCoin page title misstates it as $17.626M. Stablecoin.nyc logs Oct 3-23 rounds only.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Thin 24h window: only Predicate (Oct 29) is dated inside 24 hours; Luxor and Cancore (Oct 27) fill the slots. No crypto M&amp;A, accelerator or exit completed in the window was found; CoinGape, The Block and TokenPost were the main sources.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Excluded: Anthropic's S-1/IPO (non-crypto, only reported by crypto outlets; raise and valuation figures not attributed); Upwind $400M, Hyphenate $45M, Tenstorrent $1.5B (not crypto); the crypto.news Luxor/UE Crypto article is sponsored content; Polygon-Coinme closing (Oct 14-17) is outside 7d; the crypto.news Hercle/MegaETH weekly is from Nov 2025.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Pages that failed to open and were not cited: CryptoRank Predicate deal page, Fintech Futures Whop, TCB Daily Oct 28, Capital on Chain week 43.</div>
+</section>
+<section class="panel" data-topic="tao">
+<h2 class="panel-title">Bittensor / TAO</h2>
+<p class="panel-sub">Four subnets moved their emission splits on-chain this week, SN28 SayGM added SN64 Chutes confidential inference, and TAO trades at $250.70 (-1.20% 24h).</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">TAO price (CoinGecko, 12:27Z Oct 29)</div><div class="value">$250.70</div><div class="delta down">-1.20% 24h</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Subnets with updates (Oct 28 index, latest edition; Oct 29 returned 404)</div><div class="value">33 / 128</div><div class="delta neutral">roster size 128; Oct 27 edition had 28</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Finney runtime (RPC, head block 9,389,447)</div><div class="value">486</div><div class="delta neutral">unchanged since Oct 28 (block 9,382,168 earlier note)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">SN4 Targon buyback/burn (project-reported)</div><div class="value">1,772 TAO-equiv</div><div class="delta neutral">team figure; on-chain: 152,314.36 alpha burned at block 9,376,324</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Oct 29)</div>
+<div class="story">
+  <div class="headline">Quantum-resistant wallet code merged into release-487; Finney still on runtime 486</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Shizzy Unchained daily index (Oct 28) + Finney RPC &middot; Oct 28, 2026 &middot; <a href="https://shizzyunchained.com/subnet-news/2026-10-28">source</a></div>
+  <div class="body">The index reports PR 3220 (optional quantum-resistant signing and key rotation) merged into the release-487 branch and PR 3291 as a separate version bump, while the chain still runs specVersion 486. <em>Why it matters:</em> It is the next runtime in the pipeline, so a Finney upgrade to 487 is the event to track, and it would add optional signing paths rather than force wallet migration. <em>I could not open the GitHub PRs (403 in this session), so the merge claims rest on the aggregator alone; only the runtime 486 and head block 9,389,447 were checked directly over Finney RPC. No activation date is published.</em></div>
+</div>
+<div class="story">
+  <div class="headline">SN20 Witness, SN33 ReadyAI, SN54 Yanez and SN78 Umi reset subnet emission splits</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Shizzy Unchained chain evidence JSON (SubnetEmissionWeightsSet events) &middot; Oct 27, 2026 &middot; <a href="https://shizzyunchained.com/evidence/2026-10-28-daily-chain.json">source</a></div>
+  <div class="body">SubnetEmissionWeightsSet events at blocks 9,378,110 (SN20), 9,376,469 (SN33), 9,376,080 (SN54) and 9,377,881 (SN78) moved owner/validator/miner shares to about 33/7/60, 18/49/33, 18/49/33 and 30.75/15.5/53.75 versus a prior 18/41/41. <em>Why it matters:</em> Four subnets tilted toward validators or miners in a few days, which changes where each subnet's emission-driven yield lands. <em>Downgraded one tier: I confirmed the five block hashes match Finney RPC, but taostats.io pages would not open and event payloads were read from the aggregator's JSON. Allocation settings are not APY or burns.</em></div>
+</div>
+<div class="story">
+  <div class="headline">SN28 SayGM adds SN64 Chutes as a confidential inference provider</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Chutes official announcement (chutes.ai) &middot; Oct 28, 2026 &middot; <a href="https://chutes.ai/news/chutes-models-are-now-on-saygm">source</a></div>
+  <div class="body">Chutes says its open-weight models are now an upstream on the SN28 SayGM gateway, with TEE-served models marked by a -tee suffix, one API key and one base URL. <em>Why it matters:</em> It is a subnet-to-subnet distribution deal, so SN64 demand can now come through another subnet's gateway. <em>Team-stated privacy and TEE claims were not audited; no volume or revenue figure is given. The SayGM-side post was not independently opened.</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Oct 22–29)</div>
+<div class="story">
+  <div class="headline">Finney runtime 486 is live; reviewed delta only adds a read weight to GetStakeAvailabilityV1</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Finney RPC state_getRuntimeVersion (entrypoint-finney.opentensor.ai) &middot; Oct 27, 2026 &middot; <a href="https://shizzyunchained.com/subnet-news/2026-10-27">source</a></div>
+  <div class="body">RPC on Oct 29 returns node-subtensor specVersion 486 at head block 9,389,447; the index says the v486 diff adds read weight to stake-availability reads and changes no event or burn rules. <em>Why it matters:</em> A weight-only runtime means no new emission or burn rules this week, so Oct 28 allocation changes came from subnet owners, not the upgrade. <em>Runtime version checked directly by RPC; the 'delta' description comes from the aggregator and the release-486 source was not opened.</em></div>
+</div>
+<div class="story">
+  <div class="headline">SN4 Targon reports revenue-funded buyback and burn of 1,772 TAO-equivalent</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Targon team announcement via Shizzy Unchained index (Oct 27) + stats.targon.com &middot; Oct 27, 2026 &middot; <a href="https://shizzyunchained.com/subnet-news/2026-10-27">source</a></div>
+  <div class="body">Targon says it bought back and burned 1,772 TAO-equivalent of SN4 alpha from Targon.com revenue plus 6,678 TAO-equivalent revenue-linked; the evidence JSON shows 152,314.359 alpha burned at block 9,376,324. <em>Why it matters:</em> A revenue-linked burn is the clearest test of whether subnet cash flow supports alpha demand, but only the burn is chain-verified. <em>Project-reported figures capped at single: revenue source and TAO valuations are unconfirmed, the stats.targon.com buybacks page loaded without figures, and the 8,450 TAO graphic total is valuation, not TAO destroyed.</em></div>
+</div>
+<div class="story">
+  <div class="headline">Taoswap announces a Bittensor-Ethereum bridge routing USDC and ETH into TAO and subnet tokens</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Taoswap announcement via Shizzy Unchained index (Oct 27) &middot; Oct 26, 2026 &middot; <a href="https://shizzyunchained.com/subnet-news/2026-10-27">source</a></div>
+  <div class="body">Taoswap says users can move Ethereum USDC or ETH into TAO or subnet tokens and back, powered by tao.com. <em>Why it matters:</em> A new fiat-adjacent entry route could widen the buyer base for subnet tokens, if volume appears. <em>Only the aggregator was opened; the Taoswap post and bridge security and volume are unverified. Separately, I found no verifiable Grayscale GTAO S-1/A status update (search hits were secondary, one dead link).</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Emission splits are being tuned per subnet</strong> &mdash; Four SubnetEmissionWeightsSet events in about three days moved validator share between 7% and 49% and miner share between 33% and 60%, all versus a 18/41/41 baseline.</li>
+  <li><strong>Cross-subnet integrations keep stacking</strong> &mdash; SN28 SayGM with SN64 Chutes, SN67 Harnyx with SN92 REAX and SN68 NOVA with SN64 Chutes were all announced Oct 27-28, each by the subnets' own teams.</li>
+  <li><strong>Burns are visible on-chain but small outside SN4 and SN8</strong> &mdash; The Oct 27-28 scan lists one 152,314-alpha SN4 burn and a 493-alpha SN8 burn; most other AlphaBurned events are single-digit alpha.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Runtime 487 on Finney</strong> &mdash; If specVersion on entrypoint-finney.opentensor.ai is still 486 on Nov 5, the quantum-resistant wallet code has missed a one-week window; a bump to 487 would confirm activation.</li>
+  <li><strong>Grayscale GTAO S-1/A</strong> &mdash; No verifiable status found today; check SEC EDGAR for a new Grayscale Bittensor Trust amendment by Nov 5, otherwise treat listing timing as unknown.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Index edition used: Oct 28, 2026 (latest; Oct 29 returned 404). 33 subnets with updates, 128 on roster. Oct 27 edition used for 7d items.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The aggregator is never counted as a second source; its ratings and verified labels were ignored. GitHub PRs/commits returned 403 and taostats.io pages did not open, so items depending on them are single.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Finney runtime and head block read directly over RPC at about 12:30Z Oct 29: specVersion 486, head 9,389,447. TAO price is the supplied CoinGecko figure; a spot check gave $250.44 (-1.29%).</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Project-reported metrics (Targon buyback, Vanta payouts) are capped at single. Discord-digest items were not used. Grayscale GTAO search found only secondary pages with no verifiable current status.</div>
+</section>
+
+  <footer>
+    <img src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" style="height:26px;opacity:0.6;vertical-align:middle;margin-right:8px;" />
+    KWIZERANA INTELLIGENCE &middot; compiled 12:34 UTC, October 29, 2026 &middot; preservation of wealth / true privacy / organic community / media / compounding DAO<br />
+    <a href="reports/index.html">Archive</a> &middot; <a href="reports/feed.xml">RSS</a> &middot; <a href="INTEL_STANDARDS.md">Editorial &amp; source standards</a><br />
+    <strong>Provenance.</strong> <strong>Market figures are a live data pull timestamped 2026-10-29T12:27Z</strong>: BTC, ETH, AVAX, SOL, ZEC and XMR prices plus total cap and dominance from <strong>CoinGecko</strong> (<code>/simple/price</code> and <code>/global</code>); Fear &amp; Greed from <strong>Alternative.me</strong>; DeFi TVL and Avalanche C-Chain TVL from <strong>DefiLlama</strong> historical chain TVL (daily closes through Oct 28, Oct 29 points partial); stablecoin supply summed from DefiLlama’s stablecoins API, Avalanche stablecoins from its stablecoincharts endpoint and Avalanche DEX volume and fees from its overview endpoints; difficulty, hashrate and the retarget estimate from <strong>mempool.space</strong> (direct API). TAO price from <strong>CoinGecko</strong> (<code>bittensor</code>) and runtime from the Finney RPC; the Bittensor / TAO panel starts from the <strong>shizzyunchained.com subnet-news index</strong> (the Oct 28 edition, because the Oct 29 edition returned 404). Story research ran in eight parallel passes with each story tiered per INTEL_STANDARDS; several pages could not be opened and are noted on their cards. The Fed outcome and ETF cost basis shown in Markets are as reported by the cited outlets, not our own pulls; no CPI or 10-year figure is shown. Several stories in each panel are dated Oct 21&ndash;28 and are flagged on their cards. Eight topics, three signals, every card graded.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tab');
+  var panels = document.querySelectorAll('.panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var topic = tab.getAttribute('data-topic');
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var target = document.querySelector('.panel[data-topic="' + topic + '"]');
+      if (target) { target.classList.add('active'); }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Reader mode: collapses to a single readable column with every panel expanded.
+  var btn = document.getElementById('readerToggle');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var on = document.body.classList.toggle('reader');
+      btn.classList.toggle('on', on);
+      btn.textContent = on ? 'Exit reader mode' : 'Reader mode';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
+</body>
+</html>
