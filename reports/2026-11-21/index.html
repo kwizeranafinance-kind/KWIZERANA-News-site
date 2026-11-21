@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KWIZERANA INTELLIGENCE &mdash; Daily Crypto, DeFi &amp; VC Brief &middot; November 21, 2026</title>
+<meta name="description" content="KWIZERANA INTELLIGENCE daily brief, November 21, 2026. Today&#x27;s 3 Signals: BTC breaks the July low to under $57,000 as the Nasdaq falls 5.28%; Aave V3 Avalanche breaks its $225M line on prices, not exits; the Binance-theft ETH has left the big wallets but only about 8% is converted. Every story source-graded." />
+<meta name="author" content="KWIZERANA Finance" />
+<meta name="keywords" content="crypto intelligence, DeFi, Avalanche, stablecoins, RWA, bitcoin mining, crypto VC, airdrops, Bittensor, TAO" />
+<link rel="alternate" type="application/rss+xml" title="KWIZERANA INTELLIGENCE" href="reports/feed.xml" />
+<!-- Open Graph / share card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="KWIZERANA INTELLIGENCE" />
+<meta property="og:title" content="KWIZERANA INTELLIGENCE &mdash; November 21, 2026" />
+<meta property="og:description" content="BTC breaks the July low to under $57,000 as the Nasdaq falls 5.28%; Aave V3 Avalanche breaks its $225M line on prices, not exits; the Binance-theft ETH has left the big wallets but only about 8% is converted. Every story source-graded." />
+<meta property="og:image" content="reports/KWIZERANA_INTEL_2026-11-21_social.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="article:published_time" content="2026-11-21T13:22:07Z" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="KWIZERANA INTELLIGENCE &mdash; November 21, 2026" />
+<meta name="twitter:description" content="BTC under $57K, July low broken, Nasdaq −5.28%; Aave V3 Avalanche $211M on price not exits; Elliptic: 488k Binance-theft ETH moved, 39k swapped." />
+<meta name="twitter:image" content="reports/KWIZERANA_INTEL_2026-11-21_social.png" />
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111520;
+    --surface-2: #161b29;
+    --border: #1f2638;
+    --gold: #f0b429;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+    --purple: #a855f7;
+    --orange: #f97316;
+    --teal: #14b8a6;
+    --pink: #ec4899;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1A0826 0%, #0a0c10 60%);
+    border-bottom: 1px solid var(--border);
+  }
+  .brand-left { display: flex; align-items: center; gap: 18px; }
+  .brand-logo {
+    height: 60px; width: auto; display: block;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.55));
+  }
+  .brand-left h1 {
+    margin: 0; font-size: 22px; letter-spacing: 5px;
+    color: var(--text); font-weight: 700;
+  }
+  .brand-left .sub {
+    color: var(--muted); font-size: 13px; letter-spacing: 1.5px;
+    margin-top: 4px; text-transform: uppercase;
+  }
+  .brand-right { text-align: right; }
+  .brand-right .stamp { color: var(--gold); font-weight: 600; font-size: 14px; }
+  .brand-right .tag { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .breaking {
+    background: linear-gradient(90deg, rgba(239,68,68,0.15), rgba(240,180,41,0.08));
+    border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .breaking-title {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--red); font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .breaking-title::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red); box-shadow: 0 0 8px var(--red);
+    animation: pulse 1.4s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .breaking ul { margin: 0; padding-left: 20px; }
+  .breaking li { margin-bottom: 6px; color: var(--text); font-size: 14px; }
+  .breaking li strong { color: var(--gold); }
+
+  .market-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 20px 0 28px;
+  }
+  .ticker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .ticker .name { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .ticker .price { color: var(--text); font-size: 18px; font-weight: 700; margin-top: 4px; }
+  .ticker .chg.up { color: var(--green); font-size: 12px; }
+  .ticker .chg.down { color: var(--red); font-size: 12px; }
+  .ticker .chg.neutral { color: var(--gold); font-size: 12px; }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tab {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-weight: 500;
+  }
+  .tab:hover { transform: translateY(-1px); }
+  .tab.active { color: #fff; border-color: transparent; }
+  .tab[data-topic="defi"].active { background: var(--blue); }
+  .tab[data-topic="security"].active { background: var(--purple); }
+  .tab[data-topic="mining"].active { background: var(--orange); }
+  .tab[data-topic="airdrops"].active { background: var(--teal); }
+  .tab[data-topic="rwa"].active { background: var(--green); }
+  .tab[data-topic="markets"].active { background: var(--blue); }
+  .tab[data-topic="vc"].active { background: var(--pink); }
+  .tab[data-topic="tao"].active { background: #6366f1; }
+
+  .panel { display: none; position: relative; }
+  .panel.active { display: block; }
+  .panel-title { font-size: 22px; margin: 0 0 6px; color: var(--gold); }
+  .panel-sub { color: var(--muted); margin: 0 0 18px; font-size: 13px; }
+
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    position: relative;
+  }
+  .stat .tile-mark { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; opacity: 0.45; }
+  .stat .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding-right: 26px; }
+  .stat .value { color: var(--text); font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .stat .delta { font-size: 12px; margin-top: 2px; }
+  .stat .delta.up { color: var(--green); }
+  .stat .delta.down { color: var(--red); }
+  .stat .delta.neutral { color: var(--gold); }
+
+  .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+  }
+  .card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .card .card-title {
+    color: var(--gold); font-size: 13px; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 600;
+    margin-bottom: 14px; padding-right: 40px;
+  }
+  .story { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+  .story:last-child { border-bottom: none; }
+  .story .headline { font-weight: 600; color: var(--text); margin-bottom: 4px; font-size: 14px; }
+  .story .meta { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+  .story .summary { color: var(--text); font-size: 13px; margin-bottom: 6px; }
+  .story .why { color: var(--muted); font-size: 12px; font-style: italic; }
+  .story .why::before { content: '\25B8 '; color: var(--gold); font-style: normal; }
+
+  .trend-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.06));
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 12px; padding: 18px; margin-top: 16px; position: relative;
+  }
+  .trend-card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .trend-card h3 { margin: 0 0 12px; color: var(--blue); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .trend-card ul { margin: 0; padding-left: 20px; }
+  .trend-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+  .trend-card strong { color: var(--gold); }
+
+  .watch-card {
+    background: linear-gradient(135deg, rgba(240,180,41,0.06), rgba(249,115,22,0.04));
+    border: 1px solid rgba(240,180,41,0.3);
+    border-radius: 12px; padding: 18px; margin-top: 16px; position: relative;
+  }
+  .watch-card .tile-mark { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; opacity: 0.55; }
+  .watch-card h3 { margin: 0 0 12px; color: var(--gold); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; padding-right: 40px; }
+  .watch-card ul { margin: 0; padding-left: 20px; }
+  .watch-card li { color: var(--text); font-size: 13px; margin-bottom: 8px; }
+  .watch-card strong { color: var(--gold); }
+
+  /* ---------- Source-confidence system (see INTEL_STANDARDS.md) ---------- */
+  .conf {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    vertical-align: middle; white-space: nowrap;
+  }
+  .conf-verified { background: rgba(34,197,94,0.14); color: #4ade80; border: 1px solid rgba(34,197,94,0.40); }
+  .conf-single   { background: rgba(240,180,41,0.13); color: var(--gold); border: 1px solid rgba(240,180,41,0.40); }
+  .conf-rumor    { background: rgba(239,68,68,0.13); color: #f87171; border: 1px solid rgba(239,68,68,0.42); }
+  .conf-method   { background: rgba(148,163,184,0.13); color: var(--muted); border: 1px solid rgba(148,163,184,0.35); }
+  .story .meta .conf { margin-right: 7px; }
+  .method-note {
+    margin-top: 8px; font-size: 12px; color: var(--muted);
+    border-left: 2px solid rgba(148,163,184,0.4); padding: 4px 0 4px 10px;
+  }
+
+  /* ---------- Today's 3 Signals ---------- */
+  .signals { margin: 24px 0 8px; }
+  .signals-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 14px;
+  }
+  .signals-head h2 {
+    margin: 0; font-size: 20px; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold);
+  }
+  .signals-head .note { color: var(--muted); font-size: 12px; }
+  .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .signal {
+    background: linear-gradient(160deg, rgba(240,180,41,0.07), rgba(17,21,32,0.92));
+    border: 1px solid rgba(240,180,41,0.32);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px; padding: 18px 18px 16px; position: relative;
+  }
+  .signal .tile-mark { position: absolute; top: 12px; right: 12px; width: 26px; height: 26px; opacity: 0.40; }
+  .signal .num { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+  .signal h3 { margin: 4px 0 12px; font-size: 15px; color: var(--text); padding-right: 34px; line-height: 1.35; }
+  .signal dl { margin: 0; }
+  .signal dt {
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    font-weight: 700; color: var(--muted); margin-top: 11px;
+  }
+  .signal dl > dt:first-child { margin-top: 0; }
+  .signal dd { margin: 3px 0 0; font-size: 13px; color: var(--text); line-height: 1.5; }
+  .signal dd.sig-next { color: #fcd34d; }
+  .signal .sig-foot { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+  /* ---------- Tag chips ---------- */
+  .tag-chip {
+    font-size: 10px; letter-spacing: 0.6px; text-transform: uppercase;
+    color: var(--muted); background: var(--surface-2);
+    border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px;
+  }
+
+  /* ---------- Utility bar ---------- */
+  .util-bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; justify-content: flex-end; }
+  .util-btn {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: all .15s ease; font-family: inherit;
+  }
+  .util-btn:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+  .util-btn.on { background: var(--gold); color: #1A0826; border-color: var(--gold); font-weight: 700; }
+
+  /* ---------- Reader mode ---------- */
+  body.reader { background: #12100c; font-size: 17px; line-height: 1.72; }
+  body.reader .container { max-width: 820px; }
+  body.reader .market-bar,
+  body.reader .stat-grid,
+  body.reader .tabs { display: none; }
+  body.reader .panel { display: block !important; margin-bottom: 46px; }
+  body.reader .story-grid,
+  body.reader .signal-grid { grid-template-columns: 1fr; }
+  body.reader .card,
+  body.reader .signal,
+  body.reader .trend-card,
+  body.reader .watch-card { background: #161310; border-color: #2a2520; }
+  body.reader .card .tile-mark,
+  body.reader .signal .tile-mark,
+  body.reader .trend-card .tile-mark,
+  body.reader .watch-card .tile-mark { display: none; }
+  body.reader .story .headline { font-size: 17px; margin-bottom: 6px; }
+  body.reader .story .summary { font-size: 15.5px; }
+  body.reader .story .why { font-size: 14.5px; }
+  body.reader .panel-title { font-size: 26px; border-bottom: 1px solid #2a2520; padding-bottom: 8px; }
+
+  @media print {
+    .tabs, .util-bar, .market-bar { display: none; }
+    .panel { display: block !important; page-break-inside: avoid; }
+    html, body { background: #fff; color: #111; }
+  }
+
+  footer {
+    margin-top: 40px; padding: 18px 0;
+    border-top: 1px solid var(--border);
+    text-align: center; color: var(--muted); font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<!-- KWIZERANA_ARCHIVE_NAV_START -->
+<div style="position:sticky;top:0;z-index:9999;background:#060810;border-bottom:1px solid rgba(122,150,187,.28);font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:1120px;margin:0 auto;padding:10px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;color:#9EB8D4;font-size:13px;">
+    <a href="../../" style="color:#E8F0FF;text-decoration:none;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Kwizerana Intelligence</a>
+    <span style="display:flex;gap:12px;align-items:center;">
+      <a href="../../" style="color:#00D4AA;text-decoration:none;font-weight:700;">Latest</a>
+      <a href="../../archive/" style="color:#9EB8D4;text-decoration:none;">Archive</a>
+    </span>
+  </div>
+</div>
+<!-- KWIZERANA_ARCHIVE_NAV_END -->
+
+<header class="brand">
+  <div class="brand-left">
+    <img class="brand-logo" src="../../brand/KWIZERANA_LOGO_TRANSPARENT.png" alt="KWIZERANA Finance" />
+    <div>
+      <h1>KWIZERANA INTELLIGENCE</h1>
+      <div class="sub">Daily Crypto, DeFi &amp; VC Brief</div>
+    </div>
+  </div>
+  <div class="brand-right">
+    <div class="stamp">Saturday, November 21, 2026</div>
+    <div class="tag">Compiled 13:22 UTC &middot; live data pull 2026-11-21T13:09:54Z <strong style="color:var(--gold);">CoinGecko, Alternative.me and DefiLlama answered from the device shell, mempool.space from the cloud workspace</strong></div>
+    <div class="util-bar">
+      <button class="util-btn" id="readerToggle" type="button">Reader mode</button>
+      <a class="util-btn" href="reports/index.html">Archive</a>
+      <a class="util-btn" href="reports/feed.xml">RSS</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="signals">
+    <div class="signals-head">
+      <h2>Today's 3 Signals</h2>
+      <div class="note">What moved &middot; why it matters &middot; what to watch next &mdash; source-graded per <a href="INTEL_STANDARDS.md">INTEL_STANDARDS</a></div>
+    </div>
+    <div class="signal-grid">
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 01</div>
+  <h3>BTC breaks the $57,803 July low, trading under $57,000 for the first time since September 2024, as the Nasdaq falls 5.28% and the S&amp;P 500 enters a correction</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>Bitcoin.com puts Friday’s low at $57,799.29 and CoinDesk has BTC below $57,000 late Friday ET, its lowest since September 2024, with $2.40B of crypto futures liquidated in 24 hours (CoinGlass via CoinDesk). Equities fell with it: Nasdaq −5.28% to 22,617.73 and S&amp;P 500 −3.7% to 6,910.39, its seventh straight loss and now a correction, after Reuters reported an SEC accounting probe into Nvidia (−14%) <em>two anonymous sources; the SEC declined to comment</em>. MSTR closed at $77.80 (−9.7%, about −30% on the week), COIN $101.97, HOOD $62.17. Friday’s spot BTC ETF print is a provisional −$124.5M with IBIT not yet reported <em>Farside, relayed; single-source</em>. Our 13:09Z pull: BTC $59,288 (−3.69%), ETH $1,671.28 (−3.79%), Fear and Greed 12.</dd>
+    <dt>Matters</dt>
+    <dd>Yesterday’s test is met in full: a close under $61,273 and a break of the $57,803 July low, so no support level from this cycle is left on the chart. The driver has changed: Friday’s provisional ETF outflow (−$124.5M) was the smallest since Monday’s inflow, while equities did the damage, so BTC is now trading as high-beta tech rather than as an ETF-flow story. That puts the weight on Strategy: 850,849 BTC is about 21.4% under its $75,452 cost (<em>our calculation</em>), and its stock fell more than twice as far as BTC over the week, shrinking the equity it sells to fund STRC buybacks ten days before the MSCI deletion.</dd>
+    <dt>Next</dt>
+    <dd class="sig-next">Mon Nov 23: a Strategy 8-K on EDGAR showing BTC sold, or STRC buybacks again larger than BTC purchases, confirms the treasury is now a net seller; a daily close back above $61,273 would put BTC back inside the range it just lost. Farside’s final Friday figure with IBIT lands before Monday’s open. The MSCI deletion takes effect at the Nov 30 close.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">markets</span><span class="tag-chip">macro</span><span class="tag-chip">treasuries</span><span class="tag-chip">etf</span>
+  </div>
+</div>
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 02</div>
+  <h3>Aave V3 Avalanche breaks the $225M line to $211.19M, but unit balances barely moved: the drop is AVAX and BTC prices, not suppliers leaving C-Chain</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>DefiLlama’s Aave V3 Avalanche series fell from $225.19M to $211.19M (−6.2%) between its two latest daily points, with $208.07M live in our 13:09Z pull. Its token breakdown shows BTC.b flat at 1,124 BTC and sAVAX flat at 6.62M, WAVAX −3.3% (9.67M → 9.36M) and WETH −1.9%, offset by about +$2.45M of USDT; valued at the later prices, net unit flows are roughly zero (<em>our calculation</em>). The rest is price: AVAX $6.52 (−3.85%), BTC −3.69%. Avalanche C-Chain TVL closed Nov 20 at $541.65M (−0.22%) with a Nov 21 partial of $515.57M (−4.8%). Native USDC on Avalanche rose for a second day, $197.70M Nov 20 close and $201.82M Nov 21 partial. On V4, LlamaRisk raised the sAVAX cap on the AVAX Correlated spoke from 1M to 1.5M at 81.9% use (Aave governance forum).</dd>
+    <dt>Matters</dt>
+    <dd>Yesterday’s watch line said a close under $225M would mean supplier exits had resumed. The trigger fired, but the unit data says the opposite: lenders stayed and the collateral repriced. The risk on the house chain is therefore liquidation, not flight. Seventeen of V4 Avalanche’s top 20 sAVAX suppliers loop WAVAX borrows against it at a median health factor of 1.12 (LlamaRisk), so a further leg down in AVAX tests that loop directly. Native USDC rising for two days falsifies nothing yet, but it is the first stablecoin inflow on C-Chain since the Nov 16–18 outflow.</dd>
+    <dt>Next</dt>
+    <dd class="sig-next">DefiLlama’s Nov 21 and Nov 22 points: a fall in BTC.b, sAVAX or USDC unit balances (not dollar value) on Aave V3 Avalanche would be real supplier exits; native USDC above $210M falsifies the outflow reading, under $190M confirms it. AVAX under $6.00 would put the V4 sAVAX/WAVAX loop’s lower health factors (1.00–1.12) at liquidation risk <em>LlamaRisk’s figures; the price threshold is our inference, not a modelled level</em>.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">defi</span><span class="tag-chip">avalanche</span><span class="tag-chip">lending</span><span class="tag-chip">stablecoins</span>
+  </div>
+</div>
+
+<div class="signal">
+  <img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" />
+  <div class="num">SIGNAL 03</div>
+  <h3>The Binance-theft ETH has left the big wallets, but only about 8% has been converted: Elliptic counts ~488,000 ETH moved and ~39,000 ETH swapped to BTC</h3>
+  <dl>
+    <dt>Moved</dt>
+    <dd>Elliptic’s Nov 20 12:00 UTC update: about 488,000 ETH (~$860M) left five large theft addresses in four identical 06:50–08:30 UTC windows on Nov 17–20 (74,880 / 78,415 / 137,602 / 197,460 ETH). Only about 39,000 ETH (~$70M) has been swapped, into about 1,100 BTC, and most of the rest sits in 12,000-ETH batches. At least 2,310 BTC (~$149M) has been coinjoined since Nov 1, about 90% of it in the last four days and mostly through the Kruw coordinator. Funds still in theft-linked addresses fell to ~$2.35B from ~$2.45B, partly on lower prices; $2.85B frozen, unchanged. Separately, Wagyu’s XMR1 wrapped Monero lost about $13M to a deployer-key theft and fell 99% <em>The Block; single-source</em>.</dd>
+    <dt>Matters</dt>
+    <dd>Yesterday’s NEXT asked whether the unmoved count would fall under ~50,000 ETH: it has, with Elliptic putting the other four of the nine largest addresses at about 41,000 ETH. But movement is not laundering. With only ~8% converted and coinjoins running at roughly 500 BTC a day, the bottleneck is now the ETH-to-BTC swap step, which is the one place the ADGM order’s 26,000-address list can still bite, if THORChain node operators and swap front-ends act on it. Elliptic reports no blocking so far.</dd>
+    <dt>Next</dt>
+    <dd class="sig-next">Elliptic’s next update by Fri Nov 27: swapped ETH above ~100,000 means the conversion bottleneck is clearing and the recoverable pool is shrinking toward the $2.85B already frozen; any THORChain or Chainflip interface blocking flows or citing the ADGM order, or a Binance figure for recovered (not merely frozen) funds, would be the first sign the order is reaching the swap layer.</dd>
+  </dl>
+  <div class="sig-foot">
+    <span class="conf conf-verified">&#10003; Verified</span>
+    <span class="tag-chip">security</span><span class="tag-chip">hacks</span><span class="tag-chip">regulation</span>
+  </div>
+</div>
+
+    </div>
+    <div class="method-note" style="margin-top:14px;"><span class="conf conf-method">&#128208; Methodology</span> <strong style="color:var(--text);">How these signals are graded.</strong> Signal 01 is VERIFIED: the break of the July low is reported independently by CoinDesk and Bitcoin.com, liquidations are CoinGlass via CoinDesk, and the index closes by finchannel and TheStreet. The Friday ETF figure is single-source (Farside’s provisional total relayed by cryptoticker; IBIT pending; no SoSoValue figure found) and is labelled. A Saturday low of $55,130 appears in one Substack report and is not used. BTC, ETH and Fear and Greed are our 13:09Z pulls; the Strategy gap is our calculation from its Nov 16 8-K. Signal 02 is VERIFIED on our own DefiLlama reads (Aave V3 protocol series and token breakdown; chain TVL; USDC per-chain series) plus the Aave governance forum for the V4 cap change. DefiLlama’s Aave protocol series stamps one day later than its chain series, so its two latest daily points are labelled by value, not by date. The unit-flow reading is our calculation and is labelled. It touches Avalanche C-Chain directly. Signal 03 is VERIFIED on Elliptic’s primary analysis; the Wagyu XMR1 item inside it is single-source and labelled. No signal rests on a RUMOR / WATCH item.</div>
+  </section>
+
+  <div class="breaking">
+  <div class="breaking-title">Breaking &mdash; November 21, 2026</div>
+  <ul>
+    <li><strong>BTC breaks the $57,803 July low</strong>, under $57,000 late Friday ET (CoinDesk), $2.40B liquidated; back at $59,288 by our 13:09Z pull (see Signal 01 and Crypto &amp; US Stocks).</li>
+    <li><strong>Nasdaq −5.28%, S&amp;P 500 enters correction</strong> on a Reuters report of an SEC accounting probe into Nvidia (−14%); MSTR −9.7%, listed miners −13% to −19% (see Crypto &amp; US Stocks and Mining).</li>
+    <li><strong>Aave V3 Avalanche falls to $211.19M</strong>, below the $225M line, but unit balances are flat; native USDC on Avalanche up to $201.82M (see Signal 02 and DeFi).</li>
+    <li><strong>Elliptic: ~488,000 Binance-theft ETH has left the large wallets, ~39,000 ETH swapped to BTC</strong>; Wagyu’s XMR1 wrapped Monero drained of about $13M (see Signal 03 and Privacy &amp; Security).</li>
+    <li><strong>Payoneer wins OCC conditional approval</strong> for a stablecoin national trust bank; Sky’s USDS supply slips another $110M to $3.097B, peg intact (see Stablecoins &amp; RWA).</li>
+    <li><strong>Bittensor Finney moves to runtime 493</strong> at block 9,549,412, its second upgrade in 24 hours; TAO $184.72 (+0.40%), the only major in the green besides XMR (see Bittensor / TAO).</li>
+  </ul>
+</div>
+
+  <div class="market-bar">
+    <div class="ticker"><div class="name">Bitcoin</div><div class="price">$59,288</div><div class="chg down">−3.69% 24h · CoinGecko 13:09:54Z · Fri low $57,799 (Bitcoin.com), under $57K per CoinDesk</div></div>
+    <div class="ticker"><div class="name">Ethereum</div><div class="price">$1,671.28</div><div class="chg down">−3.79% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">&#9650; Avalanche</div><div class="price">$6.52</div><div class="chg down">−3.85% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Solana</div><div class="price">$69.52</div><div class="chg down">−2.05% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Zcash</div><div class="price">$779.33</div><div class="chg down">−3.84% 24h · CoinGecko</div></div>
+    <div class="ticker"><div class="name">Monero</div><div class="price">$471.45</div><div class="chg up">+1.80% 24h · CoinGecko · ZEC 1.65x XMR (1.75x Nov 20)</div></div>
+    <div class="ticker"><div class="name">Bittensor (TAO)</div><div class="price">$184.72</div><div class="chg up">+0.40% 24h · CoinGecko (bittensor)</div></div>
+    <div class="ticker"><div class="name">Total Market Cap</div><div class="price">$2.045T</div><div class="chg down">−6.35% 24h per /global · CoinGecko · &#128208; see note</div></div>
+    <div class="ticker"><div class="name">BTC Dominance</div><div class="price">57.67%</div><div class="chg neutral">CoinGecko /global</div></div>
+    <div class="ticker"><div class="name">Fear &amp; Greed</div><div class="price">12</div><div class="chg neutral">“Extreme Fear” · Alternative.me · 12 yesterday</div></div>
+    <div class="ticker"><div class="name">DeFi TVL (all chains)</div><div class="price">$69.56B</div><div class="chg down">−1.05% vs $70.30B Nov 19 · DefiLlama Nov 20 close · Nov 21 partial $66.56B</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX C-Chain TVL</div><div class="price">$541.65M</div><div class="chg down">−0.22% vs $542.87M Nov 19 · Nov 20 close · Nov 21 partial $515.57M (−4.82%)</div></div>
+    <div class="ticker"><div class="name">&#9650; Aave V3 Avalanche</div><div class="price">$211.19M</div><div class="chg down">−6.22% vs $225.19M (latest two daily points) · live $208.07M · under the $225M line · unit balances ~flat, drop is price &#128208; see Signal 02</div></div>
+    <div class="ticker"><div class="name">&#9650; Avalanche native USDC</div><div class="price">$201.82M</div><div class="chg up">Nov 21 partial · $197.70M Nov 20 close · between the $190M and $210M lines · bridged ~$31.2M · DefiLlama per-chain series</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX stablecoins (ex-BUIDL)</div><div class="price">$0.8868B</div><div class="chg up">+13.69% vs $0.7800B Nov 19 · Nov 20 close, incl. the $100M USDT reclassification · Nov 21 partial $0.8915B</div></div>
+    <div class="ticker"><div class="name">&#9650; AVAX DEX volume (24h)</div><div class="price">$68.27M</div><div class="chg up">+34.60% 1d · 7d total $430.75M · DefiLlama overview · fees $296.1K</div></div>
+    <div class="ticker"><div class="name">Stablecoin Supply</div><div class="price">$283.56B</div><div class="chg down">−0.35% vs $284.56B 24h ago · 7d −1.50% · USDT $174.51B · USDC $68.65B · DefiLlama sum (ex-BUIDL)</div></div>
+    <div class="ticker"><div class="name">Sky USDS supply</div><div class="price">$3.097B</div><div class="chg down">−3.43% vs $3.207B prev day (DefiLlama list endpoint) · per-token series $3.111B · above the $3.0B line, peg $1.00</div></div>
+    <div class="ticker"><div class="name">BTC Hashrate</div><div class="price">1,063 EH/s</div><div class="chg neutral">mempool.space current field (±10%) · daily 1,051 / 1,016 / 976 EH/s (points stamped Nov 19/20/21 00:00 UTC)</div></div>
+    <div class="ticker"><div class="name">BTC Difficulty</div><div class="price">134.82T</div><div class="chg neutral">−9.13% at the previous retarget · mempool.space</div></div>
+    <div class="ticker"><div class="name">Next Retarget (est)</div><div class="price">+10.34%</div><div class="chg up">mempool.space · block 977,760, 851 blocks left, about Nov 26 21:49 UTC · was +7.81% yesterday · &#128208; estimate</div></div>
+    <div class="ticker"><div class="name">Strategy BTC vs cost</div><div class="price">−21.4%</div><div class="chg down">850,849 BTC at $75,452 avg (8-K, Nov 16) vs $59,288 spot · −18.4% yesterday</div></div>
+    <div class="ticker"><div class="name">Spot BTC ETF flow (Nov 20)</div><div class="price">−$124.5M</div><div class="chg down">Farside provisional, as relayed · IBIT not yet reported · −$582.3M Nov 19 · week about −$1.25B · not our pull, single-source</div></div>
+  </div>
+
+  <div class="method-note" style="border-left-color:rgba(148,163,184,0.5); margin:0 0 18px; padding:10px 0 10px 12px;">
+    <span class="conf conf-method">&#128208; Methodology</span> <strong style="color:var(--text);">Items to carry before reading on.</strong> <strong>Closes:</strong> DefiLlama dates each daily point at 00:00 UTC; a ‘Nov 20 close’ here is the point stamped Nov 20, as in earlier briefs. All-chain Nov 19 is $70.30B and Avalanche Nov 19 $542.87M. DefiLlama’s Aave protocol series stamps one day later than its chain series (yesterday’s ‘Nov 19 close’ of $225.19M is stamped Nov 20 there), so today the two Aave readings are given by value: $225.19M → $211.19M, live $208.07M. <strong>Avalanche stablecoins:</strong> the Nov 20 close ($886.77M) includes the $100M USDT unreleased→circulating move reported yesterday; circulating plus unreleased is $1,374.4M on Nov 20 and $1,379.2M on Nov 21, so the Nov 21 partial is close to flat. CoinGecko’s /global field reads total cap −6.35% in 24h while BTC is −3.69%, ETH −3.79%, SOL −2.05% and AVAX −3.85%; with BTC dominance at 58% that field is not credible and is shown only as reported. Total stablecoin supply: our token sum $283.56B vs DefiLlama’s chart series $283.44B (Nov 20 close) and $282.58B (Nov 21 partial). Hashrate is derived from block timing and is always ±10%: mempool.space’s current field reads 1,063 EH/s and Hashrate Index 1,051.98 EH/s. Hashprice $27.42/PH/day is Hashrate Index (no timestamp; read about 13:30Z; $28.94 yesterday); Luxor’s $28.58 (Nov 20) is an earlier reading, not a conflict. <strong>The retarget:</strong> +10.34% at our read, 57.8% into the epoch, about Nov 26 21:49 UTC; it was +7.81% in yesterday’s brief; MineOrNot and ECOS estimates of +8.39–8.52% (Coinotag, Nov 20) are earlier reads. <strong>Privacy pair:</strong> ZEC $779.33 (−3.84%) and XMR $471.45 (+1.80%); ratio 1.65x vs 1.75x on Nov 20. TAO $184.72 from our 13:09:54Z pull. BTC’s Friday low: $57,799.29 (Bitcoin.com), ‘below $57,000’ (CoinDesk, about 04:10Z Saturday); a Saturday low of $55,130 in one Substack report is uncorroborated and not used. Story prices that differ from our pull (BigGo BTC $58,333 at Friday’s close; BitcoinWorld $57,914 at 09:50Z) are time differences. ETF flows are as reported by the cited outlets; Friday’s figure is provisional with IBIT missing.
+  </div>
+
+  <div class="method-note" style="border-left-color:rgba(240,180,41,0.5); margin:0 0 18px; padding:10px 0 10px 12px;">
+    <strong style="color:var(--text);">How to read the badges.</strong>
+    <span class="conf conf-verified">&#10003; Verified</span> two or more independent outlets, or a primary source (filing, wire release, official API).
+    <span class="conf conf-single">&#9670; Single-source</span> one credible outlet, not independently corroborated &mdash; directionally useful, not load-bearing.
+    <span class="conf conf-rumor">&#9888; Rumor / Watch</span> unconfirmed, aggregator-only, or self-reported with no third-party check; never used as a Signal.
+    <span class="conf conf-method">&#128208; Methodology</span> attached wherever trackers disagree or bases differ.
+    A mirror or syndication of the same copy does <em>not</em> count as a second source, and a page seen only as a search snippet is downgraded one tier. Research coverage was thin in several topics on Oct 21&ndash;22 (the stablecoin and DeFi cards carry fewer than six stories); empty slots are noted rather than backfilled, and cards dated before Oct 15 are labelled as background. Full rules in <a href="INTEL_STANDARDS.md">INTEL_STANDARDS.md</a>.
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-topic="defi">DeFi</div>
+    <div class="tab" data-topic="security">Privacy &amp; Security</div>
+    <div class="tab" data-topic="mining">Mining</div>
+    <div class="tab" data-topic="airdrops">Liquidity &amp; Airdrops</div>
+    <div class="tab" data-topic="rwa">Stablecoins &amp; RWA</div>
+    <div class="tab" data-topic="markets">Crypto &amp; US Stocks</div>
+    <div class="tab" data-topic="vc">VC &amp; Capital</div>
+    <div class="tab" data-topic="tao">Bittensor / TAO</div>
+  </div>
+
+<section class="panel active" data-topic="defi">
+<h2 class="panel-title">DeFi</h2>
+<p class="panel-sub">Leverage led DeFi as ETH fell to $1,671: Nasdaq-listed BTCS told the SEC its ~$54M Aave loan could be liquidated (CoinDesk models ~$1,446 ETH), and a $13M deployer-key hack sent Wagyu's XMR1 down 99%. On Avalanche, Aave V3 fell to $211.19M on the latest daily point ($208.07M live), below the $225M line, while LlamaRisk raised the V4 Avalanche sAVAX cap 50%. Sources: CoinDesk, The Block, The Defiant, SEC EDGAR, Aave governance forum, rekt.news; TVL and volume figures from DefiLlama via our 13:09Z pull.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">DeFi TVL Nov 20 close</div><div class="value">$69.56B</div><div class="delta down">−1.05% d/d vs $70.30B; Nov 21 partial $66.56B (−4.31%) (DefiLlama, our 13:09Z pull)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche C-Chain TVL Nov 20 close</div><div class="value">$541.65M</div><div class="delta down">−0.22% d/d vs $542.87M; Nov 21 partial $515.57M (−4.8%, AVAX −3.85%) (DefiLlama, our 13:09Z pull)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Aave V3 Avalanche latest daily point</div><div class="value">$211.19M</div><div class="delta down">−6.2% vs $225.19M; live $208.07M; under the $225M line (DefiLlama, our 13:09Z pull)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche DEX volume 24h</div><div class="value">$68.27M</div><div class="delta up">+34.6% 1d; 7d $430.75M; chain fees 24h $296.1K (DefiLlama, our 13:09Z pull)</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> CoinDesk; The Defiant; SEC EDGAR Form 8-K (primary) &middot; Nov 21, 2026 &middot; <a href="https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated">source</a></div>
+  <div class="body">BTCS had about $54M of Aave debt on Nov 19 (down from about $64M two weeks earlier) against about $111M of crypto valued at $1,775 ETH, and its Nov 19 8-K says it can give no assurance a liquidation will not happen. CoinDesk models a health factor near 1.2 and a liquidation price around $1,446. <em>Why it matters:</em> With ETH at $1,671, the modeled trigger is about 13.5% away, so a further leg down would force a public company's collateral onto Aave's liquidators. The borrowed stablecoins fund about $41M of LP positions that would have to be unwound first to repay. <em>«The health factor and $1,446 liquidation price are CoinDesk estimates; the 8-K gives no threshold or LTV.» «The 46,676 ETH collateral figure is as of Nov 9, per CoinDesk.» «BTCS shares fell 12.2% Friday to $0.653 (CoinDesk).» «Also in Crypto &amp; US Stocks today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Wagyu's XMR1 wrapped Monero plunges 99% after $13 million hack as founder promises refunds</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block (first flagged by Lookonchain) &middot; Nov 20, 2026 &middot; <a href="https://www.theblock.co/news/defi/2026-11-20-wagyus-xmr1-wrapped-monero-plunges-99-after-13-million-hack-founder-promises-refunds-444747">source</a></div>
+  <div class="body">An attacker took about $13M after receiving 5.2M XMR1 from Wagyu's deployer wallet, sold part of it for USDC on Hyperliquid and bought nearly 7,500 ETH. XMR1 fell from nearly $500 to as low as $0.65. <em>Why it matters:</em> The founder blames a deployer key left on a deleted server at Iceland's 1984.hosting, which would put this alongside last week's Lighter API-key drain: both were off-chain key handling failures, not contract bugs. The refund is personal and has no timetable. <em>«Single outlet; no security firm has published a loss figure.» «The 1984.hosting breach is the founder's account; The Block notes Icelandic reports of a 1984 cyberattack but no independent link to the key.» «Monero XMR itself is unaffected.» «Also in Privacy &amp; Security today, where DefiLlama’s hacks database lists the loss at $13.51M.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Risk Stewards: Cap Changes on Aave V4 / 2026.11.20</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Aave governance forum (LlamaRisk), primary &middot; Nov 20, 2026 &middot; <a href="https://governance.aave.com/t/risk-stewards-cap-changes-on-aave-v4-2026-11-20/26458">source</a></div>
+  <div class="body">At 14:01 UTC LlamaRisk raised the sAVAX add cap on Aave V4 Avalanche's AVAX Correlated spoke from 1M to 1.5M at 81.9% use (819.2K). Seventeen of the top 20 suppliers loop WAVAX borrows against sAVAX, with health factors from 1.00 to 1.54 (median 1.12). <em>Why it matters:</em> V4 Avalanche is growing an sAVAX/WAVAX carry loop that only works while sAVAX staking yield beats the WAVAX borrow rate. BENQI's plan, reported by The Defiant the same day, to cut sAVAX unstaking from a fixed 15 days to as little as 48 hours from next week would make that loop easier to unwind. <em>«Top 20 holders own about 97% of sAVAX supply on this spoke, so concentration is high.» «The BENQI queue is single-source (The Defiant, Nov 20), and the article body did not load.» «On-chain execution not checked.» «The Nov 21 V3 steward post (10:26 UTC) has no Avalanche lines.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Kava Lend loses roughly $3.8 million to hack, sending KAVA token down nearly 40%</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; rekt.news &middot; Nov 14, 2026 &middot; <a href="https://www.theblock.co/news/defi/2026-11-14-kava-lend-loses-roughly-3-8-million-to-hack-sending-kava-token-down-nearly-40-440350">source</a></div>
+  <div class="body">About 55.2M KAVA (about $3.76M) was drained from Kava Lend after an attacker cut the dormant BUSD market's supply to 2 base units, inflating a few thousand BUSD into about 1.25B BUSD of book collateral, then borrowed KAVA 127 times against it. <em>Why it matters:</em> The bug sat in a market kept alive during a wind-down, so other protocols with dormant reserves face the same exposure to empty-pool index inflation. Kava's Proposal 223 to freeze borrowing closes Nov 23. <em>«Kava has not published its own loss figure; $3.76M is at the $0.068 pre-attack price.» «rekt.news cites ScaleBit's $37.7M market-cap drop, which is not a realized loss.» «The attack began late Nov 13 ET, about 04:00 UTC Nov 14.» «Repeat: Kava Lend ran in the Nov 15–18 briefs; it appears again in Privacy &amp; Security today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Aave Voters Back Plan to Narrow V3 Core Collateral</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Defiant; proposal terms from the Aave governance forum (LlamaRisk ARFC) &middot; Nov 21, 2026 &middot; <a href="https://thedefiant.io/news/defi/aave-voters-back-plan-to-narrow-v3-core-collateral">source</a></div>
+  <div class="body">Aave voters backed LlamaRisk's plan to freeze 11 V3 Core reserves that held $1.33B of collateral backing $1.03B of debt as of Nov 9, led by rsETH ($661.8M) and osETH ($279.4M). Existing loans stay open. <em>Why it matters:</em> Freezing rsETH and osETH Core collateral pushes about $860M of WETH loops toward retained collateral or V4. If balances do not fall, the ARFC allows stepwise liquidation-threshold cuts and then higher borrow rates, each announced on the forum first. <em>«The vote result is reported only by The Defiant; we did not open the Snapshot page, and no percentage is given.» «The plan still needs an on-chain AIP for the freezes.» «BTC.b, relevant to Avalanche, is in scope but only $1.2M on Core.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Sky's USDC Exit Reserve Rises 29% to 1.13 Billion</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Defiant; DefiLlama USDS read (our 13:09Z pull) &middot; Nov 20, 2026 &middot; <a href="https://thedefiant.io/news/defi/sky-s-usdc-exit-reserve-rises-29-to-1-13-billion">source</a></div>
+  <div class="body">The PSM's USDC reserve rose 29% between the Nov 19 and Nov 20 snapshots to 1.13B USDC (+254M between midday snapshots). Sky's TVL still fell 44.5% in the week to Nov 20, to $2.24B (The Defiant, Nov 21). <em>Why it matters:</em> The rebuild puts the reserve back above the $872M low, but USDS supply is still shrinking ($3.207B to $3.097B on DefiLlama's list endpoint), so redemptions continue at a slower pace. No freeze or legal action has been reported. <em>«Follow-up to the Nov 20 brief.» «The Defiant does not name its data source, and both article bodies loaded only partially.» «Our USDS figures use a different endpoint from yesterday's $3.15B Nov 20 point.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>ETH under $1,700 tests leveraged loops</strong> &mdash; BTCS's modeled liquidation price (~$1,446) is about 13.5% below spot. On Aave V3 Core, WETH borrows hit 99.5% of cap, and the top-20 borrowers have a median health factor of 1.04, mostly against LST/LRT collateral. LlamaRisk raised the WETH borrow cap from 1.85M to 2.15M on Nov 21 rather than tightening it.</li>
+  <li><strong>Avalanche capital leaves faster than AVAX falls</strong> &mdash; Avalanche TVL's Nov 21 partial is −4.8% against AVAX −3.85%, and Aave V3 Avalanche is down 6.2% to $211.19M. DEX volume rose 34.6% to $68.27M, which fits forced selling better than inflows. Stablecoins at $891.51M are inflated by Tether's +$100M reclassification. Native USDC at $201.82M sits between the $190M and $210M triggers.</li>
+  <li><strong>Losses come from keys and dead markets, not new code</strong> &mdash; This week's DeFi losses came from a leaked deployer key (Wagyu, $13M), an empty-pool accounting edge in a dormant BUSD market (Kava Lend, $3.76M) and a leaked API key (Lighter, Nov 16). None involved a newly deployed contract.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>ETH $1,446 and Aave Core liquidations</strong> &mdash; Trigger: ETH under about $1,450 makes BTCS's whole Aave position eligible for liquidation on CoinDesk's model. Watch for a new BTCS 8-K on debt paydown by Mon Nov 23, and whether Core WETH borrow-cap utilization refills above 95% after Nov 21's increase.</li>
+  <li><strong>Aave V3 Avalanche $200M and the V4 sAVAX loop</strong> &mdash; Aave V3 Avalanche is $208.07M live, and under $200M would mean exits are speeding up. On V4, watch BENQI's sAVAX queue launch next week, sAVAX filling the new 1.5M cap, and AIP #543 (USAT borrow-only on V4 Avalanche), whose vote result is not shown on the forum.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Watch-item answer from Nov 20: Aave V3 Avalanche broke the $225M line. The DefiLlama protocol series, which stamps one day later than the chain series, moved from $225.19M to $211.19M (−6.2%), with $208.07M live in our 13:09Z pull.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Native USDC on Avalanche (minted): Nov 20 close $197.70M, Nov 21 partial $201.82M. Neither the $190M outflow trigger nor the $210M falsifier fired. Bridged USDC is about $31.2M.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> USDS supply bases differ: our pull's list endpoint shows $3.207B to $3.097B (−3.4%), while yesterday's brief used the per-asset series' Nov 20 point of $3.15B. USDS is still above the $3.0B trigger. Sky TVL of $2.24B (The Defiant, Nov 20 snapshot) counts a different bucket from USDS supply.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The CoinGecko /global 24h figure (−6.35%) disagrees with the majors (~−3.7%). DeFi TVL's Nov 21 partial (−4.31%) is closer to the majors' move.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Several The Defiant article bodies loaded only partially ('Loading this article…'), so the BENQI, Sky and Aave V3 Core items rest on headlines, standfirsts and metadata. We did not open the Snapshot vote for the V3 Core ARFC or the on-chain vote for AIP #543.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Excluded: Binance-hack laundering (Elliptic, $149M BTC via coinjoins; The Block, Nov 20), left for the security panel. Also excluded: a Jupiter YOLO $1B volume story and an Echo Protocol wind-down story, because their pages are dated in October, outside the window.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Editor: what broke the $225M line. DefiLlama’s Aave V3 Avalanche token breakdown fell $225.19M → $211.19M (−$14.0M) between its two latest daily points, but unit balances barely moved: BTC.b 1,124.05 → 1,124.16 and sAVAX 6.624M → 6.617M were flat, WAVAX fell 9.67M → 9.36M (−3.3%) and WETH −1.9%, while USDT rose about $2.45M. Valued at the later prices, net unit flows are roughly zero; the drop is almost entirely mark-to-market (WAVAX about −7.4%, BTC.b about −5%). «Our calculation from DefiLlama’s protocol endpoint.»</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Editor: yesterday’s brief gave USDS as $3.21B on DefiLlama’s per-token series and $3.153B on the list endpoint (not $3.15B on the per-asset series, as the note above says). Today’s list endpoint reads $3.097B; the RWA pass reads the per-token series at $3.111B.</div>
+</section>
+<section class="panel" data-topic="security">
+<h2 class="panel-title">Privacy &amp; Security</h2>
+<p class="panel-sub">A $13.5M deployer-key theft at Wagyu's XMR1 wrapped Monero led the panel. The token fell from nearly $500 to $0.65 while XMR itself rose 1.80% to $471.45 and ZEC fell 3.84% to $779.33 (CoinGecko, our 13:09Z pull). Fluidkey is back online on v1.79.22: it blames a third-party logging tool, and trackers put losses at ~$1.6M. Elliptic's Nov 20 12:00 UTC update says ~488,000 Binance-theft ETH has left five large addresses, but only ~39,000 ETH has been swapped to BTC, and ~$2.35B remains in theft-linked addresses. Sources: The Block, Elliptic, CryptoSlate, PANews, ChainCatcher, DefiLlama hacks API (pulled ~13:30 UTC Nov 21).</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ZEC</div><div class="value">$779.33</div><div class="delta down">−3.84% 24h (CoinGecko, our 13:09Z pull), from $811.15 in yesterday's pull; BTC −3.69% over the same window</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">ZEC/XMR ratio</div><div class="value">1.65x</div><div class="delta down">from 1.75x Nov 20 and 1.89x Nov 19 (computed from our pulls: $779.33 / $471.45). XMR +1.80% is the only gainer among the tracked majors</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Nov 2026 hack losses (MTD)</div><div class="value">$79.73M</div><div class="delta up">DefiLlama hacks API, 33 incidents Nov 1–20, gross; Wagyu XMR1 $13.51M added Nov 20. Fluidkey still listed with no amount (trackers ~$1.6M)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Binance theft: frozen / still in theft-linked addresses</div><div class="value">$2.85B / ~$2.35B</div><div class="delta down">Elliptic, Nov 20 12:00 UTC: down from ~$2.45B on Nov 19, partly due to lower prices (Elliptic). Frozen total unchanged; no recovered total published</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Wagyu's XMR1 wrapped Monero plunges 99% after $13 million hack as founder promises refunds</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block; DefiLlama hacks database (independent entry, $13.51M) &middot; Nov 20, 2026 &middot; <a href="https://www.theblock.co/news/defi/2026-11-20-wagyus-xmr1-wrapped-monero-plunges-99-after-13-million-hack-founder-promises-refunds-444747">source</a></div>
+  <div class="body">$13M stolen: 5.2 million XMR1 left the deployer wallet for the attacker, part was sold for USDC on Hyperliquid and rotated into ~7,500 ETH, and XMR1 fell from nearly $500 to as low as $0.65. Founder PerpetualCow blames a breach at Icelandic host 1984.hosting, where he says an old server still held the deployer key, and has pledged personal refunds. <em>Why it matters:</em> This is the second Wagyu incident in a month, after the Oct 28 leak of 4,580 completed XMR swap records with IPs (Hudson Rock). Both came from operator infrastructure, not the Monero protocol, which is why XMR rose 1.80% while its wrapped proxy went to near zero. Wrapped privacy-coin products inherit the custody risk of whoever holds the mint key. <em>«The 1984.hosting cause is the founder's claim. The Block says Icelandic outlets DV and mbl.is reported 1984 suspended services after a cyberattack, but that does not confirm the key exposure.» «No refund timetable has been given, and XMR1 total supply was not reported.» «Lookonchain first flagged the flows; DefiLlama classifies the incident as “Key Leaked via Infrastructure”.» «We found no second news outlet with an openable write-up.» «Editor: downgraded verified to single-source to match the DeFi panel: the only second reference is DefiLlama’s hacks-database listing ($13.51M), a tracker entry likely compiled from the same reports, not an independent outlet.» «Also in DeFi today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Fluidkey Exploit Reportedly Costs Nearly $1.63M; Service Restored After App Update</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> PANews; CryptoSlate (opened via cryptonews.net republication); ChainCatcher (Fluidkey statement) &middot; Nov 21, 2026 &middot; <a href="https://panews.io/articles/01a1fd87-c1e3-747d-8f6d-3f44417a8a72">source</a></div>
+  <div class="body">Trackers put losses at ~$1.6M: Bitquery traced ~$1.6M to linked wallets across six chains, and the pepebndc tracker counts ~$1.63M across seven. Fluidkey restored service on Nov 20 with web, iOS and Android v1.79.22, and attributes the drain to a flaw in a third-party logging tool that exposed session data. It says private keys never left users' devices. <em>Why it matters:</em> If the keys stayed on devices, the attacker needed only logged session data to authorize transfers. That shifts the audit question for stealth-address wallets from cryptography to telemetry and analytics dependencies. Expect privacy wallets to strip or self-host logging, and stealth-address relayers to face more scrutiny. <em>«Follow-up to the Nov 20 brief: yesterday's ~225.87 ETH (~$401K) single-analyst figure is superseded.» «Loss figures are third-party estimates, not Fluidkey's. Bitquery notes ~$277K sent during the drain to an older wallet may be a user moving their own funds, and $65K is unclassified.» «Fluidkey has not named the logging tool, the user count or the total; it promises individual contact and a full post-mortem.» «PANews cites CryptoSlate, so the two are not independent. ChainCatcher independently carries Fluidkey's cause and version statement. CryptoSlate's own page returned an error.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">How North Korea is laundering the $6.4 billion stolen from Binance</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Elliptic (primary live-updated analysis, last updated Nov 20, 2026, 12:00 UTC) &middot; Nov 20, 2026 &middot; <a href="https://elliptic.co/insights/how-north-korea-is-laundering-the-6-4-billion-stolen-from-binance/">source</a></div>
+  <div class="body">~488,000 ETH (~$860M) left five large theft addresses in four identical 06:50–08:30 UTC windows on Nov 17–20 (74,880 / 78,415 / 137,602 / 197,460 ETH). Only ~39,000 ETH (~$70M) has been swapped, into ~1,100 BTC, and most of the rest sits in 12,000 ETH batches. At least 2,310 BTC (~$149M) has been coinjoined since Nov 1, ~90% of it in the last four days and mostly via the Kruw coordinator. <em>Why it matters:</em> The ETH has left the large addresses, but only ~8% has been converted, so the bottleneck is now the ETH-to-BTC swap step (~500 BTC/day of coinjoins). That leaves the ADGM order's 26,000-address list a window to reach THORChain node operators and swap front-ends before the batches clear. Elliptic reports no blocking so far. <em>«Follow-up to the Nov 20 brief.» «Yesterday's watch item tested: we estimated ~42,000 ETH left unmoved after Nov 20. Elliptic now says the five addresses were emptied, and puts the other four of the nine largest at ~41,000 ETH (~$73M).» «The coinjoin figures are minimums, per Elliptic.» «The Elliptic page does not mention Chainflip or the ADGM order, and we found no report of THORChain or Chainflip blocking flows.» «The 18,270 BTC taken directly in the theft has not moved.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Binance obtains $6.5 billion freezing order from Abu Dhabi court in bid to recover stolen crypto</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; Cointelegraph &middot; Nov 18, 2026 &middot; <a href="https://www.theblock.co/news/business/2026-11-18-binance-freezing-court-order-adgm-crypto-october-hack-443491">source</a></div>
+  <div class="body">$6.5B worldwide freezing order from ADGM Courts (Justice William Stone SBS KC) against the unidentified Oct 29 attackers. It covers 26,000 wallet addresses on a list updated as funds move, can be served on-chain, and comes with interim delivery-up orders over specific assets. <em>Why it matters:</em> Gibson Dunn calls it possibly the largest publicly known freezing order. Its practical value depends on whether intermediaries treat on-chain service as notice. A swap interface or coinjoin coordinator that keeps processing listed addresses now has a court order to point to, which sets up the first test case for DeFi-routing liability outside the US. <em>«Binance stresses the $6.5B is an injunction ceiling, not a recovered amount.» «Frozen totals differ by basis: Binance says $2.85B was frozen or intercepted; DOJ says more than $2.7B, across government and private efforts (Cointelegraph).» «Background for the Nov 20 brief, not run as a card there.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Trezor hit by another shipping partner data leak, affecting 27,000 Skladon orders</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; Decrypt &middot; Nov 16, 2026 &middot; <a href="https://www.theblock.co/news/business/2026-11-16-trezor-hit-another-shipping-partner-data-leak-affecting-27000-skladon-orders-441524">source</a></div>
+  <div class="body">~27,000 Trezor orders placed Aug 9 – Nov 7 were exported from shipping partner Skladon on Nov 7. Exposed fields are names, phone numbers, delivery addresses, emails and order details. Trezor was not told until Nov 15 (Decrypt), and users report scam calls impersonating Trezor support. <em>Why it matters:</em> This is the third Trezor third-party leak since August, after ShipMonk and the Brevo email export. A list of hardware-wallet buyers with home addresses is a physical-attack target list. Trezor's response (45-day retention, anonymous pickup in 18 European countries) shows self-custody vendors treating shipping data as a security liability. <em>«ShipMonk figures disagree: The Block says ~13,700 customers; Trezor's own blog, updated Sep 4, says 80,689 in total including ~67,000 US customers; Decrypt also cites 80,689.» «Trezor says no seeds, PINs or passphrases were exposed.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Kava Lend loses roughly $3.8 million to hack, sending KAVA token down nearly 40%</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; Cryptoticker (citing Bitquery); DefiLlama hacks database &middot; Nov 14, 2026 &middot; <a href="https://www.theblock.co/news/defi/2026-11-14-kava-lend-loses-roughly-3-8-million-to-hack-sending-kava-token-down-nearly-40-440350">source</a></div>
+  <div class="body">~55.2 million KAVA (~$3.76M at $0.068) was drained in about 90 minutes. The attacker pushed the dormant BUSD market's net supply to a tiny positive value, so a divide-by-near-zero interest calculation inflated deposits ~243,000x, then borrowed KAVA against them 127 times and sold ~$2.09M on BNB Chain via LayerZero. <em>Why it matters:</em> This was an arithmetic edge case in a market left open after Paxos stopped minting BUSD in 2023. Deprecated-asset markets that still accept deposits are untested attack surface, and expect lenders to sunset them rather than leave them dormant. <em>«Kava has not published a loss figure or post-mortem, and says it was “not an infinite mint”.» «Price drop varies by source and time: ~39% (The Block, at publication) vs 46.6% (CoinGecko via Cryptoticker).» «DefiLlama carries $3.70M.» «Repeat: Kava Lend ran in the Nov 15–18 briefs and also appears in DeFi today.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Third-party infrastructure is the breach point in privacy tooling</strong> &mdash; Wagyu XMR1 (a deployer key on an old hosted server), Fluidkey (a third-party logging tool exposing session data) and Trezor (a shipping partner, its third leak since August) all lost funds or data without any protocol or cryptographic failure. DefiLlama classifies 4 of 33 November incidents as frontend or infrastructure, and these include the two largest non-exchange losses: Wagyu $13.51M and Lighter $10.39M.</li>
+  <li><strong>Binance ETH has moved but is not yet converted</strong> &mdash; Elliptic says ~488,000 ETH left the large addresses on Nov 17–20 in the same 06:50–08:30 UTC window each day, but only ~39,000 ETH has been swapped. Coinjoins are steady at ~480–590 BTC/day. The remaining-funds figure fell from $2.56B (Nov 17) to $2.35B (Nov 20), partly due to lower prices, while the $2.85B frozen has not grown.</li>
+  <li><strong>XMR is decoupling from ZEC</strong> &mdash; XMR +1.80% vs ZEC −3.84% and BTC −3.69% in our pull, and the ZEC/XMR ratio has fallen from 1.89x to 1.65x in two days. XMR held up despite a wrapped-XMR collapse, so the market is separating protocol risk from wrapper risk. ZEC continues to trade on ETF outflows and the governance overhang.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Binance ETH batches vs. ADGM list (through Nov 27)</strong> &mdash; Falsifiable: if laundering continues at the current pace, Elliptic's swapped figure should rise well above ~39,000 ETH and daily coinjoins stay ~500 BTC. If no new 06:50 UTC wave appears on Nov 21–23, the five-address pool is exhausted and the ~41,000 ETH in the other four large addresses is next. Also watch whether any THORChain node operator, Chainflip or the Kruw coordinator cites the ADGM order, and whether Binance publishes a recovered total.</li>
+  <li><strong>Fluidkey post-mortem and Wagyu refunds</strong> &mdash; Fluidkey promised a post-mortem naming the logging-tool flaw. Check whether DefiLlama fills its blank amount near ~$1.6M, and whether other wallets disclose use of the same tool. For Wagyu, a refund snapshot or mechanism and any 1984.hosting statement would confirm or refute the founder's account. Zcash's NU7.1 poll closes Nov 30 23:59 / Dec 1 02:59 UTC.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Binance remaining-funds bases: Elliptic Nov 20 says ~$2.35B in theft-linked addresses, versus $2.45B Nov 19 and $2.56B Nov 17 (crypto.news citing Elliptic). Elliptic attributes part of the drop to prices, so it is not all laundering. ETH figures: ~488,000 ETH left five addresses (sum of daily waves 74,880 + 78,415 + 137,602 + 197,460 = 488,357); ~39,000 swapped; the other four large addresses hold ~41,000 ETH. These are not the same basis as Onchain Lens's ~226,665 ETH (Nov 20) remaining in tracked wallets.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hack tally: DefiLlama hacks API, pulled ~13:30 UTC Nov 21, shows $79.73M gross across 33 November incidents (Nov 1–20). Yesterday's pull showed $67.19M across 35. The +$12.54M change is below Wagyu's $13.51M, so DefiLlama appears to have dropped or revised ~2 earlier entries (~$0.97M); we did not identify which. Fluidkey is still listed with no amount.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Fluidkey loss bases: ~$1.6M across six chains (Bitquery, one-hour scan, including possible owner withdrawals) vs ~$1.63M across seven chains (pepebndc tracker, Nov 20 a.m. snapshot, excluding likely owner withdrawals). Neither is a Fluidkey figure.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Not used: CryptoSlate's Fluidkey page and BeInCrypto's Zcash ETF-outflow page returned client errors (CryptoSlate was read via its cryptonews.net republication). We found no Nov 20–21 ZEC- or XMR-specific catalyst story beyond Wagyu XMR1, and CoinMarketCap's AI-written ZEC item (Nov 14) was excluded as AI-generated. The SEC Dec 15 privacy roundtable results refer to 2025.</div>
+</section>
+<section class="panel" data-topic="mining">
+<h2 class="panel-title">Mining</h2>
+<p class="panel-sub">Listed miners led Friday's AI-driven equity sell-off: MARA fell 18.6%, IREN 18% and Hut 8 17.7% (CoinDesk). BTC is now about 31% below JPMorgan's new $86,000 production-cost estimate. Hashprice is $27.42/PH/day on the Hashrate Index homepage (no timestamp; read ~13:30Z at BTC $59,297), and mempool.space now projects a +10.34% retarget around Nov 27, which would push hashprice toward roughly $25 at a flat BTC price. Network figures come from our 13:09Z pull.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hashprice (Hashrate Index)</div><div class="value">$27.42/PH/day</div><div class="delta down">vs $28.94 in yesterday's brief; Luxor index $28.58 on Nov 20 and $30.45 on Nov 16; homepage has no timestamp (read ~13:30Z)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Hashrate (mempool.space, current)</div><div class="value">1,063 EH/s</div><div class="delta up">vs 1,026 yesterday; daily points 1,051 / 1,016 / 976 EH/s stamped Nov 19/20/21; ±10%; our 13:09Z pull</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Next retarget est. (mempool.space)</div><div class="value">+10.34%</div><div class="delta up">vs +7.76% yesterday; difficulty 134.82T; block 977,760, 851 blocks left, ~Nov 27 UTC; MineOrNot projects +8.47%</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">JPMorgan production cost vs spot</div><div class="value">$86,000 vs $59,288</div><div class="delta down">spot is ~31.1% below the estimate; the gap was ~$21,000 when the note came out Wednesday at BTC ~$65,000 (TokenPost)</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Wall Street's AI trade takes a beating as chip stocks, bitcoin miners lead plunge</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> CoinDesk live blog; Ted Pillows market report (Substack) with the same closing moves &middot; Nov 20, 2026 &middot; <a href="https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut">source</a></div>
+  <div class="body">At Friday's close MARA was down 18.6%, IREN 18% and Hut 8 17.7%. At midday Core Scientific and Bitdeer were down more than 13%, and CleanSpark, Cipher and TeraWulf about 11–13%. The Nasdaq erased its 2026 gains and Anthropic fell 13% after its Nasdaq debut. <em>Why it matters:</em> Miners now trade as leveraged AI-infrastructure equity, not as a bet on hashprice. On a day when AI names sold off, the stocks fell 4–5x more than BTC (−3.7%), so equity funding for the remaining AI builds just got more expensive. <em>«This is an entry inside CoinDesk's live blog, not a standalone article; the page headline is the live-blog title.» «Midday and close figures are different snapshots.» «A ChainCatcher/Gate flash at 22:57 showed smaller drops (Core Scientific −6.2%, Hut 8 −6.7%), probably measured at a different time or after hours.» «The Substack report may draw on the same price feed, so it is weak as an independent second source.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin Falls Below $60,000 as JPMorgan Estimates $86,000 Mining Cost</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> TokenPost; Coin Edition (both reporting JPMorgan's research note) &middot; Nov 20, 2026 &middot; <a href="https://www.tokenpost.com/news/investing/62254">source</a></div>
+  <div class="body">JPMorgan's central estimate of the average cost to produce one BTC is $86,000, more than $26,000 above Friday's price under $60,000. Earlier 2026 estimates ranged from $77,000 to $85,000. <em>Why it matters:</em> JPMorgan says the gap closes mainly through hashrate exits and lower difficulty. The +10.34% retarget now projected goes the other way, so the adjustment has to come from more BTC sales or more miners shifting to AI. <em>«We did not open JPMorgan's note itself; both outlets relay it.» «The figure is a network-average cost model, not a cash cost; CryptoQuant's MARA-based Q3 estimate in yesterday's brief was $62,862, so cost estimates differ widely depending on method.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitdeer sells 281.1 BTC as Bitcoin holdings stay at zero</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> crypto.news (relaying Bitdeer's weekly update) &middot; Nov 21, 2026 &middot; <a href="https://crypto.news/bitdeer-sells-281-btc-bitcoin-holdings-zero/">source</a></div>
+  <div class="body">Bitdeer mined and sold 281.1 BTC in the week to Nov 20 (about $16.7M at $59,288), up 9.8% from 256.1 BTC the previous week, and its own holdings stay at 0 BTC. <em>Why it matters:</em> Bitdeer has no treasury, so all of its output is sold at spot. The 9.8% rise in weekly output came from the −9.13% difficulty cut, and it reverses if the projected +10% retarget lands on Nov 27. <em>«project-reported»; «Holdings exclude customer deposits.» «We did not open Bitdeer's original post; KuCoin carried the previous week's 256.1 BTC update.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Bitcoin Mining Hits Breaking Point as Difficulty Plunges 9.13%</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Bitcoin.com News; Hashrate Index (Luxor) analysis via Crypto Briefing/KuCoin; on-chain retarget at block 975,744 &middot; Nov 15, 2026 &middot; <a href="https://news.bitcoin.com/mining/bitcoin-mining-hits-breaking-point-as-difficulty-plunges-9-13/">source</a></div>
+  <div class="body">Difficulty fell 9.13% to 134.82T on Nov 14, the steepest cut since June's −10.09%. Luxor attributes about 65 of the 91 EH/s lost from Oct 29 to Nov 14 to Texas curtailment, when West Texas power averaged $64–122/MWh. <em>Why it matters:</em> Most of the cut came from power prices, not from miners giving up, so hashrate came back once prices normalised. That is why the next retarget now points to roughly +10% and wipes out the relief. <em>«The Luxor attribution was read through KuCoin's republication of Crypto Briefing; the original Crypto Briefing and Hashrate Index posts were not opened.» «Bitcoin.com gives hashprice as a $28–30 range.» «Repeat: the −9.13% retarget led Signal 03 on Nov 14; kept as the base for next week’s estimated +10.34%.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitcoin miners have billion-dollar AI contracts. Who pays for construction?</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> crypto.news (analysis of company filings) &middot; Nov 19, 2026 &middot; <a href="https://crypto.news/bitcoin-miners-have-billion-dollar-ai-contracts-who-pays-for-construction">source</a></div>
+  <div class="body">IREN has about $15B of planned FY2027 capex, with $6B still to be raised, and has pushed its $4B+ annualized revenue target from year-end 2026 to January 2027. TeraWulf's $19B, 20-year Anthropic lease phases in from late 2027 to Q2 2028. <em>Why it matters:</em> The capex arrives well before the lease income, and Friday's 18% drop in IREN and Anthropic's 13% slide after its debut mean the unfunded portion will be raised at worse terms. <em>«This is analysis; company figures are as reported by the companies, and the outlet's sensitivity examples are illustrations, not disclosures.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Hashrate Index Roundup (November 16, 2026)</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Hashrate Index (Luxor), primary data publisher &middot; Nov 16, 2026 &middot; <a href="https://hashrateindex.com/blog/hashrate-index-roundup-november-16-2026/">source</a></div>
+  <div class="body">Hashprice was $30.45/PH/day (−4.7% w/w), Luxor's forward curve priced the six-month average at $28.01, and 15 of 18 mining stocks fell in the week (median −10.0%; BTDR −31.9%, IREN −23.4%). <em>Why it matters:</em> Five days later spot hashprice ($27.42) is already below the six-month forward average, so hedges sold at the forward now look favourable and unhedged miners are below the curve. <em>«The roundup's early +14.8% retarget estimate has since been revised; mempool.space now shows +10.34%.» «The forward price is a single venue's (Luxor's) market.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Hashprice heading toward $25</strong> &mdash; Hashprice went $30.45 (Nov 16) → $28.94 (Nov 20 brief) → $28.58 (Luxor, Nov 20) → $27.42 today. A +10.34% retarget at flat BTC would put it near $24.85 (our estimate), only about $3 above the ~$22 break-even hashprice HIVE disclosed in late 2025 (CoinGeek, Dec 2025), and well below the $35–40 levels cited as industry break-even at the time.</li>
+  <li><strong>Miners trade with the AI stocks, not with BTC</strong> &mdash; On Friday BTC fell ~3.7% while MARA, IREN and Hut 8 fell ~18%. With Anthropic (TeraWulf's tenant) down 13% after its debut, investors are pricing miners on the strength of their AI tenants and the cost of funding the builds, not on block rewards.</li>
+  <li><strong>Treasuries going to zero</strong> &mdash; Bitdeer has held 0 BTC for weeks and sells all of its weekly output, Hyperscale Data sold its last coins, and MARA sold 13,597 BTC after Q3 (Nov 20 brief). With spot ~31% under JPMorgan's cost estimate, BTC from new production is going to market rather than into treasuries.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Retarget at block 977,760 (~Nov 27, mempool.space)</strong> &mdash; Estimates differ: mempool.space +10.34% (851 blocks left, our 13:09Z pull), MineOrNot +8.47%, and ECOS/MineOrNot +8.39–8.52% (Coinotag, Nov 20). Falsifiable: a final print above +8% with BTC under $60K puts hashprice under $26. A print below +5% would mean hashrate is switching off, the scenario JPMorgan needs for the cost gap to close.</li>
+  <li><strong>Miner equities vs the AI tape, and MARA's Long Ridge close (Nov 27)</strong> &mdash; Trigger: whether MARA, IREN and Hut 8 recover if the Nasdaq recovers next week. If they stay down, the market is pricing the funding risk specific to miners. MARA says the $1.5B Long Ridge acquisition closes Nov 27 and is targeting two leases by year-end (follow-up to the Nov 20 brief).</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hashprice: the Hashrate Index homepage shows $27.42/PH/day at BTC $59,297 and 1,051.98 EH/s, with no timestamp (read ~13:30Z). BitcoinWorld, relaying CryptoSlate, gives Luxor's Nov 20 value as $28.58 and projects $26.35 after a +8.47% retarget. Our ~$24.85 assumes mempool's +10.34% at today's hashprice. These are different bases and times, not a conflict.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Hashrate: mempool.space current is 1,063 EH/s (±10%, derived from block timing), against 1,051.98 EH/s on the Hashrate Index homepage. The ~1% difference is within noise. mempool's daily points (1,051/1,016/976 EH/s stamped Nov 19/20/21) are averages that trail the current reading.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Retarget estimates: mempool.space +10.34% vs MineOrNot +8.47% (via BitcoinWorld/CryptoSlate, at about 50% of the epoch) vs ECOS/MineOrNot +8.39–8.52% (Coinotag, Nov 20). The higher mempool figure reflects faster recent blocks: 182 blocks between yesterday's and today's 13:09Z pulls, about 7.9 minutes per block.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> BTC price in stories differs by time: BitcoinWorld uses $57,914 (09:50Z, CoinPaprika), CoinDesk says below $59,000, and our pull is $59,288 at 13:09Z. Production-cost estimates range from CryptoQuant's MARA-based $62,862 (Q3) to JPMorgan's network-average $86,000.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Mining-stock moves differ by snapshot: CoinDesk has Hut 8 −17.7% at the close, while ChainCatcher/Gate at 22:57 (timezone unstated) has Hut 8 −6.7% and Core Scientific −6.2%. We used CoinDesk's closing figures.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Not opened or excluded: BeInCrypto 'Bitcoin Miners Lead Wall Street's Crypto Sell-Off' (fetch error, so CoinDesk was used); the JPMorgan note itself; the original Crypto Briefing/Luxor Texas analysis; the Coinotag full text (behind JS). Bitmain price-cut stories were dropped as dated Dec 2025, and a Benzinga/Webull miner piece because it was dated 10/17. No new IREN, Cipher, TeraWulf, Core Scientific or Hut 8 announcement dated Nov 20–21 was found.</div>
+</section>
+<section class="panel" data-topic="airdrops">
+<h2 class="panel-title">Liquidity &amp; Airdrops</h2>
+<p class="panel-sub">Binance Wallet's Anthropic IPO campaign became an airdrop: it got 2,957 shares against a 500M USDC cap, so it is refunding all USDC and sending $1M of ANTB to applicants (Nov 20). Monad's Nov 24 cliff dominates the next seven days. DefiLlama's emissions index (read 11:04Z) puts Nov 21–28 cliffs at $281M across 37 events, and MON accounts for $213.5M of that. On Tokenomist's smaller MON count the week is about $151M. Extended set the XTEN TGE for Nov 30. Prices are from our CoinGecko pull at 13:15Z, alongside the house 13:09Z pull.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Cliff unlocks, Nov 21–28</div><div class="value">$151M–$281M</div><div class="delta neutral">DefiLlama emissions index (11:04Z): $281.2M across 37 events; the low end uses Tokenomist's 6.66B MON count instead of DefiLlama's 17.1B. Ex-MON the week is $67.6M</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Largest unlock: MON, Nov 24</div><div class="value">17.1B (~$218M)</div><div class="delta down">DefiLlama count at CoinGecko $0.01274 (−6.8% 24h), about 145% of 11.83B circulating; Tokenomist says 6.66B (~$85M)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Binance ANTB airdrop</div><div class="value">$1M</div><div class="delta neutral">after 2,957 Anthropic shares (~$245K at the $83 IPO price) were secured against a 500M USDC cap; at least ~$6 per applicant; all USDC refunded</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">INFI, 4 days after TGE</div><div class="value">$0.0668</div><div class="delta down">−22.6% 24h and −94% from the $1.16 TGE-window high; FDV ~$6.7M on 100M supply (CoinGecko, 13:15Z)</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Binance Anthropic Refund: $1M ANTB Airdrop Plus Full USDC Return</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Coin Gabbar; BeInCrypto (via Mitrade); Blockonomi &middot; Nov 20, 2026 &middot; <a href="https://www.coingabbar.com/en/binance-anthropic-refund-1m-antb-airdrop-usdc-return">source</a></div>
+  <div class="body">Binance Wallet capped its Anthropic xStocks IPO campaign at 500M USDC but got only about 2,957 shares, roughly $245K at the $83 IPO price. It is returning all locked USDC, giving those shares away pro rata, and airdropping $1M of bStocks ANTB to every applicant, with a floor of about $6 each, on Nov 20. <em>Why it matters:</em> Applicants who locked capital for an IPO allocation received a fill of about 0.05% plus a consolation airdrop. That makes tokenized-IPO campaigns an airdrop-farming venue with an opportunity cost, and Bitget (153,774 shares, 1.3% fill) and Gate (92,100 shares, about 5% of $152M in orders) show the same allocation squeeze. <em>«Binance's own announcement was not opened. Figures come from three secondary outlets that agree on 2,957 shares, $1M and the ~$6 floor.» «BeInCrypto's page returned a client error, so its copy was read through the Mitrade mirror.» «The ANTB value depends on Anthropic's price. It opened at $111.50 (+34%) and was quoted at $91.21 in pre-market on Nov 20 (PANews, citing Binance data).» «ANTB was not yet tradable on spot at publication.» «Also in VC &amp; Capital today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">XTEN Launch Date Confirmed: Can TGE Momentum Reverse Its Price Slide?</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Coin Gabbar (citing Extended's X post); Today in DeFi (points terms) &middot; Nov 21, 2026 &middot; <a href="https://www.coingabbar.com/en/xten-launch-date-confirmed-november-30-tge-price-slide">source</a></div>
+  <div class="body">Extended's TGE is set for Nov 30. The 300M XTEN points airdrop (30% of 1B supply, about 4.29 XTEN per Xpoint from the Nov 6 snapshot) unlocks in full at TGE. That is about $54.5M at the $0.1816 perp price, which is down 39% from the Oct 27 high of $0.2998. <em>Why it matters:</em> With only claimed airdrop tokens counting toward a free float capped near 30%, and insiders locked for 12 months, all day-one supply is points farmers'. The Dec 31 signing deadline means some of that float stays unclaimed and goes to the Ecosystem Fund. <em>«Extended's X post was not opened. The Nov 30 date comes from Coin Gabbar alone (cryptoworldheadline.com mirrors the same copy). CryptoDiffer's listing still showed only 'November 2026, estimated'.» «The page title tag reads 'XTEN Launch Date Confirmed: Who Gets Tokens First?', and the headline above is the H1.» «The $0.1816 is a perp/pre-market price, not spot, and the implied $54.5M is our multiplication.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Week-ahead cliffs total $281M on DefiLlama, and MON's Nov 24 tranche is 76% of it</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> DefiLlama emissions index (live read, 11:04Z); The Block Daily newsletter, Nov 20 (names MON, XPL, HUMA, SOON) &middot; Nov 21, 2026 &middot; <a href="https://www.theblock.co/newsletters/the-daily/2026-11-20-jpmorgan-bitcoin-price-drop-miners-senate-passes-death-bets-act-more-crypto-news-444786">source</a></div>
+  <div class="body">DefiLlama lists 37 cliff events for Nov 21–28 worth $281.2M at its prices. They include MON 17.1B ($213.5M; team 10.7B, investors 5.34B, Category Labs 0.99B) on Nov 24, GRAM 36.58M ($34.1M) on Nov 22, FF 75M ($7.5M) on Nov 28, XPL 227.8M ($10.3M) on Nov 25 and H 292.86M ($3.3M) on Nov 23. <em>Why it matters:</em> Without MON the week is only $67.6M, so the supply risk is a single event. Unlike ZRO's Nov 20 cliff, which fell 13.5% on the day, MON's tranche is larger than its entire 11.83B circulating float on DefiLlama's count. <em>«Follow-up to the Nov 20 brief. The headline is ours: it is a data read, not a published article.» «The Block's newsletter names the tokens but gives no amounts. HUMA and SOON have no cliff in DefiLlama's index for the window, so their size is unchecked.» «DefiLlama's prices (MON $0.01248) differ slightly from our CoinGecko pull ($0.01274).»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">infiniFi Launches &amp; Airdrops INFI Token, Expanding Protocol Utility and Institutional Participation</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Chainwire press release (primary); KuCoin/HashNews flash; Coin Gabbar; CoinGecko API (our 13:15Z pull) &middot; Nov 17, 2026 &middot; <a href="https://chainwire.org/2026/11/17/infinifi-launches-airdrops-infi-token-expanding-protocol-utility-and-institutional-participation">source</a></div>
+  <div class="body">8.3% of INFI supply was airdropped to Season 1–2 users at the Nov 17 15:30 UTC TGE, with 600,000 INFI in locker emissions over a year. INFI now trades at $0.0668 (−22.6% 24h), 94% below the $1.16 top of its TGE-window range and down from the $0.1425 Coin Gabbar recorded on Nov 18. <em>Why it matters:</em> At about $6.7M FDV, a protocol that raised over $6M (including a $3.1M Electric Capital seed) is now valued near its funding, which sets the bar for how airdrop-heavy, fully unlocked launches like XTEN on Nov 30 are being priced in Extreme Fear (F&amp;G 12). <em>«The $1.16 high and the −87.9% day come from Coin Gabbar's reading of CoinGecko's Nov 17–18 24h range, not an intraday chart we checked.» «The press release gives the airdrop only as a percentage. The 100M total supply comes from Coin Gabbar.» «Kraken's listing blog appeared in search results but was not opened.» «Repeat: infiniFi’s airdrop ran in the Nov 17 brief; kept for the post-TGE price read.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Bitget Launches New AI Trading Airdrop Offering Up to 105 USDT in Anthropic Stock Tokens</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> CoinEdition &middot; Nov 18, 2026 &middot; <a href="https://coinedition.com/bitget-launches-new-ai-trading-airdrop-offering-up-to-105-usdt-in-anthropic-stock-tokens/">source</a></div>
+  <div class="body">Up to 105 USDT in Anthropic stock tokens per user for AI-agent trading volume, following a round that ended Nov 6 and paid 150 USDT for 10,000 USDT of volume. Bitget says its AI traders average 300,000 USDT of cumulative volume. <em>Why it matters:</em> Exchanges are paying volume-farming rewards in tokenized equities rather than in their own or partner tokens, which takes airdrop demand away from new-token listings in the same week Binance is converting an IPO shortfall into an ANTB airdrop. <em>«Single outlet, and the volume metrics are exchange-reported.» «The terms are from Bitget via CoinEdition. Bitget's own announcement was not opened.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">InfiniFi Airdrop Live, Predict.Fun TGE Postponed - Airdrop Alpha</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Today in DeFi newsletter &middot; Nov 18, 2026 &middot; <a href="https://news.todayindefi.com/p/extended-checker-live-predictfun">source</a></div>
+  <div class="body">Nado closed its points program on Nov 12 after about 33.2M points went to more than 45,000 users over 51 weeks, with balances locked and no token or conversion rate announced. Variational says 32% of $VAR goes to points holders, fully unlocked at a TGE expected in Q4 2026. <em>Why it matters:</em> Two perp DEXs copying Extended's terms (about 30% to points, fully unlocked, insiders locked 12 months) puts a run of points-only floats into December, when XTEN's Nov 30 result becomes the reference price. <em>«This card uses the newsletter's Nado and Variational items. The infiniFi and Predict.fun items in the headline are covered elsewhere (card above; Nov 20 brief).» «All figures are project-reported via one newsletter.» «Variational's Q4 TGE is a project expectation with no date, so treat it as WATCH.» «Overlaps the infiniFi card above; Predict.fun’s delay ran in earlier briefs.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>IPO shortfalls are being paid out as airdrops</strong> &mdash; Binance (2,957 shares against a 500M USDC cap, plus $1M ANTB), Bitget (1.3% fill, plus Anthropic-token trading airdrops) and Gate (about 5% of $152M) all rationed Anthropic allocations. Campaign capital is locked for days for fills well under 5%, and the consolation is paid in stock tokens, not crypto tokens.</li>
+  <li><strong>Fully unlocked airdrop launches are repricing to their funding</strong> &mdash; INFI is down 94% from its TGE-window high to a $6.7M FDV. XTEN's perp is down 39% from its Oct 27 high before a Nov 30 TGE that unlocks its 300M-token airdrop in full. Points-heavy floats are being sold on delivery, and the pre-market discount is widening.</li>
+  <li><strong>One cliff, one week</strong> &mdash; DefiLlama's Nov 21–28 total ($281M) is 76% MON. Without it, the week totals $67.6M, so price reaction on Nov 24 will drive the unlock discussion through December.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Monad Nov 24: 6.66B or 17.1B MON?</strong> &mdash; MON is $0.01274 (−6.8% 24h, $150.7M market cap, $25.0M 24h volume). DefiLlama models the team's 10.7B as a cliff, and Tokenomist models 750M as a monthly tranche. Transfers from team or Category Labs wallets on Nov 24, or a CoinGecko circulating figure above 20B by Nov 26, would confirm the larger count. Circulating supply staying near 18.5B would confirm Tokenomist's.</li>
+  <li><strong>GRAM Nov 22: DefiLlama vs Tokenomist date</strong> &mdash; DefiLlama has 36.58M GRAM (about $35.0M at CoinGecko $0.957, −5.5% 24h) leaving the TON Believers Fund on Nov 22 at 16:17 UTC. Tokenomist's next event is Dec 6. If no Believers Fund movement shows by Nov 23, DefiLlama's date is wrong, and the week's total falls to about $247M.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> MON Nov 24 size: DefiLlama 17,105,208,333 (team 10.7B, investors 4.925B + 0.41B, Category Labs 0.9875B), Tokenomist 6.66B (investors 4.92B + team 750M monthly + treasury 988M; Aug 24 research note), CryptoRank 16.61B, MrNasDog 15.6B. At our CoinGecko $0.01274: $218.0M (DefiLlama), $84.9M (Tokenomist), $211.6M (CryptoRank), $198.8M (MrNasDog). DefiLlama's own index lists MON circulating as 51.46B against CoinGecko's ~11.83B, which is the same mismatch CryptoTicker flagged in September.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> The 7-day total is our sum of the DefiLlama emissions index (defillama-datasets.llama.fi/emissionsIndex, generated Nov 21 11:04 UTC), with cliff allocations only, burns excluded, at DefiLlama's prices: $281.2M across 37 events. Swapping MON to Tokenomist's 6.66B at the same price gives about $150.8M. Linear streams (BTC, CC and others) are excluded. Tokenomist had not published a Nov 23–29 digest at the time of our search.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Tracker disagreements this week: Humanity (H) on DefiLlama is 292.86M on Nov 23, while the Nov 20 brief had Tokenomist on Nov 25. Falcon (FF) is 75M on Nov 28 on DefiLlama and 203M on Nov 29 on MrNasDog. Morpho is 1M on Nov 20 on DefiLlama and 9.13M on Nov 21 on MrNasDog. XPL is 227.8M on Nov 25 on DefiLlama, matching MrNasDog's 228M.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Prices are from our CoinGecko API pull at 13:15Z: MON $0.01274 (−6.8%), GRAM $0.957 (−5.5%), H $0.01125 (−8.2%), FF $0.1016 (+1.3%), XPL $0.0460 (+2.8%), MORPHO $1.58, INFI $0.0668 (−22.6%), TREE $0.0286 (−6.3%), AT $0.0711 (−9.8%). XTEN has no spot price on CoinGecko.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Avalanche: no C-Chain airdrop, TGE, points program or incentive program dated Nov 14–21 was found. DefiLlama shows no AVAX cliff in Nov 21–28, and Tokenomist's next AVAX unlock is still Feb 6, 2027 (per the Nov 19 brief). The WEEX 'AVAX popular coin airdrop' promo is again excluded because it is an unverified exchange promotion.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Excluded as out of window despite surfacing in Nov 2026 searches: the Talus US airdrop (Dec 2025), CoinGape's 'Top 7 Token Unlocks' (Nov 2025), APRO HODLer Airdrop (Nov 2025) and the Binance PREDICT form (Oct 28). Still pending from the Nov 20 brief: Treehouse closes Nov 25 07:00 UTC, Doppler Nov 28, Predict.fun's Nov 26 form deadline is unresolved, and the FLOP Labs Nov 24 airdrop remains RUMOR with no new source.</div>
+</section>
+<section class="panel" data-topic="rwa">
+<h2 class="panel-title">Stablecoins &amp; RWA</h2>
+<p class="panel-sub">Payoneer won OCC conditional approval for a stablecoin trust bank, and the FDIC and FinCEN GENIUS rules reached White House review, two months before the Jan 18, 2027 effective date. Sky's USDS kept shrinking but held its peg and stayed above the $3.0B line. Avalanche's Tether release held a second day, and native USDC drifted up to $201.8M. Sources: our 13:09Z pull and a DefiLlama stablecoins API re-read; rwa.xyz (Nov 21 page); Payoneer release (PR Newswire); The Block; Latin Times; Solana Compass; KuCoin/Odaily relay of Sky's statement.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Total stablecoins (DefiLlama sum, ex-BUIDL)</div><div class="value">$283.56B</div><div class="delta down">our 13:09Z pull; chart series $285.23B Nov 19 close, $283.44B Nov 20 close (−$1.79B), $282.58B Nov 21 partial</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Sky USDS supply</div><div class="value">$3.097B</div><div class="delta down">−$109.9M d (from $3.207B), −$2.26B 7d (from $5.36B); price $1.0000; still above the $3.0B trigger</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Avalanche stablecoins (circulating, ex-BUIDL)</div><div class="value">$886.77M</div><div class="delta neutral">Nov 20 close, against $779.98M Nov 19; $891.51M Nov 21 partial; the jump is a $100M USDT release, with minted flat at $847.21M; native USDC $201.82M</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Tokenized US Treasuries (rwa.xyz, distributed)</div><div class="value">$14.18B</div><div class="delta down">−3.21% over 30d; 123 funds; 7D APY 3.59%; BUIDL $1.57B, behind USDY $2.38B and USYC $2.01B</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Payoneer Receives OCC Conditional Approval to Form Stablecoin National Trust Bank</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Payoneer press release (PR Newswire, primary) &middot; Nov 20, 2026 &middot; <a href="https://prnewswire.com/news-releases/payoneer-receives-occ-conditional-approval-to-form-stablecoin-national-trust-bank-302947358.html">source</a></div>
+  <div class="body">Payoneer, which pays out in more than 190 markets, received OCC preliminary conditional approval for PAYO Digital Bank. Once it gets final approval, the bank plans to issue PAYO-USD, a fully reserved GENIUS-compliant stablecoin that will not be listed on exchanges, and to support third-party stablecoins and conversion to local currencies. <em>Why it matters:</em> A cross-border payout network can issue a closed-loop stablecoin to its own merchants and settle internally, which takes float away from USDC/USDT on a high-frequency B2B route rather than competing for trading liquidity. Payoneer joins MoonPay (applied Nov 17–18) and earlier conditional approvals in the charter queue. <em>«Conditional approval only: final OCC approval is still needed to open. Payoneer's claim that more than a third of its customers already use stablecoins is project-reported. No launch date or supply target was given.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">USDS keeps shrinking but holds its peg: −$110M in a day to $3.10B, above the $3.0B trigger (our headline; data read)</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> DefiLlama stablecoins API (stablecoin/209 and the peggedAssets list); KuCoin relay of Odaily for Sky's statement &middot; Nov 21, 2026 &middot; <a href="https://stablecoins.llama.fi/stablecoin/209">source</a></div>
+  <div class="body">USDS went from $5.24B (Nov 19) to $3.21B (Nov 20 close) to $3.11B (Nov 21 partial, token series), and the list endpoint shows $3.097B at a $1.0000 price. In a statement relayed Nov 20, Sky said the flagged flows were about 0.03% of $968B in cumulative PSM volume and mostly occurred on third-party platforms; founder Rune Christensen said the protocol was operating normally. <em>Why it matters:</em> The outflow slowed from −$2.03B to about −$0.1B a day with no depeg, so the stress now sits in PSM concentration risk (a freeze of the pooled USDC address) rather than in the price. No freeze or legal action was found through Nov 21. <em>«Follow-up to the Nov 20 brief. Headline is ours. Nov 21 is a partial-day point. Sky's statement was seen only through an aggregator relay (KuCoin, citing Odaily), not on a Sky channel, and the relay says 'less than' 0.03% in its summary but 'approximately' 0.03% in the body. No current PSM USDC balance was read.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">The Final Missing Pieces of America's Stablecoin Rulebook Have Arrived at White House</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Latin Times &middot; Nov 20, 2026 &middot; <a href="https://www.latintimes.com/final-missing-pieces-americas-stablecoin-rulebook-have-arrived-white-house-601624">source</a></div>
+  <div class="body">Two GENIUS rules are now under White House review, which typically takes 2–3 weeks: the FDIC's final prudential rule, submitted Nov 16, and FinCEN's AML and sanctions framework, submitted Nov 18. The FDIC rule bars issuers from paying holders any interest or yield, and the OCC's final rule (Oct 21) shares the Jan 18, 2027 effective date. <em>Why it matters:</em> If the yield ban survives review unchanged, US-regulated issuers can't compete on yield with offshore yield-bearing dollars (USDe, sUSDS-type wrappers). That pushes yield into tokenized money funds, which is where the Fed's Waller placed it on Nov 17. <em>«Single outlet. CU Today carries the same story but its page returned a client error, and the OIRA/reginfo entries were not checked. Final rule text is not public until publication. The $315B market figure in the article does not match DefiLlama's $283.6B.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Tokenized Anthropic (ANT) Goes Live on Solana Minutes After Its Nasdaq Debut</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Solana Compass (launch plan corroborated by The Block, Nov 18) &middot; Nov 19, 2026 &middot; <a href="https://solanacompass.com/news/tokenized-anthropic-ant-goes-live-on-solana-on-ipo-day-from-backpack-ondo-xstocks-and-securitize">source</a></div>
+  <div class="body">Three issuers' tokenized ANT traded $29M on Solana on day one, with Backpack's token taking $26.8M (about 92%) and more than 8,000 holder accounts, and it tracked Nasdaq within about 0.3% ($95.50 vs $95.79). The IPO itself raised $81.3B at $83 a share. <em>Why it matters:</em> Tokenized equities only work if they track the listed price, and a $29M day against an $81B IPO shows that parity is solved while distribution is not. That makes 24/7 venues, rather than issuers, the bottleneck for the RWA segment now growing faster than Treasuries. <em>«Volume and holder counts come from one outlet citing on-chain dashboards. The Block's Nov 18 piece confirms only the Ondo ANTon launch plan and its project-reported figures of over $1B TVL and 450 or more assets. Anthropic warned in May that unauthorized tokenized pre-IPO shares may be void; the post-IPO tokens are issuer-backed by the listed shares, per the issuers.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Senators: Treasury must ensure 'equal footing' for stablecoin issuers in GENIUS Act implementation</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Nov 18, 2026 &middot; <a href="https://www.theblock.co/news/regulation/2026-11-18-senators-treasury-must-ensure-equal-footing-for-stablecoin-issuers-in-genius-act-implementation-443501">source</a></div>
+  <div class="body">Six senators (Lummis, Gillibrand, Alsobrooks, Ricketts, Cramer, Warner) asked Treasury Secretary Bessent for a safe harbor for state-regulated issuers with $10B or less outstanding. They say Treasury's proposal protects only federal applicants through the January 2028 state-certification deadline. <em>Why it matters:</em> Without that safe harbor, issuers under $10B have an incentive to file for OCC charters now, as Payoneer and MoonPay just did, which concentrates US stablecoin supervision federally before state regimes are certified. <em>«The letter itself was not opened. Treasury's response is pending; the comment period on its certification rule closes Nov 30 (Yahoo Finance, Oct 1).»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Hill, Moreno blame delays for missed Clarity Act window but differ on reach of agency rulemaking</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The Block &middot; Nov 19, 2026 &middot; <a href="https://www.theblock.co/news/regulation/2026-11-19-hill-moreno-blame-delays-missed-clarity-act-window-split-regulators-fill-gap-443615">source</a></div>
+  <div class="body">Sen. Moreno estimated agencies could deliver about 80% of a crypto framework by rule and put the chance of passing Clarity in the lame duck at zero. Rep. Hill said 'to have GENIUS but not market structure is a huge mistake.' <em>Why it matters:</em> Without Clarity, stablecoins will have federal rules from Jan 18, 2027 while the tokenized securities they settle against stay under SEC/CFTC rulemaking that a future administration can reverse, which keeps tokenized-equity growth offshore or on exemptions. <em>«Interview quotes from a conference (The Hill/The Block Capitol Crypto Forum). The article does not mention stablecoin yield.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>The charter queue is the GENIUS on-ramp</strong> &mdash; Payoneer won OCC conditional approval on Nov 20, two days after MoonPay's application was received on Nov 18, while the FDIC and FinCEN final rules sit at White House review. With the Jan 18, 2027 effective date eight weeks out and no state safe harbor yet, non-bank issuers are choosing the federal trust-bank route by default.</li>
+  <li><strong>Net supply contraction continues, with RLUSD again the exception</strong> &mdash; DefiLlama's chart series fell from $286.26B (Nov 18) to $283.44B (Nov 20 close). Over the day, USDT fell −$490M, USDC −$162M, USDS −$110M, PYUSD −$81M and USD1 −$33M (list endpoint, prev-day basis), while RLUSD rose +$48.5M d and +$93.1M 7d to $2.87B.</li>
+  <li><strong>Tokenized equities draw the attention while Treasuries drift</strong> &mdash; rwa.xyz shows tokenized Treasuries at $14.18B (−3.21% over 30d), with BUIDL ($1.57B) now third behind USDY and USYC. Meanwhile, IPO-day tokenized ANT traded $29M on Solana within 0.3% of Nasdaq, and Ondo reports over $1B TVL in tokenized stocks (project-reported).</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Sky USDS $3.0B line and PSM freeze risk</strong> &mdash; Trigger: USDS below $3.0B on DefiLlama (now $3.097B on the list endpoint, $3.11B on the token series), price below $0.995, or any Circle freeze or law-enforcement action on the PSM's pooled USDC by Nov 27. A one-day drop of more than $100M again (it was −$110M on Nov 21) would point to steady redemptions rather than a single exit. A USDS rebound above $3.5B would falsify the run thesis.</li>
+  <li><strong>Avalanche native USDC between the $190M and $210M lines; USDT release held</strong> &mdash; Native USDC (minted) went from $190.17M to $197.70M to $201.82M (Nov 21 partial), so neither the confirm nor the falsify line has been hit. The $100M USDT release held a second day (circulating $401.11M, unreleased $462.92M). A close above $210M falsifies the outflow call, and USDT unreleased returning to about $563M would mark a round trip.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Total stablecoin bases: the brief's DefiLlama peggedAssets sum is $283.56B, against $283.44B on the stablecoincharts/all Nov 20 close and $282.58B on its Nov 21 partial. Latin Times cites over $315B (source unstated), and that figure was not used.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> USDS bases: the list endpoint (peggedAssets id 209) shows $3.097B circulating, $3.207B prev day and $5.361B prev week. The token series shows $5.239B Nov 19, $3.207B Nov 20 and $3.111B Nov 21 partial, with Ethereum at $3.102B. Both readings stay above the $3.0B trigger.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> rwa.xyz on Nov 21 shows $14.18B distributed, −3.21% over 30d, 3.59% 7D APY and 86,452 holders. Yesterday's panel quoted the same $14.18B as −1.60% vs 30 days ago, so the 30-day comparison base has shifted; the level is consistent.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Avalanche figures come from the brief's 13:09Z pull, re-read at about 13:20Z from stablecoin/1 and stablecoin/2 chainBalances; the numbers matched.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Depeg data only, no news found: apxUSD at $0.928 (Nov 20 panel: $0.948) on $240.0M supply, unchanged d and −$20.0M 7d.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Excluded: Project Faro, the $270M 21-bank stablecoin (Cointelegraph Nov 10, American Banker Nov 12), as outside the window. Also excluded: the MoonPay charter story, run yesterday, and AMINA/UBS-Chainlink items, seen only in an aggregator headline list that could not be opened in full. Not opened: Cryptobriefing pages (client error), CU Today, TechFlow's Sky item and the TCB daily.</div>
+</section>
+<section class="panel" data-topic="markets">
+<h2 class="panel-title">Crypto &amp; US Stocks</h2>
+<p class="panel-sub">On Friday BTC broke the $57,803 July low. Bitcoin.com reports a $57,799.29 low and CoinDesk reports a move below $57,000 late Friday ET, its lowest since September 2024, as the Nasdaq Composite fell 5.28% and the S&amp;P 500 entered a correction on an Nvidia SEC accounting-probe report. About $2.4B of crypto futures were liquidated (CoinGlass via CoinDesk). BTC had rebounded to $59,288 by our 13:09Z pull. Friday's spot BTC ETF print is a provisional −$124.5M (Farside via cryptoticker), with IBIT not yet reported, and December hike odds eased to 92% (CME FedWatch via TheStreet).</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">BTC</div><div class="value">$59,288</div><div class="delta down">−3.69% 24h at our 13:09Z pull; Friday low $57,799 (Bitcoin.com), below the $57,803 July low; CoinDesk says under $57,000 late Friday ET</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Spot BTC ETF flow Nov 20</div><div class="value">−$124.5M</div><div class="delta down">provisional, IBIT not yet reported (Farside, relayed); the week of Nov 16–20 is about −$1.25B and November about −$3.59B</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Dec FOMC 25bp hike odds</div><div class="value">92%</div><div class="delta neutral">down from 96.4% on Nov 19; 50bp odds at 0% (CME FedWatch via TheStreet, Nov 20 close)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Nasdaq Composite Fri</div><div class="value">−5.28%</div><div class="delta down">22,617.73, down 10.0% on the week; S&amp;P 500 −3.7% to 6,910.39 (correction), Dow −1.9% to 48,147.33</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Bitcoin tanks below $57,000 for the first time in two years, and its not alone</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> CoinDesk; Bitcoin.com News; BigGo Finance &middot; Nov 21, 2026 &middot; <a href="https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone">source</a></div>
+  <div class="body">BTC fell below $57,000 late Friday ET, its lowest since September 2024. Bitcoin.com puts the Friday low at $57,799.29, and $2.40B of crypto futures were liquidated in 24h, more than $1B of it BTC and $545M ETH, including a single $51.71M BTC long (CoinGlass). <em>Why it matters:</em> The $57,803 July cycle low named in yesterday's NEXT test has now been broken, so no chart support from this cycle is left. BTC is about 21.4% below Strategy's $75,452 average cost, which moves attention from ETF flows to whether leveraged treasuries are forced to sell. <em>«Follow-up to the Nov 20 brief.» «Reported lows differ by venue and time: $57,799.29 (Bitcoin.com, Friday), 'below $57,000' (CoinDesk, 04:10Z Saturday), and a Saturday low of $55,130 in one Substack market report that we could not corroborate.» «BTC had rebounded to $59,288 by our 13:09Z pull.» «The headline is reproduced as published, including the missing apostrophe in 'its'.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Strategy, Coinbase Shares Battered as Bitcoin Price Hits 2-Year Low and AI Stocks Bleed</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Bitcoin.com News; CoinDesk live blog &middot; Nov 20, 2026 &middot; <a href="https://news.bitcoin.com/market-updates/strategy-coinbase-shares-battered-bitcoin-price-2-year-low-ai-stocks-bleed/">source</a></div>
+  <div class="body">MSTR closed Friday at $77.80 (−9.7% on the day and about −30% on the week from $111.62). COIN closed at $101.97 (−6.3%, near a three-year low) and HOOD at $62.17 (about −20% on the week), while CoinDesk had CRCL −8.4% and Bitmine −13.7%. <em>Why it matters:</em> MSTR fell about twice as fast as BTC over the week, which shrinks the equity cushion Strategy uses to fund STRC buybacks (90% of the Nov 9–15 buybacks were paid for with MSTR sales). It does so ten days before the Nov 30 MSCI deletion forces index funds to sell. <em>«CoinDesk's intraday prints (COIN $102.01, HOOD $62.12) differ slightly from Bitcoin.com's closes, and we use the closes.» «Neither outlet gives a CRCL closing price.» «We did not compute mNAV because we have no current share count.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Nasdaq falls 5.3% as S&amp;P 500 and Dow enter corrections</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> FinChannel; BigGo Finance; TheStreet Pro &middot; Nov 20, 2026 &middot; <a href="https://finchannel.com/nasdaq-falls-5-3-as-sp-500-and-dow-enter-corrections/142573/american-business-trends/stock-prices/2026/11/">source</a></div>
+  <div class="body">The Nasdaq Composite fell 5.28% to 22,617.73, the S&amp;P 500 3.7% to 6,910.39 (its seventh straight loss, 11.6% below its record) and the Dow 1.9% to 48,147.33. Nvidia fell about 14% to $125.53 after Reuters reported an SEC accounting probe, and the SOX fell 10.7%. <em>Why it matters:</em> The S&amp;P 500's worst week since April 2025 (−8.6%) pulled the VIX to 35.9 and cut Fed hike pricing. That is the first macro relief for crypto in weeks, but BTC is falling together with tech rather than acting as a hedge, so lower yields have not yet brought buyers back. <em>«Reuters' Nvidia probe report cites two anonymous sources. The SEC declined to comment, and an investigation does not establish wrongdoing.» «Gold's move differs by source: −4.6% (TheStreet) vs −2.8% to $3,523.20 (BigGo).»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> SEC EDGAR (BTCS 8-K, Nov 19); CoinDesk &middot; Nov 21, 2026 &middot; <a href="https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated">source</a></div>
+  <div class="body">BTCS disclosed about $54M of Aave debt as of Nov 19 (down from about $64M two weeks earlier) against about $111M of crypto valued at $1,775 per ETH. CoinDesk estimates liquidation near $1,446 per ETH, and the shares fell 12.2% Friday to 65.3 cents (−28.1% on the week). <em>Why it matters:</em> At our $1,671 ETH pull the estimated liquidation line is about 13% away, and BigGo had ETH as low as $1,601 Friday. A forced on-chain liquidation of a Nasdaq-listed treasury firm would be the first such case in this drawdown, and the loan would unwind on Aave itself. <em>«The $1,446 liquidation price is CoinDesk's calculation, which assumes the 46,676 ETH collateral from Nov 9 is unchanged. The 8-K itself gives no threshold and says only that liquidation 'may occur'.» «The 8-K is Item 7.01, furnished rather than filed.» «Also in DeFi today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">CFTC backs blockchain-based derivatives infrastructure as Backpack, tZERO win approvals</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> CFTC (Chairman Selig statement, Nov 16); The Block &middot; Nov 16, 2026 &middot; <a href="https://www.theblock.co/news/regulation/2026-11-16-cftc-blockchain-derivatives-exchange-approval-backpack-tzero-441591">source</a></div>
+  <div class="body">The CFTC approved DCM (exchange) and DCO (clearinghouse) applications for a firm that executes and settles derivatives on blockchain rails, which The Block identifies as Backpack. tZERO received its exchange designation the week before, adding to an earlier DCO approval. <em>Why it matters:</em> With CLARITY stalled in the Senate, a single-commissioner CFTC is building a crypto-derivatives framework one registration at a time. That gives US venues an onshore route but leaves the approvals open to reversal, and a Senate Agriculture hearing for two CFTC nominees (Anonick, Rowland) was held this week. <em>«Selig's statement does not name the firm. The Backpack attribution is The Block's, based on Backpack's own announcement.» «The approvals carry no dollar figures.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Fed signals and data: what happened the week of Nov. 16–20, 2026</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> Investing.com; TheStreet Pro (FedWatch figures) &middot; Nov 20, 2026 &middot; <a href="https://uk.investing.com/news/stock-market-news/fed-signals-and-data-what-happened-the-week-of-nov-1620-2026-93CH-4996610">source</a></div>
+  <div class="body">Governor Cook said Nov 20 that policy is 'not restrictive enough' and warned against falling 'behind the curve', and Philadelphia Fed President Paulson said she is open to back-to-back hikes. Even so, December 25bp odds slipped to 92% with 50bp at 0%, and pricing through Nov 2027 fell to 61bp from 86bp a week earlier (FedWatch via TheStreet). <em>Why it matters:</em> Officials are leaning hawkish while markets price fewer hikes, as weak data (Philly Fed 6.3 vs 20.6 expected, industrial production −0.4%) and a cooler Michigan 1-year inflation reading (3.7%) shift attention to growth. Oct PCE on Nov 25 becomes the deciding print before the Dec 8–9 meeting. <em>«We did not find any Nov 20 remarks from Waller. Investing.com dates his 'aggressive action' comments to Nov 19, and the Nov 20 brief already covered his 50bp call.» «The 92% FedWatch reading comes from TheStreet Pro alone.» «Cook's quotes are paraphrased in a weekly roundup, and we did not open the speech text.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Crypto is trading as a high-beta AI stock</strong> &mdash; On Friday BTC fell about 5% and ETH about 8% (BigGo closes) while the Nasdaq fell 5.28% and the SOX 10.7%. This is the second straight session in which crypto and tech fell together. Crypto equities fell more than both: MSTR −9.7%, Bitmine −13.7%, MARA −18.6%.</li>
+  <li><strong>Leveraged treasuries are being tested</strong> &mdash; Strategy's 850,849 BTC are about 21.4% below the $75,452 cost at our pull, MSTR fell about 30% on the week, and the Nov 30 MSCI deletion is nine days away. BTCS's $54M Aave loan sits about 13% above an estimated liquidation line. Treasury companies built on leverage are now running out of room to fund themselves without selling.</li>
+  <li><strong>Fed pricing eases while officials talk tougher</strong> &mdash; December hike odds fell from 96.4% (Nov 19) to 92% (Nov 20) and the 2Y fell 12bp to 4.65%, even as Cook and Paulson argued for more tightening. Lower yields have not helped BTC so far, because the drop in yields reflects fear about growth rather than an easing of financial conditions.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>NEXT: final Farside Nov 20 print and the $57,000 line</strong> &mdash; The −$124.5M Friday figure is provisional until IBIT reports. An IBIT outflow above $400M would push November past −$4B and close in on June 2026's record −$4.51B. A daily close back above $61,300 would be the first reclaim; a weekend print under $57,000 sustained into Monday's open would confirm a new cycle low. A Saturday low of $55,130 has been reported by one source only and is unconfirmed.</li>
+  <li><strong>Strategy 8-K Mon Nov 23, MSCI exit Nov 30, PCE Nov 25</strong> &mdash; Check EDGAR (CIK 1050446) for any BTC sold or STRC buybacks above the $332.2M remaining authorization, now that MSTR is at $77.80. Separately, ETH under about $1,446 puts BTCS's Aave position at risk of liquidation. Oct PCE (Nov 25) and the BTC difficulty retarget (+10.34% est., ~Nov 27, mempool.space) come before the Dec 8–9 FOMC.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Yesterday's NEXT test: BTC closed under $61,273 and broke the $57,803 July low on Friday (Bitcoin.com $57,799.29; CoinDesk 'below $57,000'). A Substack market report (Ted Pillows) gives a Saturday low of $55,130 that we could not corroborate, so it is marked as unverified. Our 13:09Z pull is $59,288.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> ETF trackers: the Friday Nov 20 figure of −$124.5M is Farside's provisional total, relayed by cryptoticker (which notes IBIT is pending) and by the Pillows Substack (which says 'IBIT reported no flow'). We could not open farside.co.uk, and we found no SoSoValue Friday figure, so the number is single-source and provisional. Coinotag gives the week at −$1.25B for BTC and −$221.7M for ETH without naming a tracker. Spot ETH ETF flows for Friday were not found.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Rates and yields differ by timestamp: 10Y at 4.95% including post-market trading (TheStreet), ~4.92% (Pillows) and 4.912% (Investing.com ticker, no timestamp). 2Y at 4.65% (TheStreet) vs 4.613% (Investing ticker). FedWatch Dec 25bp is 92% (TheStreet, Nov 20) vs 96.4% (Reuters, Nov 19).</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Strategy math is our own calculation: 850,849 × $59,288 ≈ $50.45B vs $64.20B cost, so about $13.8B (21.4%) below cost. The Pillows report uses 23.0% at a lower BTC price. We found no new Strategy 8-K after Nov 16, and none is expected before Mon Nov 23.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Pages we could not open: farside.co.uk, stockinvest.us, cryptobriefing (×3), cryptoslate, bitcoinworld, bitbase, wkow (AP) and Bangkok Post. We found no CLARITY Act or SEC crypto action dated Nov 20–21. The most recent CLARITY item we found is Orrick's October note that the bill had stalled. The 2025-dated '$903M outflow' Yahoo story came up in search and was excluded.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Story prices vs our pull: BigGo had BTC at $58,333.16 and ETH at $1,601.33 at the Friday close. CoinDesk's ticker showed $58,089 and $59,308 at different capture times. We use our 13:09Z pull (BTC $59,288, ETH $1,671.28).</div>
+</section>
+<section class="panel" data-topic="vc">
+<h2 class="panel-title">VC &amp; Capital</h2>
+<p class="panel-sub">Anthropic gave back most of its first-day gain in its second session. Shares traded about 9–11% lower on Nov 20, and the one reported close we found is $88.30, still above the $83 IPO price. Binance Wallet said its $500M USDC tokenized-ANT campaign secured only about 2,957 shares, so it is refunding all subscriptions. crypto.news's Nov 14–20 roundup counts $150.5M across three featured deals. Across the week, crypto institutions bought infrastructure: Payward agreed to buy Tribe Capital ($2.7B AUM), the Solana Foundation took a majority stake in CoinGecko, and HeartSciences holders approved the Fortitude Zcash-miner merger. Sources: SEC EDGAR, Solana Foundation, The Block, crypto.news, Decrypt, Motley Fool, securities.io, BeInCrypto (via mirror), Blockonomi. Gate Ventures and ChainCatcher/RootData had not published Nov 14–20 totals as of ~13:30Z.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Anthropic (ANT) day-two close, Nov 20</div><div class="value">$88.30</div><div class="delta down">−9.1% vs the $97.17 day-one close, still +6.4% above the $83 IPO price. The close is single-sourced (JournalArta). Intraday quotes: $86.90 (−10.6%, Motley Fool, 11:20 ET) and a $86.00 low (securities.io)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Crypto VC, Nov 14–20 (crypto.news)</div><div class="value">$150.5M</div><div class="delta neutral">3 featured deals: Variational $110M, Nomad $30.5M, MetaComp ~$10M. Our own Nov 14–20 tally is $214.7M across 7 deals; it adds Codex, Avenia, Global MPC and Null (see notes)</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Binance Wallet ANT allocation</div><div class="value">~2,957 shares</div><div class="delta down">About $245K at $83, against a $500M USDC subscription cap. All funds are being refunded, plus a $1M ANTB airdrop (BeInCrypto). xStocks says the IPO was more than 9x oversubscribed</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">HeartSciences–Fortitude merger vote</div><div class="value">99.3% for</div><div class="delta up">3,480,989 for, 20,933 against, 3,150 abstained (8-K Item 5.07, Nov 19). Combined company to list as TUDE; DCG is expected to own ~94% fully diluted</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Why Anthropic Stock Is Falling Today</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Motley Fool; securities.io; Bush Letter; Bloomberg headline (not opened) &middot; Nov 20, 2026 &middot; <a href="https://www.fool.com/investing/2026/11/20/why-anthropic-stock-is-falling-today/">source</a></div>
+  <div class="body">ANT was at $86.90 at 11:20 ET on Nov 20, down 10.6% from its $97.17 debut close. securities.io logged a $86.00–$92.56 range, and Bloomberg headlined a further post-market drop tied to Apple's AI-agent plans. <em>Why it matters:</em> Within two sessions the IPO buffer shrank from +17% to roughly +5–6% over the $83 offer price. A close below $83 would tell crypto IPO candidates such as Kraken and Consensys that even the year's most-oversubscribed listing cannot hold its price in a risk-off tape, with Fear &amp; Greed at 12 (our 13:09Z pull). <em>«Follow-up to the Nov 20 brief.» «We found no tier-one closing print. The only stated close is $88.30 (−9.1%, ~$1.17T market value) from JournalArta, a low-profile outlet; Motley Fool's own page gives both −10.57% and −8.7%.» «The Bloomberg post-market page was robots-blocked and Invezz failed to load.» «Disclosure: Anthropic makes the model that compiled this brief.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Binance Gets Only 2,957 Anthropic Shares From a $500 Million Campaign</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> BeInCrypto (read via Mitrade mirror); Blockonomi &middot; Nov 20, 2026 &middot; <a href="https://www.mitrade.com/insights/news/live-news/article-3-2266205-20261120">source</a></div>
+  <div class="body">Binance Wallet's tokenized Anthropic campaign filled its 500M USDC cap within hours but secured only about 2,957 shares (about $245K at $83). Every subscriber is being refunded, and the shares plus $1M of ANTB are being airdropped pro rata by Nov 20. <em>Why it matters:</em> That is a fill rate of about 0.05%. Tokenized IPO access is limited by the underwriters' allocation, not by on-chain demand, which is the same failure as the earlier tokenized SpaceX allocations. Exchanges that market 'IPO access' face growing refund and conduct risk. <em>«The 2,957-share count appears only in BeInCrypto (and coinotag, not opened). Blockonomi, Nov 19, corroborates the 500M USDC cap, the full refund and the $1M ANTB airdrop but gives no share count.» «The BeInCrypto original failed to load, so it was read on the Mitrade syndication.» «The 9x oversubscription figure is xStocks' own claim.» «Disclosure: Anthropic makes the model that compiled this brief.» «Also in Liquidity &amp; Airdrops today.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Crypto VC funding: Variational raises $110 million</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> crypto.news (weekly roundup) &middot; Nov 21, 2026 &middot; <a href="https://crypto.news/crypto-vc-funding-variational-nomad-metacomp/">source</a></div>
+  <div class="body">crypto.news counts $150.5M across three featured deals for Nov 14–20: Bain Capital Crypto's $110M Series B in Variational at $1.5B, Nomad's Tether-led $30.5M (R$172M) Series C and MetaComp's ~$10M. That is down 63% from the same outlet's $408.55M for Nov 7–13. <em>Why it matters:</em> Without one-off bank commitments like Project Faro's $270M, the weekly base is one derivatives venue plus strategic stablecoin cheques, three of them from Tether (Nomad, MetaComp, SCRYPT). A single large raise like Variational can now account for most of a week's total. <em>«A tracker figure from one outlet, so tier single.» «crypto.news leaves out Codex ($30M, Nov 17) and Avenia ($25M, Nov 17), both in its window; see notes.» «Nomad is $30.5M (full round) here but was $15M (Tether's portion) in the Nov 20 brief.» «Variational is the Nov 18 round, re-counted in this week's tally.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">Kraken parent Payward to acquire Tribe Capital to expand private-market offerings</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> The Block; crypto.news (CNBC analysis seen, not opened) &middot; Nov 18, 2026 &middot; <a href="https://theblock.co/news/business/2026-11-18-kraken-parent-payward-tribe-capital-443522">source</a></div>
+  <div class="body">Payward signed a definitive agreement to buy Tribe Capital, a VC and asset manager with $2.7B AUM, for an undisclosed price. Tribe will join Payward's asset-management arm, with closing expected in Q1 2027. <em>Why it matters:</em> Tribe was co-founded and is chaired by Kraken co-CEO Arjun Sethi, so this is a related-party roll-up. Before a Kraken IPO it adds fee-earning private-market AUM, and it turns Kraken from an exchange into an allocator that competes with the crypto VCs whose portfolio tokens it lists. <em>«Price and consideration undisclosed.» «A dealroom headline says '$2.6B'; both opened articles say $2.7B.» «Payward's own release was not opened.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">CoinGecko Accelerates Its Next Phase of Growth, Backed by Solana Foundation</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Solana Foundation (primary); Decrypt &middot; Nov 17, 2026 &middot; <a href="https://solana.com/news/coingecko-backed-by-solana-foundation">source</a></div>
+  <div class="body">The Solana Foundation is backing CoinGecko, which tracks more than 50M assets across more than 2,000 exchanges, on undisclosed terms. A Foundation representative told Decrypt it is a majority stake, and CoinGecko says it will explore on-chain trading features. <em>Why it matters:</em> One of the two main neutral price and market-cap references would come under majority ownership of a single L1's foundation and move toward trading. Expect index providers, funds and reporters (including this brief) to face questions about relying on its rankings and API. <em>«Terms, valuation and stake size are undisclosed. 'Majority' rests on a Foundation statement to Decrypt; the official post does not say it.» «Disclosure: this brief's prices come from the CoinGecko API.» «Decrypt says its parent builds on Solana and uses CoinGecko data.» «Disclosure: this brief’s prices come from CoinGecko’s API.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">HeartSciences holders approve Fortitude Zcash-miner merger, 3,480,989 votes to 20,933</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> HeartSciences Form 8-K, Item 5.07 (SEC EDGAR); prior DEFA14A &middot; Nov 19, 2026 &middot; <a href="https://www.sec.gov/Archives/edgar/data/1468492/000121390026122281/ea0313004-8k_heartsci.htm">source</a></div>
+  <div class="body">With 76.36% of shares present, HeartSciences (HSCS) holders voted 99.3% for the all-stock combination with DCG-backed Zcash miner Fortitude. They also approved up to 35M Class A shares for post-close private placements of up to $100M, at discounts of up to 20%. <em>Why it matters:</em> The approval creates a pure-play ZEC miner on Nasdaq (TUDE), about 94% owned by DCG fully diluted, with a small float and a $50M ATM agreed on Nov 18. With ZEC at $779.33 (our 13:09Z pull), the stock will be a thinly traded, leveraged bet on privacy coins. <em>«Headline is ours; the 8-K has no press-release headline.» «Closing is still subject to conditions; the company guides to Q4 2026.» «The ATM prospectus supplement covers only ~$3.08M under the S-3 baby-shelf limit.» «Nine-month figures (revenue $57.9M, net loss −$16.2M, ~90,582 ZEC mined) are company-reported in the Nov 16 DEFA14A.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Crypto institutions buying the layers around trading</strong> &mdash; Within three days an exchange bought a VC and asset manager (Payward–Tribe, $2.7B AUM) and an L1 foundation took a majority of the main independent data aggregator (Solana–CoinGecko). Both deals have undisclosed prices and both move a neutral intermediary inside a market participant. Expect more 'strategic' M&amp;A in place of VC rounds while equity funding stays near $150–215M a week.</li>
+  <li><strong>Tokenized IPO demand far exceeds the shares available</strong> &mdash; Binance Wallet raised a $500M USDC cap and received about 2,957 ANT shares (~$245K), a fill rate of about 0.05%, after xStocks reported more than 9x oversubscription. This follows the tokenized SpaceX allocations that were cancelled earlier. Underwriters, not exchanges, control the supply, so the crypto side of the trade ends in refunds and consolation airdrops.</li>
+  <li><strong>Tether is the steadiest buyer in a thin week</strong> &mdash; Three of the six deals crypto.news lists for Nov 14–20 are Tether's (Nomad, MetaComp, SCRYPT), on top of its Stables investment. Tether is the most frequent strategic investor even as stablecoin supply contracts (USDT $174.51B from $175.00B, our 13:09Z pull).</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Nov 14–20 tracker prints (Nov 21–23)</strong> &mdash; Gate Ventures' Sunday recap and ChainCatcher/RootData's weekly figure were not out at ~13:30Z. Test: both should sit between crypto.news's $150.5M (3 deals) and our $214.7M (7 deals). A figure above ~$450M would mean Jeeves' $300M financing capacity was counted as venture.</li>
+  <li><strong>Can ANT hold $83 on Monday, and when does TUDE trade?</strong> &mdash; Bloomberg headlined a post-market ANT drop on Nov 20 tied to Apple's AI-agent plans, with the regular-session close reported at $88.30. A Monday close below $83 would put the IPO under water inside a week. Separately, watch for a Fortitude closing 8-K and first TUDE trade, where the ~6% non-DCG float sets price discovery.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Weekly totals differ by window and basis. crypto.news's $150.5M (Nov 14–20) counts only three featured deals: Variational $110M, Nomad $30.5M (full Series C) and MetaComp ~$10M. It excludes the undisclosed Tether–Stables and Tether–SCRYPT deals and Jeeves' $300M capacity, and it omits Codex ($30M) and Avenia ($25M), both announced Nov 17. Our hand tally for Nov 14–20 is $214.7M across 7 deals: Variational 110, Nomad 30.5, Codex 30, Avenia 25, MetaComp 10, Global MPC 7.5, Null 1.7. That is $17.2M above the Nov 20 brief's $197.5M Nov 13–20 tally because Nomad is now counted at the full round, not Tether's $15M, and Null is added. Neither figure is a tracker database total.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Prior-week baseline: crypto.news and ChainCatcher/RootData both print ~$409M ($408.55M) for Nov 7–13, which includes Project Faro's ~$270M bank operating commitment. Gate Ventures had $125.5M for the week ending Nov 13 (from the Nov 20 brief), excluding Faro. Gate Ventures' and ChainCatcher's Nov 14–20 figures were not yet published.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> ANT Nov 20 close: no wire or exchange closing print was opened. JournalArta gives $88.30 (−9.1%). Intraday reads were $86.625 (−10.85%, securities.io, 10:19 ET), $86.90 (−10.57%, Motley Fool, 11:20 ET) and $87.95 (−9.5%, Bush Letter, late morning). We use $88.30 as a single-sourced close.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Nomad round size: the Nov 20 brief carried $15M (Tether Capital's cheque, per The Block); crypto.news now reports a $30.5M (R$172M) Series C led by Tether with Endeavor, Globo Ventures, Tiger Global and Spark. Both are correct on their own bases.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Could not open: the BeInCrypto and Crypto Briefing originals on the Binance refund (read the Mitrade syndication of BeInCrypto); the CNBC Payward–Tribe analysis; the Bloomberg ANT post-market page (robots-blocked); Invezz (two pages); e27 on CoinGecko; SEC EDGAR browse (we used the data.sec.gov submissions API and the filing documents directly). The DefiLlama raises API was paywalled as of the Nov 20 brief and was not re-tried.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Disclosures: Anthropic makes the model that compiled this brief, and ANT coverage uses third-party figures only. This brief's price data comes from CoinGecko, now majority-backed by the Solana Foundation per Decrypt.</div>
+</section>
+<section class="panel" data-topic="tao">
+<h2 class="panel-title">Bittensor / TAO</h2>
+<p class="panel-sub">Finney upgraded again: runtime 493 took effect at block 9,549,412 (17:46 UTC Nov 20), 7,091 blocks after 492. Subnet registration paused at the rate-limit gate. No netuid has been registered since 84; the quoted lock cost is 236.03 TAO and decaying toward about 209 TAO when the window opens around 20:48 UTC today. Taostats launched Ethereum-to-Bittensor swaps. Sources: Finney RPC reads at 13:12–13:17 UTC Nov 21 (head 9,555,244–9,555,263); the shizzyunchained.com subnet-news index, Nov 20 edition (the Nov 21 edition returned 404); official X posts and docs; SEC EDGAR; The TAO Daily; CoinMarketCap. TAO price from our 13:09Z CoinGecko pull.</p>
+<div class="stat-grid">
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">TAO price (CoinGecko, 13:09 UTC)</div><div class="value">$184.72</div><div class="delta up">+0.40% 24h (our 13:09Z pull); $184.33 in yesterday's pull</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Subnets with updates / roster</div><div class="value">6 / 128</div><div class="delta down">Nov 20 index edition: 9 items, 6 of them subnet updates, out of a 128-subnet roster. The Nov 19 edition had 11 / 128. On-chain: SubnetLimit 128, with 128 NetworkRegisteredAt entries at 13:13 UTC</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Finney runtime spec_version</div><div class="value">493</div><div class="delta up">Up from 492. state_getRuntimeVersion at 13:12 UTC. The first 493 block is 9,549,412 (17:46:12 UTC Nov 20); block 9,549,411 is still on 492</div></div>
+<div class="stat"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="label">Net TAO issuance (on-chain)</div><div class="value">≈0.498 TAO/block</div><div class="delta neutral">TotalIssuance rose 124.48 TAO across blocks 9,555,013→9,555,263, now 11,747,963.51 TAO. That's ≈3,585 TAO/day at 7,200 blocks, consistent with post-halving emission and net of any recycling. A 250-block window, because older state is pruned</div></div>
+</div>
+<div class="story-grid">
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Most Recent (through Nov 21)</div>
+<div class="story">
+  <div class="headline">Finney enacts runtime spec_version 493 at block 9,549,412</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Finney RPC (state_getRuntimeVersion at historical block hashes; block timestamp extrinsic) &middot; Nov 20, 2026 &middot; <a href="https://entrypoint-finney.opentensor.ai:443">source</a></div>
+  <div class="body">Block 9,549,412 (17:46:12 UTC Nov 20) is the first on spec 493, 7,091 blocks (about 23.6 hours) after 492 activated at block 9,542,321. Head 9,555,244 was still on 493 at 13:12 UTC Nov 21. <em>Why it matters:</em> That is two runtime replacements in under 24 hours, and the release notes for 493 couldn't be reached today. Indexers are already breaking: the index reports that its eTAO and burns collector stopped at a runtime-metadata change guard. Third-party burn and emission dashboards may lag or misread until they update their decoders. <em>«Headline paraphrased; the source is on-chain reads, not an article.» «What 493 changes is unknown: GitHub returned 403 for this run, and no release note or outlet coverage was found.» «Registration parameters read the same after the upgrade (NetworkRateLimit 10,800 blocks, NetworkMinLockCost 1 TAO, SubnetLimit 128).» «Follow-up to the Nov 20 brief, which covered 492.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">No new subnet since netuid 84; lock cost quotes 236.03 TAO ahead of the ~20:48 UTC window, netuid 57 next to prune</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Finney RPC (subnetInfo_getLockCost, subnetInfo_getSubnetToPrune, NetworkRegisteredAt, NetworkLastLockCost) &middot; Nov 21, 2026 &middot; <a href="https://entrypoint-finney.opentensor.ai:443">source</a></div>
+  <div class="body">subnetInfo_getLockCost returned 236.03 TAO (≈$43.6K at $184.72) at about block 9,555,250. NetworkLastLockCost is still 167.86 TAO from netuid 84 at block 9,546,723, and the 10,800-block rate limit reopens at block 9,557,523 (≈20:48 UTC today, assuming 12s blocks). <em>Why it matters:</em> If the quote keeps decaying at the observed ≈0.0117 TAO/block, the window opens near 209.4 TAO (≈$38.7K), the fifth straight ≈1.25× step. A registration then would deregister netuid 57, which the runtime currently names as the prune candidate. Netuid 57 was registered at block 8,057,320 and has no on-chain SubnetIdentity. <em>«Headline paraphrased; the source is on-chain reads.» «The 209.4 TAO projection is our linear extrapolation. The implied decay (about L/14,354 blocks) doesn't match the NetworkLockReductionInterval storage value of 28,800.» «The prune candidate can change before the window opens. Netuid 57's project name wasn't identified, and the SN84 owner still has no identity set.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">You can now do cross-chain swaps on taostats.</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> taostats (official X thread and live taostats.io/swap page) &middot; Nov 20, 2026 &middot; <a href="https://x.com/taostats/status/2123702904662216999">source</a></div>
+  <div class="body">Taostats now offers one-step swaps from an Ethereum wallet (e.g. MetaMask) into TAO or any subnet's alpha, and back out to USDC or ETH on Ethereum. It says unfilled swaps are refunded and that it adds no fee of its own. The live swap page has a Cross-chain tab. <em>Why it matters:</em> Removing the bridge, exchange and withdrawal steps lets Ethereum holders buy subnet alpha directly. That could widen the buyer base for small-cap alpha tokens, along with their exposure to slippage, at a time when TAO itself is falling. <em>«This is a primary source for availability only. No usage, volume or fill-rate data is published, and no swap was executed by us.» «“No fee of its own” excludes routing, gas and slippage costs.» «The routing and settlement provider isn't named in the posts read.»</em></div>
+</div>
+</div>
+<div class="card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><div class="card-title">Also in the Last Seven Days (Nov 14–Nov 21)</div>
+<div class="story">
+  <div class="headline">TAO Synergies Form 10-Q: approximately 84,855 TAO held as of November 16, 2026</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> SEC EDGAR (TAO Synergies Inc. 10-Q for Q3 2026) &middot; Nov 16, 2026 &middot; <a href="https://www.sec.gov/Archives/edgar/data/1571934/000110465926128507/taox-20260930x10q.htm">source</a></div>
+  <div class="body">TAOX held about 84,855 TAO (≈$15.8M) on Nov 16, up from 84,405 TAO on Sep 30. Its Sep 30 cost basis was $29.17M (≈$345.56/TAO), and 72,193 TAO were staked from BitGo custody through validator Yuma. Q3 staking revenue was $245,724 (≈1,098 TAO), and it made no TAO purchases in the first nine months of 2026. <em>Why it matters:</em> At $184.72 the treasury is about 46% below its average cost. With no 2026 purchases, growth is coming only from roughly 0.4% quarterly staking yield. Listed TAO proxies are not adding net spot demand in this drawdown. <em>«Headline paraphrased from the filing.» «The ~46% figure is our calculation from the Sep 30 cost basis and our 13:09Z price.» «Five Form 4s were filed Nov 17 and were not reviewed.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">SN62 Ridges launches Ridgeline: issue-to-pull-request agents at $9.99 for 10 credits or 1 credit per 1,000 locked alpha</div>
+  <div class="meta"><span class="conf conf-verified">&#10003; Verified</span> Ridges AI (official X posts Nov 19 and Nov 20; docs.ridges.ai) &middot; Nov 19, 2026 &middot; <a href="https://docs.ridges.ai/ridgeline/credits">source</a></div>
+  <div class="body">SN62 Ridges' Ridgeline sells 10 credits for $9.99/month (Paddle, fiat), or earns 1 credit per 1,000 alpha locked for 3 days. One credit buys one GitHub issue turned into a pull request, and a PR review costs 0.1 credit. Locked-stake credits expire after two weeks, and simply holding alpha doesn't count. <em>Why it matters:</em> Granting product credits only for locked alpha creates a utility-driven sink for SN62 alpha supply. It will only matter if Ridgeline jobs grow enough to make locking worth more than trading. <em>«Headline paraphrased; the Nov 19 post reads “Meet Ridgeline. Your own fleet of software engineers.”» «These are published terms only; no subscriber, job or locked-alpha figures are disclosed.» «Ridgeline had an earlier beta, so this is not its first appearance.»</em></div>
+</div>
+<div class="story">
+  <div class="headline">Fugal (SN70) Beats OpenRouter's Auto Router on Quality and Cost in Early Tests</div>
+  <div class="meta"><span class="conf conf-single">&#9670; Single-source</span> The TAO Daily (Yuma Subnet Spotlight interview with Fugal's Jack Doherty) &middot; Nov 18, 2026 &middot; <a href="https://taodaily.io/fugal-sn70-beats-openrouters-auto-router-on-quality-and-cost-in-early-tests/">source</a></div>
+  <div class="body">SN70 Fugal reports comparable answer quality at about half the cost of strong reference models in early Router Arena tests. It also says it beat OpenRouter's auto router on both quality and cost, after going from V1 to V3 in about two weeks with miners routing across about 600 OpenRouter models. <em>Why it matters:</em> Model routing (about 21% of traffic in data cited in the interview) is a market with incumbents such as OpenRouter, AWS and Azure. A measurable cost edge is the kind of claim that could turn emissions into paid inference demand, if third parties can reproduce it. <em>«Project-reported: the benchmarks come from the team via an interview and haven't been independently reproduced.» «“Early tests” covers no stated sample size or methodology.»</em></div>
+</div>
+</div>
+</div>
+<div class="trend-grid">
+<div class="trend-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Key Trends</h3><ul>
+  <li><strong>Registration ratchet keeps hitting the gate</strong> &mdash; Lock cost has gone 85.94 → 107.43 → 134.29 → 167.86 TAO, and the next window projects to about 209.4 TAO (≈$38.7K). Each slot has been taken as soon as the 10,800-block window opened. The runtime now names netuid 57 as the next prune target, so each new registration replaces one of the 128 incumbents.</li>
+  <li><strong>Runtime cadence outpaces tooling</strong> &mdash; Runtime 492 went live at 18:06 UTC Nov 19 and 493 at 17:46 UTC Nov 20. The index says 492's released code fixes coldkey swaps and lock conviction, but the contents of 493 couldn't be read. The aggregator's own eTAO, burns and owner-holdings collectors stopped at runtime-schema guards, so burn and emission data from third parties is temporarily less reliable.</li>
+  <li><strong>Subnets packaged for non-crypto users</strong> &mdash; SN62 Ridgeline ($9.99/10 credits), SN24 ms.computer free website hosting (The TAO Daily, Nov 21), SN94 Cathedral attested private compute and SN127 Zils small-model training (Novelty Search, per The TAO Daily Nov 20), and SN53 Engy reportedly powering Const's Arbos coding agents (The TAO Daily, Nov 21). Usage and revenue numbers are almost entirely absent or project-reported.</li>
+</ul></div>
+<div class="watch-card"><img class="tile-mark" src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" /><h3>Ones to Watch</h3><ul>
+  <li><strong>Tonight's registration window (≈20:48 UTC, block 9,557,523)</strong> &mdash; A take near 209.4 TAO continues the ≈1.25× ratchet and should deregister netuid 57 if it is still the prune candidate. No taker by Nov 23, or any change to the lock-cost decay after runtime 493, would mean demand is fading or the mechanism was altered. Re-check getLockCost and NetworkRegisteredAt.</li>
+  <li><strong>Discord-only subnet operations and an unreconciled lock (rumor)</strong> &mdash; These are known only from Discord and haven't been independently checked. SN3 Teutonic reportedly reallocated competition incentives (MAIN2 40%; MIX07, MIX08 and MIX09 20% each). SN116 Carbon reported A100 build overload timeouts with free reruns, SN71 Leadpoet promised reruns after a validator outage, and SN94 Cathedral says its stable12 enables the Escape lane by default. Separately, SN99 Axonry posted on X (Nov 20) that its SN99 alpha is in a “perpetual conviction lock”; no amount was given and it hasn't been reconciled on-chain.</li>
+</ul></div>
+</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Index: the shizzyunchained.com 2026-11-21 edition returned 404 and the 2026-11-20 edition was used: 9 items, with the header reading “6 subnets with updates · 128 in coverage roster”; coverage 10:37 ET Nov 19 to 10:14 ET Nov 20. The 11-20 edition resolves now even though it returned 404 yesterday. evidence/2026-11-20-chain.json returned 404 at both paths tried. Star ratings and 'verified' labels were ignored. Items sourced from the index's Discord links are treated as rumor and kept out of the cards.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> GitHub returned 403 for RaoFoundation/subtensor (web and API: this session hasn't been given access to the repository). The contents of runtime 493 are unknown, and 492's changes (coldkey-swap and lock fixes, PR 3333) come only from the index, not our own read.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Chain method: reads from entrypoint-finney.opentensor.ai between 13:12 and 13:17 UTC Nov 21. The upgrade block was found by binary search on state_getRuntimeVersion between 9,548,054 (492) and head, and times were decoded from the timestamp.set extrinsic. Historical state more than about 256 blocks old is pruned on this node, so issuance was measured over a 250-block window. The SubtensorModule BlockEmission storage reads 1.0 TAO, which conflicts with the observed ≈0.498 TAO/block net increase in TotalIssuance; we report the observed delta.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Lock cost: subnetInfo_getLockCost (236.03 TAO) and NetworkLastLockCost (167.86 TAO) measure different things: the current decaying quote versus the last price paid. The implied decay doesn't match the NetworkLockReductionInterval storage value (28,800 blocks), so the 209.4 TAO projection is an estimate.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Price disagreement: CoinMarketCap's AI-written story (16:04 UTC Nov 20) cites TAO near $186, −6.86% over 13 hours, a market cap of about $2.18B and Fear &amp; Greed 7. Our 13:09Z pull is $184.72, +0.40% over 24 hours, with Fear &amp; Greed 12. The TAOX 10-Q implies about $186/TAO on Nov 16 ($15.8M / 84,855). TAO-specific price stories were not carded, because CMC attributes the move to the broad market sell-off.</div>
+<div class="method-note"><span class="conf conf-method">&#128208; Methodology</span> Excluded: the Engy SN53/Arbos story (The TAO Daily Nov 21, resting on an Engy team member's X post) and SN24 ms.computer free hosting (The TAO Daily Nov 21) are single-source and appear only in trends. The GTAO 8-K, SN47 Optia, SN105 Beam and SN60 Bitsec items ran yesterday and were not repeated. Const's alphaXiv remark is commentary only.</div>
+</section>
+
+  <footer>
+    <img src="../../brand/KWIZERANA_MARK_TRANSPARENT.png" alt="" style="height:26px;opacity:0.6;vertical-align:middle;margin-right:8px;" />
+    KWIZERANA INTELLIGENCE &middot; compiled 13:22 UTC, November 21, 2026 &middot; preservation of wealth / true privacy / organic community / media / compounding DAO<br />
+    <a href="reports/index.html">Archive</a> &middot; <a href="reports/feed.xml">RSS</a> &middot; <a href="INTEL_STANDARDS.md">Editorial &amp; source standards</a><br />
+    <strong>Provenance.</strong> <strong>Market figures are a live data pull timestamped 2026-11-21T13:09:54Z</strong>: BTC, ETH, AVAX, SOL, ZEC, XMR and TAO prices plus total cap and dominance from <strong>CoinGecko</strong> (<code>/simple/price</code> and <code>/global</code>); Fear &amp; Greed from <strong>Alternative.me</strong>; DeFi TVL and Avalanche C-Chain TVL from <strong>DefiLlama</strong> historical chain TVL (daily points through Nov 20, Nov 21 partial) and Aave V3 Avalanche from its protocol series and token breakdown; stablecoin supply summed from DefiLlama’s stablecoins API (ex-BUIDL), Avalanche stablecoins from its stablecoincharts endpoint with the USDT and USDC per-chain series, and Avalanche DEX volume and fees from its overview endpoints; difficulty, hashrate and the retarget from <strong>mempool.space</strong> (read from the cloud workspace); hashprice from the Hashrate Index live page; the Finney runtime and subnet lock cost read from the public Finney RPC; the TAO panel starts from the <a href="https://shizzyunchained.com/subnet-news/2026-11-20">shizzyunchained.com subnet-news index</a> (an aggregator, never counted as a second source; the Nov 21 edition returned 404, so the Nov 20 edition was used, and its chain-evidence file returned 404; GitHub was unreachable from this run again, so items resting only on repository or Discord evidence were dropped or kept as watch items). Story research ran in eight parallel passes with each story tiered per INTEL_STANDARDS, then an editor pass: one card was downgraded verified to single-source (Wagyu XMR1 in Privacy &amp; Security, to match the DeFi panel); cross-panel overlaps (Wagyu in DeFi and Security; BTCS in DeFi and Markets; Kava Lend in DeFi and Security; Binance’s Anthropic campaign in VC and Airdrops) and repeats from earlier briefs (Kava Lend, infiniFi, the −9.13% retarget) are flagged on their cards. Disclosure: Anthropic, whose stock appears in this brief, makes the model that compiles it; CoinGecko, which supplies this brief’s prices, is now majority-backed by the Solana Foundation. Several stories in each panel are dated Nov 14&ndash;Nov 20 and are flagged on their cards. Eight topics, three signals, every card graded.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tab');
+  var panels = document.querySelectorAll('.panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var topic = tab.getAttribute('data-topic');
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var target = document.querySelector('.panel[data-topic="' + topic + '"]');
+      if (target) { target.classList.add('active'); }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Reader mode: collapses to a single readable column with every panel expanded.
+  var btn = document.getElementById('readerToggle');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var on = document.body.classList.toggle('reader');
+      btn.classList.toggle('on', on);
+      btn.textContent = on ? 'Exit reader mode' : 'Reader mode';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
+</body>
+</html>
